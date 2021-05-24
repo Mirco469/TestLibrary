@@ -29,16 +29,16 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<eds-button id="idbutton"
+<!-- <eds-button id="idbutton"
             label="ITA"
-            type="primary"
-            icon="language-eng"
+            type="outline"
+            icon="language-it"
             [disabled]="false"
             [isDropdown]="false"
             [dropdownOpen]="false"
             actionsDropdown="undefined"
             (action)="stampa($event)"
-></eds-button>
+></eds-button> -->
 
 <!-- CHECKBOX -->
 <!--<eds-checkbox type="unselected"
@@ -59,7 +59,7 @@
 <button (click)="stampa(modelMulti)">Stampa dropdown</button>-->
 
 <!-- DROPDOWN -->
-<!--<eds-dropdown id="undefined"
+<!-- <eds-dropdown id="undefined"
               [isAutocomplete]="false"
               [items]="itemsDropdown"
               label="Label"
@@ -73,7 +73,7 @@
               [(ngModel)]="modelDropdown"
               name="dropdown">
 </eds-dropdown>
-<button (click)="stampa(modelDropdown)">Stampa dropdown</button>-->
+<button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
 <!-- HEADER TABLE -->
 <!--<eds-header-table id="status"
@@ -87,11 +87,10 @@
 <!--<eds-icon name="action-email"></eds-icon>-->
 
 <!-- INPUT DATE -->
-<!--<eds-input-date (change)="stampa($event)"
-                [(ngModel)]="modelDate"
+<!-- <eds-input-date (change)="stampa($event)"
                 name="date">
 </eds-input-date>
-<button (click)="stampa(modelDate)">Stampa data</button>-->
+<button (click)="stampa(modelDate)">Stampa data</button> -->
 
 <!-- INPUT NUMBER -->
 <!--<eds-input-number [disabled]="false"
@@ -184,15 +183,18 @@
 <button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
 <!-- TOAST -->
-<!--<eds-toast [id]="'id'"
+<eds-toast [id]="'id'"
            type="info"
            title="Info toast"
            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
-</eds-toast>-->
+</eds-toast>
 
 <!-- NAVIGATION -->
-<!--<eds-navigation [categories]="categories"
+<!-- <eds-navigation [categories]="categories"
                 username="Heilam Hein von Wolff"
                 source="data:image/jpeg;base64,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"
-                (command)="stampa($event)">
-</eds-navigation>-->
+                (command)="stampa($event)"
+                [currentCategory]="currentCategory"
+                [sections]="sections"
+                [activeNavItem]="activeNavItem">
+</eds-navigation> -->

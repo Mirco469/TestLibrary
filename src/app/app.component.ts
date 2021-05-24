@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   model;
 
@@ -909,7 +909,11 @@ export class AppComponent {
     }
   ];
   selectedItemInput;
-  modelDropdown;
+  modelDropdown = {
+    "id": 3,
+    "label": "test3",
+    "disabled": true
+  };
 
   // INPUT DATE
   modelDate;
@@ -957,6 +961,12 @@ export class AppComponent {
   modelTextfield;
 
   // NAVIGATION
+  currentCategory = {
+    "id": "1",
+    "icon": "bu-access-automation",
+    "label": "Access automation"
+  }
+
   categories = [
     {
       "id": "0",
@@ -970,7 +980,61 @@ export class AppComponent {
     }
   ];
 
+  sections = []
+
+  activeNavItem = {
+    "id": "clienti"
+  }
+
   stampa(data) {
     console.log(data);
+  }
+
+  ngOnInit() {
+    this.sections = [
+      {
+        "title": "Anagrafiche",
+        "items": [
+          {
+            "id": "clienti",
+            "icon": "menu-clienti",
+            "label": "Clienti"
+          },
+          {
+            "id": "sedi",
+            "icon": "menu-sedi",
+            "label": "Sedi"
+          },
+          {
+            "id": "impianti",
+            "icon": "menu-installations",
+            "label": "Impianti"
+          },
+          {
+            "id": "fornitori",
+            "icon": "menu-fornitori",
+            "label": "Fornitori"
+          }
+        ]
+      },
+      {
+        "title": "Ticket",
+        "items": [
+          {
+            "id": "ticket",
+            "icon": "menu-ticket",
+            "label": "Ticket"
+          },
+          {
+            "id": "calendario_ticket",
+            "icon": "general-calendar",
+            "label": "Calendario Ticket"
+          }
+        ]
+      }
+    ]
+    this.activeNavItem = {
+      "id": "sedi"
+    }
   }
 }
