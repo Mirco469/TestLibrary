@@ -183,11 +183,11 @@
 <button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
 <!-- TOAST -->
-<eds-toast [id]="'id'"
+<!-- <eds-toast [id]="'id'"
            type="info"
            title="Info toast"
            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.">
-</eds-toast>
+</eds-toast> -->
 
 <!-- NAVIGATION -->
 <!-- <eds-navigation [categories]="categories"
@@ -198,3 +198,43 @@
                 [sections]="sections"
                 [activeNavItem]="activeNavItem">
 </eds-navigation> -->
+
+<!-- ACCORDION -->
+<eds-accordion (hierarchyChange)="stampa($event)">
+  <eds-accordion-line label="Root Accordion">
+    <div accordion-head>
+      <h3> Titolo Accordion line ( Root ) </h3>
+    </div>
+    <div accordion-body>
+      <p> This is where the body is rendered ( it is different than children slot ) </p>
+
+      <!-- Row with children -->
+      <eds-accordion-line label="Label sottolivello 2-1">
+        <div accordion-head>SUBTITLE!</div>
+        <div accordion-inline> SUB-LINE </div>
+        <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
+
+        <!-- First row with no children -->
+        <eds-accordion-line label="Label sottolivello 3-1">
+          <div accordion-head>SUBTITLE!</div>
+          <div accordion-inline> SUB-LINE </div>
+          <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
+        </eds-accordion-line>
+
+        <!-- Second row with no children -->
+        <eds-accordion-line label="Label sottolivello 3-2">
+          <div accordion-head>SUBTITLE!</div>
+          <div accordion-inline> SUB-LINE </div>
+          <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
+
+          <eds-accordion-line label="Label sottolivello 3-2-1"></eds-accordion-line>
+
+        </eds-accordion-line>
+
+      </eds-accordion-line>
+    </div>
+
+  </eds-accordion-line>
+
+
+</eds-accordion>
