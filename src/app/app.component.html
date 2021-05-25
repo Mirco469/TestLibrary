@@ -41,22 +41,22 @@
 ></eds-button> -->
 
 <!-- CHECKBOX -->
-<!--<eds-checkbox type="unselected"
+<!-- <eds-checkbox type="unselected"
               label="Checkbox Item"
               [disabled]="false"
               [(ngModel)]="modelCheckbox"
               name="checkbox">
 </eds-checkbox>
-<button (click)="stampa(modelCheckbox)">Stampa Checkbox</button>-->
+<button (click)="stampa(modelCheckbox)">Stampa Checkbox</button> -->
 
 <!-- DROPDOWN-MULTI -->
-<!--<eds-dropdown-multi [options]="options"
+<!-- <eds-dropdown-multi [options]="options"
                     label="Label"
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti">
 </eds-dropdown-multi>
-<button (click)="stampa(modelMulti)">Stampa dropdown</button>-->
+<button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
 <!-- DROPDOWN -->
 <!-- <eds-dropdown id="undefined"
@@ -87,27 +87,27 @@
 <!--<eds-icon name="action-email"></eds-icon>-->
 
 <!-- INPUT DATE -->
-<!-- <eds-input-date (change)="stampa($event)"
+<!-- <eds-input-date [(ngModel)]="modelDate"
                 name="date">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button> -->
 
 <!-- INPUT NUMBER -->
-<!--<eds-input-number [disabled]="false"
+<!-- <eds-input-number [disabled]="false"
                   [(ngModel)]="modelNumber"
                   name="number">
 </eds-input-number>
-<button (click)="stampa(modelNumber)">Stampa number</button>-->
+<button (click)="stampa(modelNumber)">Stampa number</button> -->
 
 <!-- INPUT TIME -->
-<!--<eds-input-time label="Label"
+<!-- <eds-input-time label="Label"
                 placeholder="Content"
                 [disabled]="false"
                 (change)="stampa($event)"
                 [(ngModel)]="modelTime"
                 name="time">
 </eds-input-time>
-<button (click)="stampa(modelTime)">Stampa time</button>-->
+<button (click)="stampa(modelTime)">Stampa time</button> -->
 
 <!-- RADIO BUTTON -->
 <!-- <eds-radio-button [id]="'id1'"
@@ -200,7 +200,7 @@
 </eds-navigation> -->
 
 <!-- ACCORDION -->
-<eds-accordion (hierarchyChange)="stampa($event)">
+<!-- <eds-accordion (hierarchyChange)="stampa($event)">
   <eds-accordion-line label="Root Accordion">
     <div accordion-head>
       <h3> Titolo Accordion line ( Root ) </h3>
@@ -208,21 +208,18 @@
     <div accordion-body>
       <p> This is where the body is rendered ( it is different than children slot ) </p>
 
-      <!-- Row with children -->
-      <eds-accordion-line label="Label sottolivello 2-1">
+      <eds-accordion-line label="Label sottolivello 2-1" (checked)="stampa($event)">
         <div accordion-head>SUBTITLE!</div>
         <div accordion-inline> SUB-LINE </div>
         <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
 
-        <!-- First row with no children -->
-        <eds-accordion-line label="Label sottolivello 3-1">
+        <eds-accordion-line label="Label sottolivello 3-1" (checked)="stampa($event)">
           <div accordion-head>SUBTITLE!</div>
           <div accordion-inline> SUB-LINE </div>
           <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
         </eds-accordion-line>
 
-        <!-- Second row with no children -->
-        <eds-accordion-line label="Label sottolivello 3-2">
+        <eds-accordion-line label="Label sottolivello 3-2" (checked)="stampa($event)">
           <div accordion-head>SUBTITLE!</div>
           <div accordion-inline> SUB-LINE </div>
           <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
@@ -237,4 +234,14 @@
   </eds-accordion-line>
 
 
-</eds-accordion>
+</eds-accordion> -->
+
+
+<eds-card-row icon="general-chip"
+              title="Guide in alluminio"
+              optionIcon="arrow-forward"
+              case="simple"
+              [extraOptions]="extraOptionsRowCard"
+              (optionPressed)="stampa($event)"
+              (pressed)="stampa($event)">
+</eds-card-row>

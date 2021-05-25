@@ -888,7 +888,7 @@ export class AppComponent implements OnInit {
       "label": "Opzione 11"
     }
   ]
-  modelMulti;
+  modelMulti = [];
 
   // DROPDOWN
   itemsDropdown = [
@@ -919,10 +919,10 @@ export class AppComponent implements OnInit {
   modelDate;
 
   // INPUT NUMNER
-  modelNumber;
+  modelNumber = 0;
 
   // INPUT TIME
-  modelTime;
+  modelTime = "";
 
   // RADIO BUTTON
   modelRadio;
@@ -1037,4 +1037,23 @@ export class AppComponent implements OnInit {
       "id": "sedi"
     }
   }
+
+  extraOptionsRowCard = [
+    {
+      id: 'option@1',
+      icon: 'action-close',
+      disabled: true
+    },
+    {
+      id: 'option@2',
+      icon: 'action-cog',
+      disabled: false
+    },
+    {
+      id: 'option@3',
+      icon: 'action-edit',
+      disabled: false
+    }
+  ]
+
 }
