@@ -96,14 +96,16 @@
 <!-- <eds-input-number [disabled]="false"
                   [(ngModel)]="modelNumber"
                   name="number">
-</eds-input-number>
+</eds-input-number> -->
+<!-- <input type="number"
+       [(ngModel)]="modelNumber"
+       name="number"/>
 <button (click)="stampa(modelNumber)">Stampa number</button> -->
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
                 placeholder="Content"
                 [disabled]="false"
-                (change)="stampa($event)"
                 [(ngModel)]="modelTime"
                 name="time">
 </eds-input-time>
@@ -112,16 +114,16 @@
 <!-- RADIO BUTTON -->
 <!-- <eds-radio-button [id]="'id1'"
                   [disabled]="false"
-                  [active]="false"
                   value="value1"
+                  label="Label 1"
                   [name]="'name'"
                   [(ngModel)]="modelRadio"
                   (radioButtonEventEmitter)="stampa($event)">
 </eds-radio-button>
 <eds-radio-button [id]="'id2'"
                   [disabled]="false"
-                  [active]="false"
                   value="value2"
+                  label="Label 2"
                   [name]="'name'"
                   [(ngModel)]="modelRadio"
                   (radioButtonEventEmitter)="stampa($event)">
@@ -137,14 +139,12 @@
 </eds-stepper>-->
 
 <!-- SWITCH -->
-<!--<eds-switch [id]="'id'"
-            [disabled]="false"
-            [active]="false"
+<!-- <eds-switch [id]="'id'"
             label="Test Label"
-            (switch)="stampa($event)"
             [(ngModel)]="modelSwitch"
             name="switch">
-</eds-switch>-->
+</eds-switch>
+<button (click)="stampa(modelSwitch)">Stampa switch</button> -->
 
 <!-- TAG -->
 <!--<eds-tag [id]="'id'"
@@ -163,12 +163,14 @@
               [disabled]="false"
               [warning]="false"
               [(ngModel)]="modelTextarea"
-              name="textarea">
+              name="textarea"
+              (blur)="stampa('blur')"
+              (focus)="stampa('focus')">
 </eds-textarea>
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<!-- <eds-textfield [id]="'id'"
+<eds-textfield [id]="'id'"
                [label]="'label'"
                placeholder="Placeholder"
                [disabled]="false"
@@ -178,9 +180,11 @@
                warningText="Warning"
                [isLoading]="false"
                [(ngModel)]="modelTextfield"
-               name="textfield">
+               name="textfield"
+               (blur)="stampa('blur')"
+               (focus)="stampa('focus')">
 </eds-textfield>
-<button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
+<button (click)="stampa(modelTextfield)">Stampa textfield</button>
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"
@@ -200,36 +204,40 @@
 </eds-navigation> -->
 
 <!-- ACCORDION -->
-<!-- <eds-accordion (hierarchyChange)="stampa($event)">
+<!-- <eds-accordion>
   <eds-accordion-line label="Root Accordion">
     <div accordion-head>
       <h3> Titolo Accordion line ( Root ) </h3>
     </div>
+    <div accordion-inline>
+      <eds-checkbox style="margin-right: 8px" label="Opzione a dx"></eds-checkbox>
+      <eds-checkbox label="Expert"></eds-checkbox>
+    </div>
     <div accordion-body>
       <p> This is where the body is rendered ( it is different than children slot ) </p>
+    </div>
 
-      <eds-accordion-line label="Label sottolivello 2-1" (checked)="stampa($event)">
+    <eds-accordion-line label="Label sottolivello 2-1">
+      <div accordion-head>SUBTITLE!</div>
+      <div accordion-inline> SUB-LINE </div>
+      <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
+
+      <eds-accordion-line label="Label sottolivello 3-1">
+        <div accordion-head>SUBTITLE!</div>
+        <div accordion-inline> SUB-LINE </div>
+        <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
+      </eds-accordion-line>
+
+      <eds-accordion-line label="Label sottolivello 3-2">
         <div accordion-head>SUBTITLE!</div>
         <div accordion-inline> SUB-LINE </div>
         <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
 
-        <eds-accordion-line label="Label sottolivello 3-1" (checked)="stampa($event)">
-          <div accordion-head>SUBTITLE!</div>
-          <div accordion-inline> SUB-LINE </div>
-          <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
-        </eds-accordion-line>
-
-        <eds-accordion-line label="Label sottolivello 3-2" (checked)="stampa($event)">
-          <div accordion-head>SUBTITLE!</div>
-          <div accordion-inline> SUB-LINE </div>
-          <div accordion-body>Single div with stuff that i definitely projected here. No other siblings are projected</div>
-
-          <eds-accordion-line label="Label sottolivello 3-2-1"></eds-accordion-line>
-
-        </eds-accordion-line>
+        <eds-accordion-line label="Label sottolivello 3-2-1"></eds-accordion-line>
 
       </eds-accordion-line>
-    </div>
+
+    </eds-accordion-line>
 
   </eds-accordion-line>
 
@@ -237,11 +245,11 @@
 </eds-accordion> -->
 
 
-<eds-card-row icon="general-chip"
+<!-- <eds-card-row icon="general-chip"
               title="Guide in alluminio"
               optionIcon="arrow-forward"
               case="simple"
               [extraOptions]="extraOptionsRowCard"
               (optionPressed)="stampa($event)"
               (pressed)="stampa($event)">
-</eds-card-row>
+</eds-card-row> -->
