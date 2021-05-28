@@ -29,7 +29,8 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<!-- <eds-button id="idbutton"
+<p>Qua c'è un bottone, puoi premerlo e stampa in console!</p>
+<eds-button id="idbutton"
             label="ITA"
             type="outline"
             icon="language-it"
@@ -38,7 +39,9 @@
             [dropdownOpen]="false"
             actionsDropdown="undefined"
             (action)="stampa($event)"
-></eds-button> -->
+            [tooltipLabel]="'ciao'"
+></eds-button>
+<p>Vai sul codice html e decommenta i vari componenti per provarli!</p>
 
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
@@ -96,7 +99,9 @@
 <!-- <eds-input-number [disabled]="false"
                   [(ngModel)]="modelNumber"
                   name="number">
-</eds-input-number> -->
+</eds-input-number>
+<button (click)="stampa(modelNumber)">Stampa number</button>
+<input type="number" step="1" /> -->
 <!-- <input type="number"
        [(ngModel)]="modelNumber"
        name="number"/>
@@ -170,7 +175,7 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<eds-textfield [id]="'id'"
+<!-- <eds-textfield [id]="'id'"
                [label]="'label'"
                placeholder="Placeholder"
                [disabled]="false"
@@ -184,7 +189,7 @@
                (blur)="stampa('blur')"
                (focus)="stampa('focus')">
 </eds-textfield>
-<button (click)="stampa(modelTextfield)">Stampa textfield</button>
+<button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"

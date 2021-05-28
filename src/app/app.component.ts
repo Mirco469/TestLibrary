@@ -919,7 +919,7 @@ export class AppComponent implements OnInit {
   modelDate;
 
   // INPUT NUMNER
-  modelNumber;
+  modelNumber = 0;
 
   // INPUT TIME
   modelTime = "";
