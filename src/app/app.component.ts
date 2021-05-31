@@ -1054,6 +1054,23 @@ export class AppComponent implements OnInit {
       icon: 'action-edit',
       disabled: false
     }
-  ]
+  ];
+
+  listButtons: [
+    {
+      id: '1',
+      label: 'Ghost',
+      disabled: false,
+      type: 'ghost',
+      icon: ''
+    },
+    {
+      id: '2',
+      label: 'Primary button',
+      disabled: true,
+      type: 'primary',
+      icon: ''
+    }
+  ];
 
 }

@@ -29,7 +29,7 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<p>Qua c'è un bottone, puoi premerlo e stampa in console!</p>
+<!-- <p>Qua c'è un bottone, puoi premerlo e stampa in console!</p>
 <eds-button id="idbutton"
             label="ITA"
             type="outline"
@@ -41,7 +41,7 @@
             (action)="stampa($event)"
             [tooltipLabel]="'ciao'"
 ></eds-button>
-<p>Vai sul codice html e decommenta i vari componenti per provarli!</p>
+<p>Vai sul codice html e decommenta i vari componenti per provarli!</p> -->
 
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
@@ -258,3 +258,10 @@
               (optionPressed)="stampa($event)"
               (pressed)="stampa($event)">
 </eds-card-row> -->
+
+<br>
+<p>Il footer del drawer con i bottoni è invisibile.</p>
+<div style="width:400px; height:700px">
+  <eds-drawer [macrotype]="'drawer'" [type]="'basic'" [title]="'Nuovo allegato'"
+              [textOverTitle]="'Allegati'" [showBackButton]="true"  [listButtons]="listButtons"></eds-drawer>
+</div>
