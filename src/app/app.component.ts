@@ -1056,7 +1056,7 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  listButtons: [
+  listButtons = [
     {
       id: '1',
       label: 'Ghost',
