@@ -43,6 +43,75 @@
 ></eds-button>
 <p>Vai sul codice html e decommenta i vari componenti per provarli!</p> -->
 
+<p>Questi bottoni sono in linea e hanno il tooltip</p>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+            [tooltipLabel]="'ciao'"
+></eds-button>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+            [tooltipLabel]="'ciao'"
+></eds-button>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+            [tooltipLabel]="'ciao'"
+></eds-button>
+
+<p>Questi bottoni non sono in linea perchè al primo è stato tolto il tooltip</p>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+></eds-button>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+            [tooltipLabel]="'ciao'"
+></eds-button>
+<eds-button id="idbutton"
+            label="ITA"
+            type="outline"
+            icon="language-it"
+            [disabled]="false"
+            [isDropdown]="false"
+            [dropdownOpen]="false"
+            actionsDropdown="undefined"
+            (action)="stampa($event)"
+            [tooltipLabel]="'ciao'"
+></eds-button>
+
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
               label="Checkbox Item"
@@ -57,7 +126,8 @@
                     label="Label"
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
-                    name="dropdownmulti">
+                    name="dropdownmulti"
+                    (blur)="stampa('blur')">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
@@ -74,7 +144,8 @@
               [selectedItemInput]="selectedItemInput"
               (onSelectItem)="stampa($event)"
               [(ngModel)]="modelDropdown"
-              name="dropdown">
+              name="dropdown"
+              (blur)="stampa('blur')">
 </eds-dropdown>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
@@ -91,17 +162,20 @@
 
 <!-- INPUT DATE -->
 <!-- <eds-input-date [(ngModel)]="modelDate"
-                name="date">
+                name="date"
+                (blur)="stampa('blur')"
+                [isReadOnly]="true">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button> -->
 
 <!-- INPUT NUMBER -->
-<!-- <eds-input-number [disabled]="false"
+<!-- <eds-input-number
                   [(ngModel)]="modelNumber"
-                  name="number">
+                  name="number"
+                  (blur)="stampa('blur')"
+                  [isReadOnly]="true">
 </eds-input-number>
-<button (click)="stampa(modelNumber)">Stampa number</button>
-<input type="number" step="1" /> -->
+<button (click)="stampa(modelNumber)">Stampa number</button> -->
 <!-- <input type="number"
        [(ngModel)]="modelNumber"
        name="number"/>
@@ -112,7 +186,9 @@
                 placeholder="Content"
                 [disabled]="false"
                 [(ngModel)]="modelTime"
-                name="time">
+                name="time"
+                (blur)="stampa('blur')"
+                [isReadOnly]="true">
 </eds-input-time>
 <button (click)="stampa(modelTime)">Stampa time</button> -->
 
@@ -170,7 +246,8 @@
               [(ngModel)]="modelTextarea"
               name="textarea"
               (blur)="stampa('blur')"
-              (focus)="stampa('focus')">
+              (focus)="stampa('focus')"
+              [isReadOnly]="true">
 </eds-textarea>
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
@@ -187,7 +264,8 @@
                [(ngModel)]="modelTextfield"
                name="textfield"
                (blur)="stampa('blur')"
-               (focus)="stampa('focus')">
+               (focus)="stampa('focus')"
+               [isReadOnly]="true">
 </eds-textfield>
 <button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
@@ -259,9 +337,35 @@
               (pressed)="stampa($event)">
 </eds-card-row> -->
 
-<br>
-<p>Il footer del drawer con i bottoni è invisibile.</p>
+<!-- DRAWER -->
+<!-- <p>Il footer del drawer con i bottoni è invisibile.</p>
 <div style="width:400px; height:700px">
   <eds-drawer [macrotype]="'drawer'" [type]="'basic'" [title]="'Nuovo allegato'"
               [textOverTitle]="'Allegati'" [showBackButton]="true"  [listButtons]="listButtons"></eds-drawer>
-</div>
+</div> -->
+
+<!-- REGEX -->
+<!-- <form #myForm1="ngForm">
+  <p>Input enhancers</p>
+  <eds-textfield [id]="'id'"
+                 label="Contains only five numbers"
+                 placeholder="Placeholder"
+                 type="default"
+                 regexp="^[+ 0-9]{5}$"
+                 (noMatch)="stampa($event)"
+                 (match)="stampa($event)"
+                 [(ngModel)]="modelTextfield"
+                 name="textfield">
+  </eds-textfield>
+  <button (click)="stampa(modelTextfield)">Stampa textfield</button>
+  <p>Form valid: {{myForm1.form.valid}}</p>
+</form> -->
+
+<!-- <form #myForm2="ngForm">
+  <p>Input html nativo</p>
+  <input type="text"
+         [(ngModel)]="modelTextfield"
+         name="textfield"
+         pattern="[+ 0-9]{5}"/>
+  <p>Form valid: {{myForm2.form.valid}}</p>
+</form> -->

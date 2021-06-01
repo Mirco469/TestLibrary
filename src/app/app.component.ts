@@ -916,10 +916,10 @@ export class AppComponent implements OnInit {
   };
 
   // INPUT DATE
-  modelDate;
+  modelDate = new Date();
 
   // INPUT NUMNER
-  modelNumber = 0;
+  modelNumber = 2;
 
   // INPUT TIME
   modelTime = "";
@@ -1056,7 +1056,7 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  listButtons: [
+  listButtons = [
     {
       id: '1',
       label: 'Ghost',
