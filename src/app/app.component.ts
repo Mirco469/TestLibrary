@@ -888,7 +888,12 @@ export class AppComponent implements OnInit {
       "label": "Opzione 11"
     }
   ]
-  modelMulti = [];
+  modelMulti = [
+    {
+      "id": 9,
+      "label": "Opzione 10"
+    }
+  ];
 
   // DROPDOWN
   itemsDropdown = [
@@ -910,19 +915,18 @@ export class AppComponent implements OnInit {
   ];
   selectedItemInput;
   modelDropdown = {
-    "id": 3,
-    "label": "test3",
-    "disabled": true
+    "id": 2,
+    "label": "test2"
   };
 
   // INPUT DATE
   modelDate = new Date();
 
-  // INPUT NUMNER
-  modelNumber = 2;
+  // INPUT NUMBER
+  modelNumber = 5;
 
   // INPUT TIME
-  modelTime = "";
+  modelTime = "00:01";
 
   // RADIO BUTTON
   modelRadio;
