@@ -5,7 +5,7 @@
 ></eds-action-pager>-->
 
 <!-- SEARCH -->
-<!--<eds-search [withFilters]="true"
+<!-- <eds-search [withFilters]="true"
             numberOfFilter="0"
             [withOptions]="false"
             options="undefined"
@@ -13,9 +13,10 @@
             (search)="stampa($event)"
             (startFilter)="stampa($event)"
             [(ngModel)]="modelSearch"
-            name="search">
+            name="search"
+            (clear)="stampa('clear')">
 </eds-search>
-<button (click)="stampa(modelSearch)">Stampa Search</button>-->
+<button (click)="stampa(modelSearch)">Stampa Search</button> -->
 
 <!-- TABLE -->
 <!--<eds-table [configuration]="configuration"
@@ -43,7 +44,8 @@
 ></eds-button>
 <p>Vai sul codice html e decommenta i vari componenti per provarli!</p> -->
 
-<p>Questi bottoni sono in linea e hanno il tooltip</p>
+<!-- BUTTON TOOLTIP BUG -->
+<!-- <p>Questi bottoni sono in linea e hanno il tooltip</p>
 <eds-button id="idbutton"
             label="ITA"
             type="outline"
@@ -110,7 +112,7 @@
             actionsDropdown="undefined"
             (action)="stampa($event)"
             [tooltipLabel]="'ciao'"
-></eds-button>
+></eds-button> -->
 
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
@@ -127,7 +129,8 @@
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti"
-                    (blur)="stampa('blur')">
+                    (blur)="stampa('blur')"
+                    [isReadOnly]="true">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
@@ -142,7 +145,6 @@
               [isRemovable]="true"
               [isDisabled]="false"
               [selectedItemInput]="selectedItemInput"
-              (onSelectItem)="stampa($event)"
               [(ngModel)]="modelDropdown"
               name="dropdown"
               (blur)="stampa('blur')">
@@ -169,13 +171,17 @@
 <button (click)="stampa(modelDate)">Stampa data</button> -->
 
 <!-- INPUT NUMBER -->
-<!-- <eds-input-number
+<!-- <form #myForm3="ngForm">
+  <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
+                  [max_range] = 5
                   (blur)="stampa('blur')"
-                  [isReadOnly]="true">
+                  [disabled]="true">
 </eds-input-number>
-<button (click)="stampa(modelNumber)">Stampa number</button> -->
+<button (click)="stampa(modelNumber)">Stampa number</button>
+  <p>Form valid: {{myForm3.form.valid}}</p>
+</form> -->
 <!-- <input type="number"
        [(ngModel)]="modelNumber"
        name="number"/>
