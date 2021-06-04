@@ -750,70 +750,14 @@ export class AppComponent implements OnInit {
   ];
 
   // TABLE
-  configuration = {
-    "headers": [
-      {
-        "id": "id",
-        "displayName": "ID",
-        "width": 50
-      },
-      {
-        "id": "status",
-        "displayName": "Stato",
-        "width": 110
-      },
-      {
-        "id": "priority",
-        "displayName": "Priorità"
-      },
-      {
-        "id": "customer",
-        "displayName": "Cliente"
-      },
-      {
-        "id": "impianto",
-        "displayName": "Impianto"
-      }
-    ],
-    "rowOptions": [
-      {
-        id: 1,
-        hideInMore: false,
-        disabled: false
-      }
-    ]
-  }
+  configuration: any = {
+    "headers": [],
+    "rowOptions": []
+  };
 
-  data = [
-    {
-      "id": "0",
-      "customer": "Paul Simon",
-      "impianto": "LOCALE",
-      "priority": "Low",
-      "status": "Pending"
-    },
-    {
-      "id": "1",
-      "customer": "Paul Simon",
-      "impianto": "Barriera articolata contrapposta - parcheggio SUD - esterna DX uscita, con qualche riga di testo in più per mostrare come funziona quando c'è testo in più",
-      "priority": "MYOB",
-      "status": "Pending"
-    },
-    {
-      "id": "2",
-      "customer": "Art Garfunkel",
-      "impianto": "DONE",
-      "priority": "---",
-      "status": "Closed"
-    },
-    {
-      "id": "3",
-      "customer": "Paul Simon",
-      "impianto": "Barriera articolata contrapposta - parcheggio SUD - esterna DX uscita",
-      "priority": "High",
-      "status": "Shipping"
-    }
-  ]
+  data: any = [];
+
+  columnsToShow: any = [];
 
   // SEARCH
   modelSearch;
@@ -839,7 +783,7 @@ export class AppComponent implements OnInit {
   ]
 
   // CHECKBOX
-  modelCheckbox;
+  modelCheckbox = {checked: false, indeterminate: true};
 
   // DROPDOWN-MULTI
   options = [
@@ -920,7 +864,7 @@ export class AppComponent implements OnInit {
   };
 
   // INPUT DATE
-  modelDate = new Date();
+  modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
 
   // INPUT NUMBER
   modelNumber = 5;
@@ -995,6 +939,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.order(null);
+
     this.sections = [
       {
         "title": "Anagrafiche",
@@ -1076,5 +1022,160 @@ export class AppComponent implements OnInit {
       icon: ''
     }
   ];
+
+  order($event) {
+    setTimeout(
+      () => {
+        this.configuration = {
+          "headers": [
+            {
+              "id": "707",
+              "displayName": "Customer code"
+            },
+            {
+              "id": "708",
+              "displayName": "Customer name"
+            },
+            {
+              "id": "712",
+              "displayName": "Address"
+            },
+            {
+              "id": "713",
+              "displayName": "City"
+            },
+            {
+              "id": "714",
+              "displayName": "ZIP code"
+            },
+            {
+              "id": "2259",
+              "displayName": "Country"
+            },
+            {
+              "id": "2260",
+              "displayName": "Province"
+            }
+          ],
+          "rowOptions": []
+        }
+
+        this.data = [
+          {
+            "707": "0000074369",
+            "708": "RS MOTORS- Garage PORSCHE",
+            "712": "KORTRIJKSTRAAT 155a",
+            "713": "INGELMUNSTER",
+            "714": "8770",
+            "2259": "Belgium",
+            "2260": "",
+            "idDetail": "978878",
+            "id": "978878"
+          },
+          {
+            "707": "0000074368",
+            "708": "TEPPER AUFZUGE GMB",
+            "712": "HAFENGRENZWEG 11-19",
+            "713": "MUNSTER",
+            "714": "48155",
+            "2259": "Germany",
+            "2260": "",
+            "idDetail": "978772",
+            "id": "978772"
+          },
+          {
+            "707": "0000074367",
+            "708": "BODEM Elektro- Elektronik GmbH Wolfgang Bodem",
+            "712": "Zetschdorf 17",
+            "713": "Gutenborn",
+            "714": "06712",
+            "2259": "Germany",
+            "2260": "15 - Saxen-Anhalt",
+            "idDetail": "978771",
+            "id": "978771"
+          },
+          {
+            "707": "0000074365",
+            "708": "GLOBAL ESTATE GROUP",
+            "712": "KAPELLESTRAAT 117",
+            "713": "OOSTKAMP",
+            "714": "8020",
+            "2259": "Belgium",
+            "2260": "",
+            "idDetail": "978770",
+            "id": "978770"
+          },
+          {
+            "707": "0000074366",
+            "708": "WINLOCK SYSTEMS BV",
+            "712": "WEVERSLAAN 32",
+            "713": "LOKEREN",
+            "714": "9160",
+            "2259": "Belgium",
+            "2260": "",
+            "idDetail": "978769",
+            "id": "978769"
+          },
+          {
+            "707": "0000074364",
+            "708": "OTRA SOLUTIONS BV",
+            "712": "DORPSSTRAAT 122",
+            "713": "KORTENAKEN",
+            "714": "3470",
+            "2259": "Belgium",
+            "2260": "",
+            "idDetail": "978768",
+            "id": "978768"
+          },
+          {
+            "707": "0000074277",
+            "708": "LEZO INSTALACIONES Y SVOS",
+            "712": "C/ SALVADIOS 34. PTA 3.",
+            "713": "COLMENAR VIEJO",
+            "714": "28770",
+            "2259": "Spain",
+            "2260": "28 - Madrid",
+            "idDetail": "978767",
+            "id": "978767"
+          },
+          {
+            "707": "0000074331",
+            "708": "WORK & MANAGEMENT S.R.L.",
+            "712": "VIALE SCALA GRECA 406",
+            "713": "SIRACUSA",
+            "714": "96100",
+            "2259": "Italy",
+            "2260": "SR - Siracusa",
+            "idDetail": "978716",
+            "id": "978716"
+          },
+          {
+            "707": "0000074326",
+            "708": "TOP CHASSIS BELGIUM",
+            "712": "CHAUSSE DE TUBIZE 118",
+            "713": "HENNUYRE",
+            "714": "7090",
+            "2259": "Belgium",
+            "2260": "",
+            "idDetail": "978715",
+            "id": "978715"
+          },
+          {
+            "707": "0000074308",
+            "708": "Plegge + Bauer Baubeschläge GmbH",
+            "712": "Hertelsbrunnenring 19",
+            "713": "Kaiserslautern",
+            "714": "67657",
+            "2259": "Germany",
+            "2260": "07 - Rhineland Palatinate",
+            "idDetail": "978714",
+            "id": "978714"
+          }
+        ]
+        this.columnsToShow = this.configuration.headers.map( x => x.id );
+
+      }, 1000
+    )
+  }
 
 }

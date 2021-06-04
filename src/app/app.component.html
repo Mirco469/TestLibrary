@@ -30,8 +30,7 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<!-- <p>Qua c'è un bottone, puoi premerlo e stampa in console!</p>
-<eds-button id="idbutton"
+<!-- <eds-button id="idbutton"
             label="ITA"
             type="outline"
             icon="language-it"
@@ -41,8 +40,8 @@
             actionsDropdown="undefined"
             (action)="stampa($event)"
             [tooltipLabel]="'ciao'"
-></eds-button>
-<p>Vai sul codice html e decommenta i vari componenti per provarli!</p> -->
+            [disabled]="true"
+></eds-button> -->
 
 <!-- BUTTON TOOLTIP BUG -->
 <!-- <p>Questi bottoni sono in linea e hanno il tooltip</p>
@@ -119,6 +118,7 @@
               label="Checkbox Item"
               [disabled]="false"
               [(ngModel)]="modelCheckbox"
+              (change)="stampa('change')"
               name="checkbox">
 </eds-checkbox>
 <button (click)="stampa(modelCheckbox)">Stampa Checkbox</button> -->
@@ -129,8 +129,7 @@
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti"
-                    (blur)="stampa('blur')"
-                    [isReadOnly]="true">
+                    (blur)="stampa('blur')">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
@@ -152,12 +151,11 @@
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
 <!-- HEADER TABLE -->
-<!--<eds-header-table id="status"
-                  displayName="Stato"
-                  order="default"
-                  inputScrollable="undefined"
-                  (orderColumn)="stampa($event)">
-</eds-header-table>-->
+<eds-table [configuration]="configuration" [data]="data"
+           [columnsToShow]="columnsToShow"
+           (select)="stampa($event)"
+           (order)="order($event)"
+></eds-table>
 
 <!-- ICON -->
 <!--<eds-icon name="action-email"></eds-icon>-->
@@ -165,10 +163,11 @@
 <!-- INPUT DATE -->
 <!-- <eds-input-date [(ngModel)]="modelDate"
                 name="date"
-                (blur)="stampa('blur')"
-                [isReadOnly]="true">
+                [startValue]="modelDate"
+                (blur)="stampa('blur')">
 </eds-input-date>
-<button (click)="stampa(modelDate)">Stampa data</button> -->
+<button (click)="stampa(modelDate)">Stampa data</button>
+{{modelDate}} -->
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
@@ -252,8 +251,7 @@
               [(ngModel)]="modelTextarea"
               name="textarea"
               (blur)="stampa('blur')"
-              (focus)="stampa('focus')"
-              [isReadOnly]="true">
+              (focus)="stampa('focus')">
 </eds-textarea>
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
@@ -264,14 +262,13 @@
                [disabled]="false"
                [isMandatory]="false"
                [withIcon]="false"
-               [warning]="false"
+               [warning]="true"
                warningText="Warning"
                [isLoading]="false"
                [(ngModel)]="modelTextfield"
                name="textfield"
                (blur)="stampa('blur')"
-               (focus)="stampa('focus')"
-               [isReadOnly]="true">
+               (focus)="stampa('focus')">
 </eds-textfield>
 <button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
