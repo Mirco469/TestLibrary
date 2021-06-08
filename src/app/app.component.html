@@ -146,16 +146,19 @@
               [selectedItemInput]="selectedItemInput"
               [(ngModel)]="modelDropdown"
               name="dropdown"
-              (blur)="stampa('blur')">
+              (blur)="stampa('blur dropdown')"
+              [isAutocomplete]="true"
+              [createOptionOnEmptySet]="true"
+              (create)="stampa($event)">
 </eds-dropdown>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
 <!-- HEADER TABLE -->
-<eds-table [configuration]="configuration" [data]="data"
+<!-- <eds-table [configuration]="configuration" [data]="data"
            [columnsToShow]="columnsToShow"
            (select)="stampa($event)"
            (order)="order($event)"
-></eds-table>
+></eds-table> -->
 
 <!-- ICON -->
 <!--<eds-icon name="action-email"></eds-icon>-->
@@ -163,7 +166,6 @@
 <!-- INPUT DATE -->
 <!-- <eds-input-date [(ngModel)]="modelDate"
                 name="date"
-                [startValue]="modelDate"
                 (blur)="stampa('blur')">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button>
@@ -174,9 +176,8 @@
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
-                  [max_range] = 5
-                  (blur)="stampa('blur')"
-                  [disabled]="true">
+                  [max] = 5
+                  (blur)="stampa('blur')">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
@@ -184,7 +185,8 @@
 <!-- <input type="number"
        [(ngModel)]="modelNumber"
        name="number"/>
-<button (click)="stampa(modelNumber)">Stampa number</button> -->
+<button (click)="stampa(modelNumber)">Stampa number</button>
+<p>ngModel: {{modelNumber !== undefined ? modelNumber : 'undefined'}}</p> -->
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -256,13 +258,13 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<!-- <eds-textfield [id]="'id'"
+<eds-textfield [id]="'id'"
                [label]="'label'"
                placeholder="Placeholder"
                [disabled]="false"
                [isMandatory]="false"
                [withIcon]="false"
-               [warning]="true"
+               [warning]="false"
                warningText="Warning"
                [isLoading]="false"
                [(ngModel)]="modelTextfield"
@@ -270,7 +272,11 @@
                (blur)="stampa('blur')"
                (focus)="stampa('focus')">
 </eds-textfield>
-<button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
+<button (click)="stampa(modelTextfield)">Stampa textfield</button>
+
+<br><br>
+<p>Native html input text</p>
+<input type="text" name="textfield2" id="textfield2" [(ngModel)]="modelTextfieldNative">
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"

@@ -867,7 +867,7 @@ export class AppComponent implements OnInit {
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
 
   // INPUT NUMBER
-  modelNumber = 5;
+  modelNumber;
 
   // INPUT TIME
   modelTime = "00:01";
@@ -907,6 +907,7 @@ export class AppComponent implements OnInit {
 
   // TEXTFIELD
   modelTextfield;
+  modelTextfieldNative;
 
   // NAVIGATION
   currentCategory = {

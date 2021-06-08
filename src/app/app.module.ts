@@ -28,7 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DropdownModule,
     HeaderTableModule,
     IconModule,
-    InputDateModule,
     InputTimeModule,
     RadioButtonModule,
     StepperModule,
@@ -40,7 +39,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputNumberModule,
     AccordionModule,
     CardRowModule,
-    DrawerModule
+    DrawerModule,
+    InputDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
