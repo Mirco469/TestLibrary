@@ -759,6 +759,548 @@ export class AppComponent implements OnInit {
 
   columnsToShow: any = [];
 
+  // TABLE WITH OPTIONS
+  configuration2: any = {
+    "headers": [],
+    "rowOptions": []
+  };
+
+  data2: any = [];
+
+  columnsToShow2: any = [];
+
+  loadData() {
+    this.configuration2 = {
+      "headers": [
+          {
+              "id": "3288",
+              "displayName": "File Description"
+          },
+          {
+              "id": "3291",
+              "displayName": "Language"
+          },
+          {
+              "id": "3298",
+              "displayName": "Attachment Category"
+          },
+          {
+              "id": "3296",
+              "displayName": "Issue type"
+          },
+          {
+              "id": "3292",
+              "displayName": "Product Family"
+          },
+          {
+              "id": "3293",
+              "displayName": "Product Type"
+          },
+          {
+              "id": "3300",
+              "displayName": "Material Code"
+          },
+          {
+              "id": "3301",
+              "displayName": "Company"
+          }
+      ],
+      "rowOptions": [
+          {
+              "id": "EXPORT",
+              "icon": "general-document"
+          },
+          {
+              "id": "DELETE",
+              "icon": "action-trash"
+          }
+      ]
+    }
+
+    this.data2 = [
+      {
+          "3288": "CLONE - Verbale di collaudo e messa in servizio",
+          "3291": "Italian",
+          "3292": "CANCELLI MANUALI",
+          "3293": "CANCELLO BATTENTE VEICOLARE",
+          "3296": "New Installation",
+          "3298": "Verbale di collaudo e messa in servizio",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909466",
+          "name": "CLONE - Verbale di collaudo e messa in servizio"
+      },
+      {
+          "3288": "Verbale di collaudo e messa in servizio",
+          "3291": "Italian",
+          "3292": "CANCELLI MANUALI",
+          "3293": "CANCELLO BATTENTE VEICOLARE",
+          "3296": "New Installation",
+          "3298": "Verbale di collaudo e messa in servizio",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909465",
+          "name": "Verbale di collaudo e messa in servizio"
+      },
+      {
+          "3288": "Segnalazione cliente rischi",
+          "3291": "Italian",
+          "3292": "CANCELLI MANUALI",
+          "3293": "CANCELLO BATTENTE VEICOLARE",
+          "3296": "",
+          "3298": "Segnalazione cliente rischi",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909464",
+          "name": "Segnalazione cliente rischi"
+      },
+      {
+          "3288": "Verbale di collaudo e messa in servizio",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "TERMINALE",
+          "3296": "New Installation",
+          "3298": "Verbale di collaudo e messa in servizio",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909462",
+          "name": "Verbale di collaudo e messa in servizio"
+      },
+      {
+          "3288": "Verbale di collaudo e messa in servizio",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "LETTORE",
+          "3296": "New Installation",
+          "3298": "Verbale di collaudo e messa in servizio",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909461",
+          "name": "Verbale di collaudo e messa in servizio"
+      },
+      {
+          "3288": "Segnalazione cliente rischi",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "LETTORE",
+          "3296": "",
+          "3298": "Segnalazione cliente rischi",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909459",
+          "name": "Segnalazione cliente rischi"
+      },
+      {
+          "3288": "Segnalazione cliente rischi",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "TERMINALE",
+          "3296": "",
+          "3298": "Segnalazione cliente rischi",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909458",
+          "name": "Segnalazione cliente rischi"
+      },
+      {
+          "3288": "Analisi rischi primo intervento",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "TERMINALE",
+          "3296": "",
+          "3298": "Analisi rischi primo intervento",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909457",
+          "name": "Analisi rischi primo intervento"
+      },
+      {
+          "3288": "Analisi rischi primo intervento",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI PEDONALE",
+          "3293": "LETTORE",
+          "3296": "",
+          "3298": "Analisi rischi primo intervento",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909456",
+          "name": "Analisi rischi primo intervento"
+      },
+      {
+          "3288": "Verbale di collaudo e messa in servizio",
+          "3291": "Italian",
+          "3292": "CONTROLLO ACCESSI VEICOLARE",
+          "3293": "LETTORE",
+          "3296": "New Installation",
+          "3298": "Verbale di collaudo e messa in servizio",
+          "3300": "",
+          "3301": "FAAC S.p.A. (1100)",
+          "id": "909455",
+          "name": "Verbale di collaudo e messa in servizio"
+      }
+    ];
+
+    this.columnsToShow2 = [
+      "3288",
+      "3291",
+      "3298",
+      "3296",
+      "3292",
+      "3293",
+      "3300",
+      "3301"
+    ];
+  }
+
+  // TABLE WITH LONG HEADERS
+  configuration3: any = {
+    "headers": [],
+    "rowOptions": []
+  };
+
+  data3: any = [];
+
+  columnsToShow3: any = [];
+
+  loadData3() {
+    this.configuration3 = {
+      "headers": [
+          {
+              "id": "Status",
+              "displayName": "Status"
+          },
+          {
+              "id": "Key",
+              "displayName": "Tkt #"
+          },
+          {
+              "id": "OP_TKT_TYPE",
+              "displayName": "TKT Type"
+          },
+          {
+              "id": "OP_CUSTOMER",
+              "displayName": "Customer"
+          },
+          {
+              "id": "OP_SITE",
+              "displayName": "Site"
+          },
+          {
+              "id": "OP_ASSET",
+              "displayName": "Asset"
+          },
+          {
+              "id": "OP_PRIORITY",
+              "displayName": "Priority"
+          },
+          {
+              "id": "OP_SUPPLIER",
+              "displayName": "Supplier"
+          },
+          {
+              "id": "OP_REQUESTED_DATE",
+              "displayName": "Request Date"
+          },
+          {
+              "id": "OP_SALES_ORDER",
+              "displayName": "Sales Order #"
+          },
+          {
+              "id": "OP_SALES_ORDER_DATE",
+              "displayName": "Sales Order Date"
+          },
+          {
+              "id": "OP_SALES_ORDER_TOTAL",
+              "displayName": "Sales Order Total Amount"
+          },
+          {
+              "id": "OP_PURCHASE_ORDER",
+              "displayName": "Purchase Order #"
+          },
+          {
+              "id": "OP_PURCHASE_ORDER_DATE",
+              "displayName": "Purchase Order Date"
+          },
+          {
+              "id": "OP_PURCHASE_ORDER_TOTAL",
+              "displayName": "Purchase Order Total Amount"
+          },
+          {
+              "id": "OP_ASSET_STATUS_PRE",
+              "displayName": "Asset working before repair?"
+          },
+          {
+              "id": "OP_ASSET_STATUS_POST",
+              "displayName": "Asset working after repair?"
+          },
+          {
+              "id": "OP_RISK_ONSITE",
+              "displayName": "Risk found during repair?"
+          },
+          {
+              "id": "OP_EXECUTION_DATE",
+              "displayName": "Execution Date"
+          }
+      ],
+      "rowOptions": []
+    }
+
+    this.data3 = [
+      {
+          "idDetail": 308713,
+          "id": 308713,
+          "Status": "",
+          "Key": "",
+          "OP_TKT_TYPE": "",
+          "OP_CUSTOMER": "0000066213 ELMET SRL ",
+          "OP_SITE": "",
+          "OP_ASSET": "",
+          "OP_PRIORITY": "",
+          "OP_SUPPLIER": "0000102880 - ELETEC SNC DI TILLI E VICARI ",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308704,
+          "id": 308704,
+          "Status": "",
+          "Key": "",
+          "OP_TKT_TYPE": "",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "",
+          "OP_ASSET": "",
+          "OP_PRIORITY": "",
+          "OP_SUPPLIER": "0000118608 - SIGNORELLI GIAN LUIGI ",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308701,
+          "id": 308701,
+          "Status": "",
+          "Key": "",
+          "OP_TKT_TYPE": "",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "",
+          "OP_ASSET": "",
+          "OP_PRIORITY": "",
+          "OP_SUPPLIER": "0000128559 - AIR TEK TRONIK SRL ",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308698,
+          "id": 308698,
+          "Status": "",
+          "Key": "",
+          "OP_TKT_TYPE": "",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "",
+          "OP_ASSET": "",
+          "OP_PRIORITY": "",
+          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308679,
+          "id": 308679,
+          "Status": "Open",
+          "Key": "AAS-3124",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "514 - RICCI CASA CIANO D'ENZA (RE) ",
+          "OP_ASSET": "514/003 - Porta scorrevole a due ante con sfondamento -  -  - ",
+          "OP_PRIORITY": "3 - Normale",
+          "OP_SUPPLIER": "",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308678,
+          "id": 308678,
+          "Status": "Open",
+          "Key": "AAS-3123",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000066213 ELMET SRL ",
+          "OP_SITE": "11634 - G.C.I. - Auchan San Rocco Al Porto ",
+          "OP_ASSET": "11634/004 - Porta automatica dx esterna lato sud. Barcode: 01252514 -  - Barcode: 01252514 - Porta fronte ingresso ipermercato ",
+          "OP_PRIORITY": "3 - Normale",
+          "OP_SUPPLIER": "",
+          "OP_REQUESTED_DATE": "",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308674,
+          "id": 308674,
+          "Status": "Confirmed and Planned",
+          "Key": "AAS-3119",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+          "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
+          "OP_PRIORITY": "1 - Emergenza",
+          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+          "OP_REQUESTED_DATE": "2021-06-09",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308673,
+          "id": 308673,
+          "Status": "In Progress",
+          "Key": "AAS-3118",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+          "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
+          "OP_PRIORITY": "1 - Emergenza",
+          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+          "OP_REQUESTED_DATE": "2021-06-09",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "Yes",
+          "OP_ASSET_STATUS_POST": "Yes",
+          "OP_RISK_ONSITE": "No",
+          "OP_EXECUTION_DATE": "2021-06-09"
+      },
+      {
+          "idDetail": 308655,
+          "id": 308655,
+          "Status": "Confirmed and Planned",
+          "Key": "AAS-3100",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+          "OP_ASSET": "511/002 - Porta Automatica Scorrevole -  -  - Ingresso Laterale - Vista Interna SX ",
+          "OP_PRIORITY": "1 - Emergenza",
+          "OP_SUPPLIER": "0000120652 - EXCALIBUR SERVICE SRL ",
+          "OP_REQUESTED_DATE": "2021-06-09",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      },
+      {
+          "idDetail": 308637,
+          "id": 308637,
+          "Status": "Accepted By Supplier",
+          "Key": "AAS-3082",
+          "OP_TKT_TYPE": "Maintenance Ticket",
+          "OP_CUSTOMER": "0000066213 ELMET SRL ",
+          "OP_SITE": "14930 - Conforama - Aprilia (LT) ",
+          "OP_ASSET": "14930/005 - PORTA ALZATA RAPIDA -  -  - MONTACARICHI ",
+          "OP_PRIORITY": "3 - Normale",
+          "OP_SUPPLIER": "0000100859 - SEI   S.R.L. ",
+          "OP_REQUESTED_DATE": "2021-06-08",
+          "OP_SALES_ORDER": "",
+          "OP_SALES_ORDER_DATE": "",
+          "OP_SALES_ORDER_TOTAL": "",
+          "OP_PURCHASE_ORDER": "",
+          "OP_PURCHASE_ORDER_DATE": "",
+          "OP_PURCHASE_ORDER_TOTAL": "",
+          "OP_ASSET_STATUS_PRE": "",
+          "OP_ASSET_STATUS_POST": "",
+          "OP_RISK_ONSITE": "",
+          "OP_EXECUTION_DATE": ""
+      }
+    ];
+
+    this.columnsToShow3 = [
+      "Status",
+      "Key",
+      "OP_TKT_TYPE",
+      "OP_CUSTOMER",
+      "OP_SITE",
+      "OP_ASSET",
+      "OP_PRIORITY",
+      "OP_SUPPLIER",
+      "OP_REQUESTED_DATE",
+      "OP_SALES_ORDER",
+      "OP_SALES_ORDER_DATE",
+      "OP_SALES_ORDER_TOTAL",
+      "OP_PURCHASE_ORDER",
+      "OP_PURCHASE_ORDER_DATE",
+      "OP_PURCHASE_ORDER_TOTAL",
+      "OP_ASSET_STATUS_PRE",
+      "OP_ASSET_STATUS_POST",
+      "OP_RISK_ONSITE",
+      "OP_EXECUTION_DATE"
+    ];
+  }
+
   // SEARCH
   modelSearch;
 
@@ -857,7 +1399,6 @@ export class AppComponent implements OnInit {
       "disabled": true
     }
   ];
-  selectedItemInput;
   modelDropdown = {
     "id": 2,
     "label": "test2"

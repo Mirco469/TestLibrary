@@ -18,12 +18,6 @@
 </eds-search>
 <button (click)="stampa(modelSearch)">Stampa Search</button> -->
 
-<!-- TABLE -->
-<!--<eds-table [configuration]="configuration"
-           [data]="data"
-           (select)="stampa($event)"
-></eds-table>-->
-
 <!-- BREADCRUMB-->
 <!--<eds-breadcrumbs [breadcrumbs]="breadcrumbs"
                  (changeBreadcrumb)="stampa($event)">
@@ -143,14 +137,15 @@
               [width]="176"
               [isRemovable]="true"
               [isDisabled]="false"
-              [selectedItemInput]="selectedItemInput"
               [(ngModel)]="modelDropdown"
               name="dropdown"
               (blur)="stampa('blur dropdown')"
               [isAutocomplete]="true"
               [createOptionOnEmptySet]="true"
-              (create)="stampa($event)">
+              (create)="stampa($event)"
+              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'">
 </eds-dropdown>
+<p>{{modelDropdown | json}}</p>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
 <!-- HEADER TABLE -->
@@ -176,8 +171,9 @@
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
-                  [max] = 5
-                  (blur)="stampa('blur')">
+                  [max]="5"
+                  (blur)="stampa('blur')"
+                  [wholeNumbers]="true">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
@@ -258,7 +254,7 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<eds-textfield [id]="'id'"
+<!-- <eds-textfield [id]="'id'"
                [label]="'label'"
                placeholder="Placeholder"
                [disabled]="false"
@@ -276,7 +272,7 @@
 
 <br><br>
 <p>Native html input text</p>
-<input type="text" name="textfield2" id="textfield2" [(ngModel)]="modelTextfieldNative">
+<input type="text" name="textfield2" id="textfield2" [(ngModel)]="modelTextfieldNative"> -->
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"
@@ -339,7 +335,7 @@
 
 <!-- <eds-card-row icon="general-chip"
               title="Guide in alluminio"
-              optionIcon="arrow-forward"
+              optionIcon="action-more-3-dots"
               case="simple"
               [extraOptions]="extraOptionsRowCard"
               (optionPressed)="stampa($event)"
@@ -378,3 +374,19 @@
          pattern="[+ 0-9]{5}"/>
   <p>Form valid: {{myForm2.form.valid}}</p>
 </form> -->
+
+<!-- TABLE WITH OPTIONS -->
+<eds-table [configuration]="configuration2"
+          [data]="data2"
+          [columnsToShow]="columnsToShow2"
+          (rowClick)="stampa('row click')"
+          (optionClick)="stampa('options click')"
+></eds-table>
+<button (click)="loadData()">Load data</button>
+
+<!-- TABLE WITH LONG HEADERS -->
+<!-- <eds-table [configuration]="configuration3"
+           [data]="data3"
+           [columnsToShow]="columnsToShow3"
+></eds-table>
+<button (click)="loadData3()">Load data</button> -->
