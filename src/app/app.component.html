@@ -37,76 +37,6 @@
             [disabled]="true"
 ></eds-button> -->
 
-<!-- BUTTON TOOLTIP BUG -->
-<!-- <p>Questi bottoni sono in linea e hanno il tooltip</p>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-            [tooltipLabel]="'ciao'"
-></eds-button>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-            [tooltipLabel]="'ciao'"
-></eds-button>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-            [tooltipLabel]="'ciao'"
-></eds-button>
-
-<p>Questi bottoni non sono in linea perchè al primo è stato tolto il tooltip</p>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-></eds-button>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-            [tooltipLabel]="'ciao'"
-></eds-button>
-<eds-button id="idbutton"
-            label="ITA"
-            type="outline"
-            icon="language-it"
-            [disabled]="false"
-            [isDropdown]="false"
-            [dropdownOpen]="false"
-            actionsDropdown="undefined"
-            (action)="stampa($event)"
-            [tooltipLabel]="'ciao'"
-></eds-button> -->
-
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
               label="Checkbox Item"
@@ -167,7 +97,7 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<!-- <form #myForm3="ngForm">
+<form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
@@ -177,12 +107,7 @@
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
-<!-- <input type="number"
-       [(ngModel)]="modelNumber"
-       name="number"/>
-<button (click)="stampa(modelNumber)">Stampa number</button>
-<p>ngModel: {{modelNumber !== undefined ? modelNumber : 'undefined'}}</p> -->
+</form>
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -268,11 +193,7 @@
                (blur)="stampa('blur')"
                (focus)="stampa('focus')">
 </eds-textfield>
-<button (click)="stampa(modelTextfield)">Stampa textfield</button>
-
-<br><br>
-<p>Native html input text</p>
-<input type="text" name="textfield2" id="textfield2" [(ngModel)]="modelTextfieldNative"> -->
+<button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"
@@ -376,13 +297,13 @@
 </form> -->
 
 <!-- TABLE WITH OPTIONS -->
-<eds-table [configuration]="configuration2"
+<!-- <eds-table [configuration]="configuration2"
           [data]="data2"
           [columnsToShow]="columnsToShow2"
           (rowClick)="stampa('row click')"
           (optionClick)="stampa('options click')"
 ></eds-table>
-<button (click)="loadData()">Load data</button>
+<button (click)="loadData()">Load data</button> -->
 
 <!-- TABLE WITH LONG HEADERS -->
 <!-- <eds-table [configuration]="configuration3"

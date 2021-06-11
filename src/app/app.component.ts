@@ -1448,7 +1448,6 @@ export class AppComponent implements OnInit {
 
   // TEXTFIELD
   modelTextfield;
-  modelTextfieldNative;
 
   // NAVIGATION
   currentCategory = {
