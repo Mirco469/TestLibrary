@@ -1324,6 +1324,26 @@ export class AppComponent implements OnInit {
     }
   ]
 
+  // BUTTON
+  actionsDropdown = [
+    {
+      "id": 1,
+      "label": "Option 1"
+    },
+    {
+      "id": 2,
+      "label": "Option 2"
+    },
+    {
+      "id": 3,
+      "label": "Option 3"
+    },
+    {
+      "id": 4,
+      "label": "Option 4"
+    }
+  ];
+
   // CHECKBOX
   modelCheckbox = {checked: false, indeterminate: true};
 
@@ -1408,7 +1428,7 @@ export class AppComponent implements OnInit {
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
 
   // INPUT NUMBER
-  modelNumber;
+  modelNumber = 3;
 
   // INPUT TIME
   modelTime = "00:01";

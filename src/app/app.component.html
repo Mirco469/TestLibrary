@@ -1,8 +1,8 @@
 <!-- ACTION PAGER -->
-<!--<eds-action-pager [disabled]="false"
+<!-- <eds-action-pager [disabled]="false"
                   [items]="items"
                   (action)="stampa($event)"
-></eds-action-pager>-->
+></eds-action-pager> -->
 
 <!-- SEARCH -->
 <!-- <eds-search [withFilters]="true"
@@ -24,18 +24,17 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<!-- <eds-button id="idbutton"
-            label="ITA"
-            type="outline"
+<eds-button id="idbutton"
+            label="Prova bottone"
+            type="primary"
             icon="language-it"
             [disabled]="false"
-            [isDropdown]="false"
+            [isDropdown]="true"
             [dropdownOpen]="false"
-            actionsDropdown="undefined"
+            [actionsDropdown]="actionsDropdown"
             (action)="stampa($event)"
             [tooltipLabel]="'ciao'"
-            [disabled]="true"
-></eds-button> -->
+></eds-button>
 
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
@@ -97,17 +96,16 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<form #myForm3="ngForm">
+<!-- <form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
                   [max]="5"
-                  (blur)="stampa('blur')"
-                  [wholeNumbers]="true">
+                  (blur)="stampa('blur')">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form>
+</form> -->
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
