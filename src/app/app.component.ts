@@ -1467,7 +1467,7 @@ export class AppComponent implements OnInit {
   modelTextarea;
 
   // TEXTFIELD
-  modelTextfield;
+  modelTextfield = "prova textfield";
 
   // NAVIGATION
   currentCategory = {

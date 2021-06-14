@@ -24,7 +24,7 @@
 </eds-breadcrumbs>-->
 
 <!-- BUTTON -->
-<eds-button id="idbutton"
+<!-- <eds-button id="idbutton"
             label="Prova bottone"
             type="primary"
             icon="language-it"
@@ -34,7 +34,7 @@
             [actionsDropdown]="actionsDropdown"
             (action)="stampa($event)"
             [tooltipLabel]="'ciao'"
-></eds-button>
+></eds-button> -->
 
 <!-- CHECKBOX -->
 <!-- <eds-checkbox type="unselected"
@@ -309,3 +309,14 @@
            [columnsToShow]="columnsToShow3"
 ></eds-table>
 <button (click)="loadData3()">Load data</button> -->
+
+<!-- TEXFIELD NGMODEL ERROR -->
+<form #myForm4="ngForm">
+  <eds-textfield [id]="'id'"
+               [placeholder]="'Placeholder'"
+               [isReadOnly]="true">
+  </eds-textfield>
+  <button (click)="stampa(modelTextfield)">Stampa textfield</button>
+  <p>Input nativo</p>
+  <input type="text" placeholder="placheholder" readonly="true">
+</form>

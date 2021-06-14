@@ -6,7 +6,7 @@ import { NavigationModule, ActionPagerModule, SearchModule, TableModule, Breadcr
          SwitchModule, TagModule, TextareaModule, TextfieldModule, ToastModule, InputNumberModule,
          AccordionModule, CardRowModule, DrawerModule } from 'enhancers-design-system';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     NavigationModule,
     ActionPagerModule,
