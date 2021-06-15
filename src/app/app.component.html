@@ -177,21 +177,21 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<!-- <eds-textfield [id]="'id'"
-               [label]="'label'"
-               placeholder="Placeholder"
-               [disabled]="false"
-               [isMandatory]="false"
-               [withIcon]="false"
-               [warning]="false"
-               warningText="Warning"
-               [isLoading]="false"
-               [(ngModel)]="modelTextfield"
-               name="textfield"
-               (blur)="stampa('blur')"
-               (focus)="stampa('focus')">
-</eds-textfield>
-<button (click)="stampa(modelTextfield)">Stampa textfield</button> -->
+<form>
+  <eds-textfield id="id"
+                label="label"
+                placeholder="Placeholder"
+                [warning]="warning"
+                warningText="Warning"
+                [(ngModel)]="modelTextfield"
+                name="textfield"
+                (blur)="stampa('blur')"
+                (focus)="stampa('focus')">
+  </eds-textfield>
+  <p>Valore warning: {{warning}}</p>
+  <button (click)="setWarning()">Attiva warning</button>
+  <button (click)="stampa(modelTextfield)">Stampa textfield</button>
+</form>
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"
@@ -311,7 +311,7 @@
 <button (click)="loadData3()">Load data</button> -->
 
 <!-- TEXFIELD NGMODEL ERROR -->
-<form #myForm4="ngForm">
+<!-- <form #myForm4="ngForm">
   <eds-textfield [id]="'id'"
                [placeholder]="'Placeholder'"
                [isReadOnly]="true">
@@ -319,4 +319,4 @@
   <button (click)="stampa(modelTextfield)">Stampa textfield</button>
   <p>Input nativo</p>
   <input type="text" placeholder="placheholder" readonly="true">
-</form>
+</form> -->

@@ -1467,7 +1467,12 @@ export class AppComponent implements OnInit {
   modelTextarea;
 
   // TEXTFIELD
-  modelTextfield = "prova textfield";
+  modelTextfield = "Testo";
+  warning = false;
+
+  setWarning() {
+    this.warning = !this.warning;
+  }
 
   // NAVIGATION
   currentCategory = {
