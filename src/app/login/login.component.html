@@ -1,0 +1,25 @@
+<!-- OPP-877 -->
+<form [formGroup]="loginForm" name="loginForm" (ngSubmit)="loginForm.valid && onLogin()">
+  <eds-textfield label="Username"
+                 id="username"
+                 name="username"
+                 formControlName="username"
+                 placeholder="Inserisci username">
+  </eds-textfield>
+  <eds-textfield label="Password"
+                 id="password"
+                 name="password"
+                 [visibility]="false"
+                 formControlName="password"
+                 placeholder="Inserisci password"
+                 [withIcon]="true"
+                 [type]="'password'">
+  </eds-textfield>
+  <eds-button type="submit"
+              label="Accedi"
+              [disabled]="!loginForm.valid">
+  </eds-button>
+  <p>FORM DATA</p>
+  <p>Username: {{loginForm.controls.username.value}}</p>
+  <p>Password: {{loginForm.controls.password.value}}</p>
+</form>
