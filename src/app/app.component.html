@@ -81,7 +81,7 @@
 <!-- <eds-table [configuration]="configuration" [data]="data"
            [columnsToShow]="columnsToShow"
            (select)="stampa($event)"
-           (order)="order($event)"
+           (order)="order(true)"
 ></eds-table> -->
 
 <!-- ICON -->
@@ -100,10 +100,13 @@
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
+                  [min]="0"
                   [max]="5"
                   (blur)="stampa('blur')">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
+  <p>Min: 0</p>
+  <p>Max: 5</p>
   <p>Form valid: {{myForm3.form.valid}}</p>
 </form> -->
 
@@ -184,6 +187,7 @@
                 [warning]="warning"
                 warningText="Warning"
                 [(ngModel)]="modelTextfield"
+                [required]="true"
                 name="textfield"
                 (blur)="stampa('blur')"
                 (focus)="stampa('focus')">

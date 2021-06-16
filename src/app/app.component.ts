@@ -1467,7 +1467,7 @@ export class AppComponent implements OnInit {
   modelTextarea;
 
   // TEXTFIELD
-  modelTextfield = "Testo";
+  modelTextfield;
   warning = false;
 
   setWarning() {
@@ -1589,41 +1589,43 @@ export class AppComponent implements OnInit {
     }
   ];
 
-  order($event) {
+  order(reload = false) {
     setTimeout(
       () => {
-        this.configuration = {
-          "headers": [
-            {
-              "id": "707",
-              "displayName": "Customer code"
-            },
-            {
-              "id": "708",
-              "displayName": "Customer name"
-            },
-            {
-              "id": "712",
-              "displayName": "Address"
-            },
-            {
-              "id": "713",
-              "displayName": "City"
-            },
-            {
-              "id": "714",
-              "displayName": "ZIP code"
-            },
-            {
-              "id": "2259",
-              "displayName": "Country"
-            },
-            {
-              "id": "2260",
-              "displayName": "Province"
-            }
-          ],
-          "rowOptions": []
+        if(!reload) {
+          this.configuration = {
+            "headers": [
+              {
+                "id": "707",
+                "displayName": "Customer code"
+              },
+              {
+                "id": "708",
+                "displayName": "Customer name"
+              },
+              {
+                "id": "712",
+                "displayName": "Address"
+              },
+              {
+                "id": "713",
+                "displayName": "City"
+              },
+              {
+                "id": "714",
+                "displayName": "ZIP code"
+              },
+              {
+                "id": "2259",
+                "displayName": "Country"
+              },
+              {
+                "id": "2260",
+                "displayName": "Province"
+              }
+            ],
+            "rowOptions": []
+          }
         }
 
         this.data = [
