@@ -10,743 +10,158 @@ export class AppComponent implements OnInit {
   model;
 
   // ACTION PAGER
-  items = [
+  pageCapacities = [
     {
       "id": 1,
-      "label": "elemento"
+      "label": "25 risultati",
+      "value": "100"
     },
     {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
+      "id": 2,
+      "label": "50 risultati",
+      "value": "200"
     },
     {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
-    },
-    {
-      "id": 1,
-      "label": "elemento"
+      "id": 3,
+      "label": "75 risultati",
+      "value": "300"
     },
     {
-      "id": 1,
-      "label": "elemento"
+      "id": 4,
+      "label": "100 risultati",
+      "value": "400"
     }
+  ];
+
+  defaultPageCapacity = {
+    "id": 1,
+    "label": "25 risultati",
+    "value": "100"
+  };
+
+  defaultPage = {
+    "id": 1,
+    "label": "pag 1",
+    "value": "pag1"
+  };
+
+  pages = [
+    {
+      "id": 1,
+      "label": "pag 1",
+      "value": "pag1"
+    },
+    {
+      "id": 2,
+      "label": "pag 2",
+      "value": "pag2"
+    },
+    {
+      "id": 3,
+      "label": "pag 3",
+      "value": "pag3"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+    {
+      "id": 4,
+      "label": "pag 4",
+      "value": "pag4"
+    },
+
   ];
 
   // TABLE
