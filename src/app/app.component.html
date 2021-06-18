@@ -96,16 +96,17 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<!-- <form #myForm3="ngForm">
+<form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
                   [max]="5"
+                  [min]="0"
                   (blur)="stampa('blur')">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
+</form>
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -177,7 +178,7 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<form>
+<!-- <form>
   <eds-textfield id="id"
                 label="label"
                 placeholder="Placeholder"
@@ -191,7 +192,7 @@
   <p>Valore warning: {{warning}}</p>
   <button (click)="setWarning()">Attiva warning</button>
   <button (click)="stampa(modelTextfield)">Stampa textfield</button>
-</form>
+</form> -->
 
 <!-- TOAST -->
 <!-- <eds-toast [id]="'id'"
@@ -320,3 +321,9 @@
   <p>Input nativo</p>
   <input type="text" placeholder="placheholder" readonly="true">
 </form> -->
+
+<!-- TIMETABLE EDITOR-->
+<!-- <eds-timetable-editor [title]="'title'"
+                      [table]="timetableEditorNoTurns"
+                      (returnTable)="stampa($event)">
+</eds-timetable-editor> -->

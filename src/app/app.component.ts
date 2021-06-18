@@ -1744,4 +1744,150 @@ export class AppComponent implements OnInit {
     )
   }
 
+  // TIMETABLE EDITOR
+  timetableEditor = {
+    "times": [
+      {
+        "name": "LUN",
+        "description": "Custom Text",
+        "allDay": false,
+        "turns": [
+          {
+            "from": "00:00",
+            "to": "09:00"
+          },
+          {
+            "from": "09:30",
+            "to": "18:45"
+          }
+        ]
+      },
+      {
+        "name": "MAR",
+        "description": "",
+        "allDay": true,
+        "turns": [
+          {
+            "from": "00:30",
+            "to": "18:45"
+          }
+        ]
+      },
+      {
+        "name": "MER",
+        "description": "",
+        "allDay": false,
+        "turns": [
+          {
+            "from": "00:30",
+            "to": "08:45"
+          },
+          {
+            "from": "08:45",
+            "to": "12:45"
+          }
+        ]
+      },
+      {
+        "name": "GIO",
+        "description": "",
+        "allDay": true,
+        "turns": [
+          {
+            "from": "00:30",
+            "to": "18:45"
+          }
+        ]
+      },
+      {
+        "name": "VEN",
+        "description": "",
+        "allDay": true,
+        "turns": [
+          {
+            "from": "00:30",
+            "to": "18:45"
+          }
+        ]
+      },
+      {
+        "name": "SAB",
+        "description": "",
+        "allDay": true,
+        "turns": [
+          {
+            "from": "00:30",
+            "to": "18:45"
+          }
+        ]
+      },
+      {
+        "name": "DOM",
+        "description": "Festivo",
+        "inactive": true,
+        "turns": []
+      }
+    ]
+  };
+
+  timetableEditorNoTurns = {
+    "times": [
+        {
+            "name": "Monday",
+            "description": "",
+            "turns": [
+                {
+                    "from": "1",
+                    "to": "12"
+                },
+                {
+                    "from": "13",
+                    "to": "18"
+                }
+            ]
+        },
+        {
+            "name": "Tuesday",
+            "description": "",
+            "turns": [
+                {
+                    "from": "10",
+                    "to": "12"
+                }
+            ],
+            "allDay": true
+        },
+        {
+            "name": "Wednesday",
+            "description": "",
+            "turns": [],
+            inactive: true
+        },
+        {
+            "name": "Thursday",
+            "description": "",
+            "turns": [],
+            inactive: true
+        },
+        {
+            "name": "Friday",
+            "description": "",
+            "turns": [],
+            inactive: true
+        },
+        {
+            "name": "Saturday",
+            "description": "",
+            "turns": [],
+            inactive: true
+        },
+        {
+            "name": "Sunday",
+            "description": "",
+            "turns": [],
+            inactive: true
+        }
+    ]
+};
+
 }
