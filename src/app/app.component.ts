@@ -1305,4 +1305,50 @@ export class AppComponent implements OnInit {
     ]
 };
 
+trowserSteps = [
+  {
+    id: 1,
+    label: 'Costi Fissi'
+  },
+  {
+    id: 2,
+    label: 'Costi Manutenzione'
+  },
+  {
+    id: 3,
+    label: 'Preventivo Sostituzione'
+  },
+  {
+    id: 4,
+    label: 'Materiali Sostituiti'
+  },
+  {
+    id: 5,
+    label: 'Stato Impianto'
+  }
+];
+trowserListButtons = [
+  {
+    id: '1',
+    label: 'Annulla',
+    disabled: false,
+    type: 'ghost',
+    icon: ''
+  },
+  {
+    id: '2',
+    label: 'Salva come bozza e chiudi',
+    disabled: false,
+    type: 'outline',
+    icon: ''
+  },
+  {
+    id: '3',
+    label: 'Prosegui',
+    disabled: false,
+    type: 'primary',
+    icon: ''
+  }
+];
+
 }

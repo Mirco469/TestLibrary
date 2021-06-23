@@ -1,5 +1,5 @@
 <!-- ACTION PAGER -->
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <eds-action-pager [numberOfItems]="3456"
                   [pageCapacities]="pageCapacities"
                   [defaultPageCapacity]="defaultPageCapacity"
@@ -10,7 +10,7 @@
                   [defaultPage]="defaultPage"
                   string_di_toTranslate="di"
                   string_pagine_toTranslate="pagine"
-></eds-action-pager>
+></eds-action-pager> -->
 
 <!-- SEARCH -->
 <!-- <eds-search [withFilters]="true"
@@ -104,7 +104,7 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<form #myForm3="ngForm">
+<!-- <form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
@@ -114,7 +114,7 @@
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form>
+</form> -->
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -335,3 +335,6 @@
                       [table]="timetableEditorNoTurns"
                       (returnTable)="stampa($event)">
 </eds-timetable-editor> -->
+
+<eds-trowser [type]="'MultiStep'"
+              [listButtons]="trowserListButtons" [steps]="trowserSteps" title="test" stepChoiceEnabled="true" currentStep="1"></eds-trowser>

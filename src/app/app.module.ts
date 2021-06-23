@@ -4,7 +4,7 @@ import { NavigationModule, ActionPagerModule, SearchModule, TableModule, Breadcr
          ButtonModule, CheckboxModule, DropdownMultiModule, DropdownModule, HeaderTableModule,
          IconModule, InputDateModule, InputTimeModule, RadioButtonModule, StepperModule,
          SwitchModule, TagModule, TextareaModule, TextfieldModule, ToastModule, InputNumberModule,
-         AccordionModule, CardRowModule, DrawerModule, TimetableEditorModule } from 'enhancers-design-system';
+         AccordionModule, CardRowModule, DrawerModule, TimetableEditorModule, TrowserModule } from 'enhancers-design-system';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -42,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardRowModule,
     DrawerModule,
     InputDateModule,
-    TimetableEditorModule
+    TimetableEditorModule,
+    TrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
