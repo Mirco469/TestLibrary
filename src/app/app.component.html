@@ -336,7 +336,7 @@
                       (returnTable)="stampa($event)">
 </eds-timetable-editor> -->
 
-<eds-trowser [type]="'MultiStep'"
+<!-- <eds-trowser [type]="'MultiStep'"
               [listButtons]="trowserListButtons" [steps]="trowserSteps" title="test" stepChoiceEnabled="true" currentStep="1">
   <eds-table [configuration]="configuration" [data]="data"
              [columnsToShow]="columnsToShow"
@@ -344,4 +344,9 @@
              (order)="order($event)"
   ></eds-table>
 
-</eds-trowser>
+</eds-trowser> -->
+
+<eds-signature-input [(ngModel)]="signature"></eds-signature-input>
+
+<button (click)="signature=null">elimina firma</button>
+<p>{{signature}}</p>
