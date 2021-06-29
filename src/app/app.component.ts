@@ -1020,22 +1020,6 @@ export class AppComponent implements OnInit {
             {
               "id": "712",
               "displayName": "Address"
-            },
-            {
-              "id": "713",
-              "displayName": "City"
-            },
-            {
-              "id": "714",
-              "displayName": "ZIP code"
-            },
-            {
-              "id": "2259",
-              "displayName": "Country"
-            },
-            {
-              "id": "2260",
-              "displayName": "Province"
             }
           ],
           "rowOptions": []
