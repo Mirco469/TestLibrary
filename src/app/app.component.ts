@@ -920,6 +920,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadData();
     this.order(null);
 
     this.sections = [
