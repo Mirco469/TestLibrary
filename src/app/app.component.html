@@ -123,8 +123,7 @@
                 [disabled]="false"
                 [(ngModel)]="modelTime"
                 name="time"
-                (blur)="stampa('blur')"
-                [isReadOnly]="true">
+                (blur)="stampa('blur')">
 </eds-input-time>
 <button (click)="stampa(modelTime)">Stampa time</button> -->
 
@@ -332,10 +331,10 @@
 </form> -->
 
 <!-- TIMETABLE EDITOR-->
-<!-- <eds-timetable-editor [title]="'title'"
+<eds-timetable-editor [title]="'title'"
                       [table]="timetableEditorNoTurns"
                       (returnTable)="stampa($event)">
-</eds-timetable-editor> -->
+</eds-timetable-editor>
 
 <!-- <eds-trowser [type]="'MultiStep'"
               [listButtons]="trowserListButtons" [steps]="trowserSteps" title="test" stepChoiceEnabled="true" currentStep="1">
