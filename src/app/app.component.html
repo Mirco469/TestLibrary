@@ -1,5 +1,4 @@
 <!-- ACTION PAGER -->
-<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <eds-action-pager [numberOfItems]="3456"
                   [pageCapacities]="pageCapacities"
                   [defaultPageCapacity]="defaultPageCapacity"
@@ -10,7 +9,7 @@
                   [defaultPage]="defaultPage"
                   string_di_toTranslate="di"
                   string_pagine_toTranslate="pagine"
-></eds-action-pager> -->
+></eds-action-pager>
 
 <!-- SEARCH -->
 <!-- <eds-search [withFilters]="true"
@@ -60,7 +59,8 @@
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti"
-                    (blur)="stampa('blur')">
+                    (blur)="stampa('blur')"
+                    (dropdownOpened)="stampa('dropdown aperto')">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
@@ -80,7 +80,8 @@
               [isAutocomplete]="true"
               [createOptionOnEmptySet]="true"
               (create)="stampa($event)"
-              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'">
+              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'"
+              (dropdownOpened)="stampa('dropdown aperto')">
 </eds-dropdown>
 <p>{{modelDropdown | json}}</p>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
@@ -93,15 +94,15 @@
 ></eds-table> -->
 
 <!-- ICON -->
-<!--<eds-icon name="action-email"></eds-icon>-->
+<!-- <eds-icon name="filled-action-filter"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<!-- <eds-input-date [(ngModel)]="modelDate"
+<eds-input-date [(ngModel)]="modelDate"
                 name="date"
                 (blur)="stampa('blur')">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button>
-{{modelDate}} -->
+{{modelDate}}
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
@@ -304,13 +305,13 @@
 </form> -->
 
 <!-- TABLE WITH OPTIONS -->
-<!-- <eds-table [configuration]="configuration2"
+<eds-table [configuration]="configuration2"
           [data]="data2"
           [columnsToShow]="columnsToShow2"
           (rowClick)="stampa('row click')"
           (optionClick)="stampa('options click')"
 ></eds-table>
-<button (click)="loadData()">Load data</button> -->
+<button (click)="loadData()">Load data</button>
 
 <!-- TABLE WITH LONG HEADERS -->
 <!-- <eds-table [configuration]="configuration3"
@@ -346,7 +347,9 @@
 
 </eds-trowser> -->
 
-<eds-signature-input [(ngModel)]="signature"></eds-signature-input>
+<!-- <div>
+  <eds-signature-input [(ngModel)]="signature"></eds-signature-input>
+</div>
 
 <button (click)="signature=null">elimina firma</button>
-<p>{{signature}}</p>
+<p>{{signature}}</p> -->
