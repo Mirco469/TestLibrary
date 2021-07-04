@@ -1337,4 +1337,23 @@ trowserListButtons = [
 
   signature;
 
+  selectedItemInput = {id: 1, label: 'test1', disabled: false};
+  items = [
+    {
+      id: 1,
+      label: 'test1',
+      disabled: false
+    },
+    {
+      id: 2,
+      label: 'test2',
+      disabled: false
+    },
+    {
+      id: 3,
+      label: 'test3',
+      disabled: true
+    }
+  ]
+
 }
