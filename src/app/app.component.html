@@ -77,10 +77,12 @@
               [(ngModel)]="modelDropdown"
               name="dropdown"
               (blur)="stampa('blur dropdown')"
+              (onSelectItem)="stampa($event)"
               [isAutocomplete]="true"
               [createOptionOnEmptySet]="true"
               (create)="stampa($event)"
-              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'">
+              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'"
+              (dropdownOpened)="stampa('aperto')">
 </eds-dropdown>
 <p>{{modelDropdown | json}}</p>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
@@ -406,7 +408,7 @@
 </div> -->
 
 <!-- BUTTON DISABLED IN FORM BUG -->
-<p>Eds-button non funzionante nel form</p>
+<!-- <p>Eds-button non funzionante nel form</p>
 <form (submit)="submitform()">
   <eds-button id="idbutton"
       label="Prova bottone"
@@ -422,4 +424,14 @@
   <button id="idbutton"
       type="submit"
       [disabled]="true">Prova bottone</button>
-</form>
+</form> -->
+
+<!-- INPUT NUMBER AS STRING BUG -->
+<eds-input-number
+                  [(ngModel)]="modelNumberAsString"
+                  name="number"
+                  (blur)="stampa('blur')">
+</eds-input-number>
+
+<input type="number"  [(ngModel)]="modelNumberAsString" [ngModelOptions]="{standalone: true}">
+
