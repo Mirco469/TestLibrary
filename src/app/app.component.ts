@@ -1392,4 +1392,8 @@ trowserListButtons = [
       children: []
     }
   ]
+
+  submitform() {
+    alert('form submit')
+  }
 }

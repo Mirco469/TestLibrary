@@ -260,14 +260,13 @@
 
 </eds-accordion> -->
 
-
 <!-- <eds-card-row icon="general-chip"
               title="Guide in alluminio"
               optionIcon="action-more-3-dots"
               case="simple"
               [extraOptions]="extraOptionsRowCard"
-              (optionPressed)="stampa($event)"
-              (pressed)="stampa($event)">
+              (optionPressed)="stampa('optionPressed')"
+              (pressed)="stampa('pressed')">
 </eds-card-row> -->
 
 <!-- DRAWER -->
@@ -371,11 +370,10 @@
   </eds-accordion-list-line>
 </eds-accordion-list> -->
 
-<div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
+<!-- <div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
   <div style="display: flex; flex: 1">
     <div style="display: flex; align-items: center">
       <eds-checkbox></eds-checkbox>
-      <!-- <div [style.visibility]="(hasChildren && showChildren) ? 'initial' : 'hidden'" class="line"></div> -->
     </div>
     <eds-header-table [displayName]="'Clienti'"></eds-header-table>
   </div>
@@ -388,14 +386,12 @@
 <div accordion>
   <eds-accordion-embedded>
     <eds-accordion-embedded-line label="Nome cliente">
-      <!-- Row with children -->
       <eds-accordion-embedded-line [label]="site.label" [id]="site.id" *ngFor="let site of sites" [checked]="site.checked">
         <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
           <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
           <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
         </div>
 
-        <!-- First row with no children -->
         <eds-accordion-embedded-line [label]="installation.label" [id]="installation.id" *ngFor="let installation of site.children" [checked]="installation.checked">
           <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
             {{installation.checked}}
@@ -407,4 +403,23 @@
       </eds-accordion-embedded-line>
     </eds-accordion-embedded-line>
   </eds-accordion-embedded>
-</div>
+</div> -->
+
+<!-- BUTTON DISABLED IN FORM BUG -->
+<p>Eds-button non funzionante nel form</p>
+<form (submit)="submitform()">
+  <eds-button id="idbutton"
+      label="Prova bottone"
+      type="submit"
+      icon="language-it"
+      [disabled]="true"
+      [isDropdown]="true"></eds-button>
+</form>
+
+
+<p>Button nativo funzionante con form</p>
+<form (submit)="submitform()">
+  <button id="idbutton"
+      type="submit"
+      [disabled]="true">Prova bottone</button>
+</form>
