@@ -1356,4 +1356,40 @@ trowserListButtons = [
     }
   ]
 
+  sites = [
+    {
+      id: 1,
+      label: 'Sede1',
+      checked: false,
+      children:  [
+        {
+          id: 1,
+          label: 'impianto1',
+          checked: false
+        },
+        {
+          id: 2,
+          label: 'impianto2',
+          checked: false
+        },
+        {
+          id: 3,
+          label: 'impianto3',
+          checked: false
+        }
+      ]
+    },
+    {
+      id: 2,
+      label: 'Sede2',
+      checked: false,
+      children : []
+    },
+    {
+      id: 3,
+      label: 'Sede3',
+      checked: false,
+      children: []
+    }
+  ]
 }

@@ -371,103 +371,40 @@
   </eds-accordion-list-line>
 </eds-accordion-list> -->
 
-<eds-accordion-container>
-  <div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
-    <div style="display: flex; flex: 1">
-      <div style="display: flex; align-items: center">
-        <eds-checkbox></eds-checkbox>
-        <!-- <div [style.visibility]="(hasChildren && showChildren) ? 'initial' : 'hidden'" class="line"></div> -->
-      </div>
-      <eds-header-table [displayName]="'Clienti'"></eds-header-table>
+<div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
+  <div style="display: flex; flex: 1">
+    <div style="display: flex; align-items: center">
+      <eds-checkbox></eds-checkbox>
+      <!-- <div [style.visibility]="(hasChildren && showChildren) ? 'initial' : 'hidden'" class="line"></div> -->
     </div>
-    <div style="display: flex; flex: 1; width: 100%; justify-content: space-between">
-      <eds-header-table [displayName]="'Man. programmata'"></eds-header-table>
-      <eds-header-table [displayName]="'Man. riparativa'"></eds-header-table>
-      <eds-header-table [displayName]="'Nuova installazione'"></eds-header-table>
-    </div>
+    <eds-header-table [displayName]="'Clienti'"></eds-header-table>
   </div>
-  <div accordion>
-    <eds-accordion-embedded>
-      <eds-accordion-embedded-line label="Nome cliente">
-        <!-- Row with children -->
-        <eds-accordion-embedded-line label="Nome sede">
+  <div style="display: flex; flex: 1; width: 100%; justify-content: space-between">
+    <eds-header-table [displayName]="'Man. programmata'"></eds-header-table>
+    <eds-header-table [displayName]="'Man. riparativa'"></eds-header-table>
+    <eds-header-table [displayName]="'Nuova installazione'"></eds-header-table>
+  </div>
+</div>
+<div accordion>
+  <eds-accordion-embedded>
+    <eds-accordion-embedded-line label="Nome cliente">
+      <!-- Row with children -->
+      <eds-accordion-embedded-line [label]="site.label" [id]="site.id" *ngFor="let site of sites" [checked]="site.checked">
+        <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+          <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+          <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+        </div>
+
+        <!-- First row with no children -->
+        <eds-accordion-embedded-line [label]="installation.label" [id]="installation.id" *ngFor="let installation of site.children" [checked]="installation.checked">
           <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+            {{installation.checked}}
+            <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem" (click)="installation.checked = true"></eds-dropdown>
             <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
             <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
           </div>
-
-          <!-- First row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <!-- Second row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
         </eds-accordion-embedded-line>
       </eds-accordion-embedded-line>
-      <eds-accordion-embedded-line label="Nome cliente">
-        <!-- Row with children -->
-        <eds-accordion-embedded-line label="Nome sede">
-          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-            <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-            <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-          </div>
-
-          <!-- First row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <!-- Second row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-        </eds-accordion-embedded-line>
-      </eds-accordion-embedded-line>
-    </eds-accordion-embedded>
-  </div>
-</eds-accordion-container>
+    </eds-accordion-embedded-line>
+  </eds-accordion-embedded>
+</div>
