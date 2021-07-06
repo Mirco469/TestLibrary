@@ -1398,4 +1398,5 @@ trowserListButtons = [
   }
 
   modelNumberAsString = "10";
+  modelNumberAsString2 = "10.00";
 }

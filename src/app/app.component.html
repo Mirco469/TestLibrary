@@ -435,3 +435,11 @@
 
 <input type="number"  [(ngModel)]="modelNumberAsString" [ngModelOptions]="{standalone: true}">
 
+<eds-input-number
+                  [(ngModel)]="modelNumberAsString2"
+                  name="number"
+                  (blur)="stampa('blur')">
+</eds-input-number>
+
+<input type="number"  [(ngModel)]="modelNumberAsString2" [ngModelOptions]="{standalone: true}">
+
