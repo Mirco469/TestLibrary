@@ -221,14 +221,16 @@ export class AppComponent implements OnInit {
           }
       ],
       "rowOptions": [
-          {
-              "id": "EXPORT",
-              "icon": "general-document"
-          },
-          {
-              "id": "DELETE",
-              "icon": "action-trash"
-          }
+        {
+            "id": "Visualizza in una nuova scheda",
+            "icon": "general-document",
+          hideInMore: true
+        },
+        {
+            "id": "Visualizza in una nuova pagina",
+            "icon": "action-trash",
+            hideInMore: true
+        }
       ]
     }
 
@@ -813,6 +815,10 @@ export class AppComponent implements OnInit {
     {
       "id": 9,
       "label": "Opzione 10"
+    },
+    {
+      "id": 10,
+      "label": "Opzione 11"
     }
   ];
 
@@ -834,10 +840,7 @@ export class AppComponent implements OnInit {
       "disabled": true
     }
   ];
-  modelDropdown = {
-    "id": 2,
-    "label": "test2"
-  };
+  modelDropdown;
 
   // INPUT DATE
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);

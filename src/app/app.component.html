@@ -60,31 +60,35 @@
                     (change)="stampa($event)"
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti"
-                    (blur)="stampa('blur')">
+                    (blur)="stampa('blur')"
+                    [disabled]="true">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
 <!-- DROPDOWN -->
-<!-- <eds-dropdown id="undefined"
-              [isAutocomplete]="false"
-              [items]="itemsDropdown"
-              label="Label"
-              [menuCollapsed]="true"
-              placeholder="Placeholder"
-              [width]="176"
-              [isRemovable]="true"
-              [isDisabled]="false"
-              [(ngModel)]="modelDropdown"
-              name="dropdown"
-              (blur)="stampa('blur dropdown')"
-              (onSelectItem)="stampa($event)"
-              [isAutocomplete]="true"
-              [createOptionOnEmptySet]="true"
-              (create)="stampa($event)"
-              [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'"
-              (dropdownOpened)="stampa('aperto')">
-</eds-dropdown>
-<p>{{modelDropdown | json}}</p>
+<!-- <div>
+  <eds-dropdown id="undefined"
+                [isAutocomplete]="false"
+                [items]="itemsDropdown"
+                label="Label"
+                [menuCollapsed]="true"
+                placeholder="Placeholder"
+                [width]="176"
+                [isRemovable]="true"
+                [isDisabled]="false"
+                [(ngModel)]="modelDropdown"
+                name="dropdown"
+                (blur)="stampa('blur dropdown')"
+                (onSelectItem)="stampa($event)"
+                [isAutocomplete]="true"
+                [createOptionOnEmptySet]="true"
+                (create)="stampa($event)"
+                [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'"
+                (dropdownOpened)="stampa('aperto')"
+                [fullWidth]="true">
+  </eds-dropdown>
+</div>
+<p>NgModel: {{modelDropdown | json}}undefined</p>
 <button (click)="stampa(modelDropdown)">Stampa dropdown</button> -->
 
 <!-- HEADER TABLE -->
@@ -305,13 +309,14 @@
 </form> -->
 
 <!-- TABLE WITH OPTIONS -->
-<!-- <eds-table [configuration]="configuration2"
+<p>More options not responsive  (click load data first):</p>
+<eds-table [configuration]="configuration2"
           [data]="data2"
           [columnsToShow]="columnsToShow2"
           (rowClick)="stampa('row click')"
           (optionClick)="stampa('options click')"
 ></eds-table>
-<button (click)="loadData()">Load data</button> -->
+<button (click)="loadData()">Load data</button>
 
 <!-- TABLE WITH LONG HEADERS -->
 <!-- <eds-table [configuration]="configuration3"
@@ -427,7 +432,7 @@
 </form> -->
 
 <!-- INPUT NUMBER AS STRING BUG -->
-<eds-input-number
+<!-- <eds-input-number
                   [(ngModel)]="modelNumberAsString"
                   name="number"
                   (blur)="stampa('blur')">
@@ -441,5 +446,5 @@
                   (blur)="stampa('blur')">
 </eds-input-number>
 
-<input type="number"  [(ngModel)]="modelNumberAsString2" [ngModelOptions]="{standalone: true}">
+<input type="number"  [(ngModel)]="modelNumberAsString2" [ngModelOptions]="{standalone: true}"> -->
 
