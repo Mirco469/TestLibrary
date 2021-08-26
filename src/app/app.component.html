@@ -61,31 +61,20 @@
                     [(ngModel)]="modelMulti"
                     name="dropdownmulti"
                     (blur)="stampa('blur')"
-                    [disabled]="true">
+                    [isReadOnly]="true">
 </eds-dropdown-multi>
 <button (click)="stampa(modelMulti)">Stampa dropdown</button> -->
 
 <!-- DROPDOWN -->
 <!-- <div>
   <eds-dropdown id="undefined"
-                [isAutocomplete]="false"
                 [items]="itemsDropdown"
                 label="Label"
-                [menuCollapsed]="true"
                 placeholder="Placeholder"
-                [width]="176"
-                [isRemovable]="true"
-                [isDisabled]="false"
+                [isRemovable]="false"
+                [disabled]="false"
                 [(ngModel)]="modelDropdown"
-                name="dropdown"
-                (blur)="stampa('blur dropdown')"
-                (onSelectItem)="stampa($event)"
-                [isAutocomplete]="true"
-                [createOptionOnEmptySet]="true"
-                (create)="stampa($event)"
-                [createOptionLabel]="'Aggiungi tradotto lalal alalal lalal'"
-                (dropdownOpened)="stampa('aperto')"
-                [fullWidth]="true">
+                name="dropdown">
   </eds-dropdown>
 </div>
 <p>NgModel: {{modelDropdown | json}}undefined</p>
@@ -110,17 +99,19 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<!-- <form #myForm3="ngForm">
+<form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
-                  [max]="5"
-                  [min]="0"
                   (blur)="stampa('blur')">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
+</form>
+
+<input type="number"
+       [(ngModel)]="nativeModelNumber"
+       name="number_nativo"/>
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -201,7 +192,8 @@
                 [(ngModel)]="modelTextfield"
                 name="textfield"
                 (blur)="stampa('blur')"
-                (focus)="stampa('focus')">
+                (focus)="stampa('focus')"
+                [isReadOnly]="true">
   </eds-textfield>
   <p>Valore warning: {{warning}}</p>
   <button (click)="setWarning()">Attiva warning</button>
@@ -309,14 +301,14 @@
 </form> -->
 
 <!-- TABLE WITH OPTIONS -->
-<p>More options not responsive  (click load data first):</p>
+<!-- <p>More options not responsive  (click load data first):</p>
 <eds-table [configuration]="configuration2"
           [data]="data2"
           [columnsToShow]="columnsToShow2"
           (rowClick)="stampa('row click')"
           (optionClick)="stampa('options click')"
 ></eds-table>
-<button (click)="loadData()">Load data</button>
+<button (click)="loadData()">Load data</button> -->
 
 <!-- TABLE WITH LONG HEADERS -->
 <!-- <eds-table [configuration]="configuration3"
@@ -448,3 +440,49 @@
 
 <input type="number"  [(ngModel)]="modelNumberAsString2" [ngModelOptions]="{standalone: true}"> -->
 
+<!-- ACCORDION TEMPLATE -->
+<!-- <div style="display:flex; margin: 0 45px 10px 42px">
+  <div style="flex: 1">
+    <eds-header-table [displayName]="'Operazioni'"></eds-header-table>
+  </div>
+  <div style="flex:1; display:flex;">
+    <div style="flex: 1; display: flex; align-items: center;">
+      <eds-checkbox [type]="'partial'"></eds-checkbox>
+      <eds-header-table [displayName]="'Operazione conforme'"></eds-header-table>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center;">
+      <eds-checkbox [type]="'selected'"></eds-checkbox>
+      <eds-header-table [displayName]="'Operazione eseguita'"></eds-header-table>
+    </div>
+    <div style="flex: 1; display: flex; align-items: center;">
+      <eds-checkbox [type]="'partial'"></eds-checkbox>
+      <eds-header-table [displayName]="'Conferma'"></eds-header-table>
+    </div>
+  </div>
+</div>
+
+<eds-accordion-template>
+  <h3 accordion-head-title>Nome del gruppo delle Tariffe</h3>
+  <div accordion-head-operations>
+    <eds-checkbox [label]="'Si'" [type]="'selected'"></eds-checkbox>
+    <eds-checkbox [label]="'Pericolo caduta massi e incendio doloso'" [type]="'selected'"></eds-checkbox>
+    <eds-checkbox [label]="'No'"></eds-checkbox>
+  </div>
+  <div accordion-body>
+    <div style="border-top: 1px solid grey; padding-top: 10px;">
+      <div style="margin-bottom: 20px; color: grey">APPROFONDIMENTI</div>
+      <div style="margin-bottom: 10px; color: grey">Descrizione</div>
+      Assenza di danneggiamenti, cricche, fratture...
+      <div style="margin-top: 20px; margin-bottom: 10px; color: grey">Eseguita</div>
+      08/06/2021
+    </div>
+    <div style="border-top: 1px solid grey; padding-top: 10px; margin-top: 30px;">
+      <div style="margin-bottom: 20px; color: grey">NOTE RISCHI</div>
+      <div style="margin-bottom: 10px; color: grey">Descrizione tipo rischio</div>
+    </div>
+  </div>
+</eds-accordion-template> -->
+
+
+<!-- <eds-button edsTooltip="Testo tooltip" placement="top" [label]="'Hover me to show a Tooltip!'" style="margin: 100px;"></eds-button>
+ -->
