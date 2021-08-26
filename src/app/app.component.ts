@@ -846,7 +846,8 @@ export class AppComponent implements OnInit {
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
 
   // INPUT NUMBER
-  modelNumber = 3;
+  modelNumber = "45.10";
+  nativeModelNumber = "45.10";
 
   // INPUT TIME
   modelTime = "00:01";
@@ -1402,4 +1403,25 @@ trowserListButtons = [
 
   modelNumberAsString = "10";
   modelNumberAsString2 = "10.00";
+
+  CardRowIcon: 'general-document';
+  CardRowTitle: 'Nome di un allegato';
+  CardRowOptionIcon: 'arrow-forward';
+  CardRowExtraOptions: [
+    {
+      id: 'option@1',
+      icon: 'action-close',
+      disabled: true
+    },
+    {
+      id: 'option@2',
+      icon: 'action-cog',
+      disabled: false
+    },
+    {
+      id: 'option@3',
+      icon: 'action-edit',
+      disabled: false
+    }
+  ]
 }
