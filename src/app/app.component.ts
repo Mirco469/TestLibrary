@@ -1424,4 +1424,263 @@ trowserListButtons = [
       disabled: false
     }
   ]
+
+  /* Radio button BUG */
+  group = {
+    customFields: [
+      {
+         "key":"OP_ASSET_STATUS_PRE",
+         "objectTypeId":0,
+         "visibilityRules":[
+
+         ],
+         "groupId":3,
+         "add":false,
+         "hMin":false,
+         "signature":false,
+         "asDetail":false,
+         "fileMngmt":false,
+         "enableInlineEdit":false,
+         "customField":{
+            "id":"customfield_22614",
+            "key":"OP_ASSET_STATUS_PRE",
+            "multiple":false,
+            "componentType":"select",
+            "required":false,
+            "layout":{
+               "defaultLabel":"Impianto funzionante prima dell'intervento?",
+               "readOnly":false,
+               "size":4,
+               "right":0,
+               "left":0,
+               "index":440,
+               "labelPosition":"top",
+               "objectTypeId":[
+
+               ],
+               "visibilityRules":[
+                  {
+                     "3":{
+                        "view":true,
+                        "edit":true
+                     },
+                     "type":"STATUS",
+                     "viewVisibility":true,
+                     "editVisibility":true,
+                     "userProfile":"default"
+                  }
+               ],
+               "hasCustomerTotal":false,
+               "hasSupplierTotal":false,
+               "isKeyAttribute":false,
+               "visibleOnLoad":true,
+               "editOnLoad":true,
+               "componentType":"select",
+               "label":"Impianto funzionante prima dell'intervento?"
+            },
+            "attributesToShow":"",
+            "orderIndex":440,
+            "values":[
+               {
+                  "children":null,
+                  "id":"23262",
+                  "label":"Si",
+                  "value":"Yes"
+               },
+               {
+                  "children":null,
+                  "id":"23263",
+                  "label":"No",
+                  "value":"No"
+               }
+            ],
+            "ngModel":{
+               "self":"http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23262",
+               "disabled":false,
+               "id":"23262",
+               "value":"Si",
+               "key":"Yes"
+            },
+            "mode":"edit",
+            "childs":[
+
+            ],
+            "hMin":false,
+            "signature":false,
+            "asDetail":false,
+            "translatedLabel":"Impianto funzionante prima dell'intervento?"
+         }
+      },
+      {
+         "key":"OP_ASSET_STATUS_POST",
+         "objectTypeId":0,
+         "visibilityRules":[
+
+         ],
+         "groupId":3,
+         "add":false,
+         "hMin":false,
+         "signature":false,
+         "asDetail":false,
+         "fileMngmt":false,
+         "enableInlineEdit":false,
+         "customField":{
+            "id":"customfield_22615",
+            "key":"OP_ASSET_STATUS_POST",
+            "multiple":false,
+            "componentType":"select",
+            "required":false,
+            "layout":{
+               "defaultLabel":"Impianto funzionante al termine dell'intervento?",
+               "readOnly":false,
+               "size":4,
+               "right":0,
+               "left":0,
+               "index":450,
+               "labelPosition":"top",
+               "objectTypeId":[
+
+               ],
+               "visibilityRules":[
+                  {
+                     "3":{
+                        "view":true,
+                        "edit":true
+                     },
+                     "type":"STATUS",
+                     "viewVisibility":true,
+                     "editVisibility":true,
+                     "userProfile":"default"
+                  }
+               ],
+               "hasCustomerTotal":false,
+               "hasSupplierTotal":false,
+               "isKeyAttribute":false,
+               "visibleOnLoad":true,
+               "editOnLoad":true,
+               "componentType":"select",
+               "label":"Impianto funzionante al termine dell'intervento?"
+            },
+            "attributesToShow":"",
+            "orderIndex":450,
+            "values":[
+               {
+                  "children":null,
+                  "id":"23264",
+                  "label":"Si",
+                  "value":"Yes"
+               },
+               {
+                  "children":null,
+                  "id":"23265",
+                  "label":"No",
+                  "value":"No"
+               }
+            ],
+            "ngModel":{
+               "self":"http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23265",
+               "disabled":false,
+               "id":"23265",
+               "value":"No",
+               "key":"No"
+            },
+            "mode":"edit",
+            "childs":[
+
+            ],
+            "hMin":false,
+            "signature":false,
+            "asDetail":false,
+            "translatedLabel":"Impianto funzionante al termine dell'intervento?"
+         }
+      },
+      {
+         "key":"OP_RISK_ONSITE",
+         "objectTypeId":0,
+         "visibilityRules":[
+
+         ],
+         "groupId":3,
+         "add":false,
+         "hMin":false,
+         "signature":false,
+         "asDetail":false,
+         "fileMngmt":false,
+         "enableInlineEdit":false,
+         "customField":{
+            "id":"customfield_22616",
+            "key":"OP_RISK_ONSITE",
+            "multiple":false,
+            "componentType":"select",
+            "required":false,
+            "layout":{
+               "defaultLabel":"Rilevato rischio sull'impianto?",
+               "readOnly":false,
+               "size":4,
+               "right":0,
+               "left":0,
+               "index":470,
+               "labelPosition":"top",
+               "objectTypeId":[
+
+               ],
+               "visibilityRules":[
+                  {
+                     "3":{
+                        "view":true,
+                        "edit":true
+                     },
+                     "type":"STATUS",
+                     "viewVisibility":true,
+                     "editVisibility":true,
+                     "userProfile":"default"
+                  }
+               ],
+               "hasCustomerTotal":false,
+               "hasSupplierTotal":false,
+               "isKeyAttribute":true,
+               "visibleOnLoad":true,
+               "editOnLoad":true,
+               "componentType":"select",
+               "label":"Rilevato rischio sull'impianto?"
+            },
+            "attributesToShow":"",
+            "orderIndex":470,
+            "values":[
+               {
+                  "children":null,
+                  "id":"23266",
+                  "label":"Si",
+                  "value":"Yes"
+               },
+               {
+                  "children":null,
+                  "id":"23267",
+                  "label":"No",
+                  "value":"No"
+               }
+            ],
+            "ngModel":null,
+            "mode":"edit",
+            "childs":[
+
+            ],
+            "hMin":false,
+            "signature":false,
+            "asDetail":false,
+            "translatedLabel":"Rilevato rischio sull'impianto?"
+         }
+      }
+   ]
+  }
+
+  assignRadioButtonValueFromSelect(field, values:any[], newValue) {
+    if ((field?.layout?.readOnly === true || (field?.isRequiredForGroup && field?.isRequiredForGroup.disabled === true) || !field?.layout.editOnLoad)) {
+      return;
+    }
+    const finalValue = values.find((ele) => {
+      return ele.value == newValue;
+    });
+    field['ngModel'] = {...finalValue, key: finalValue.value};
+  }
 }

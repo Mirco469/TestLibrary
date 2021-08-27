@@ -99,7 +99,7 @@
 {{modelDate}} -->
 
 <!-- INPUT NUMBER -->
-<form #myForm3="ngForm">
+<!-- <form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
@@ -111,7 +111,7 @@
 
 <input type="number"
        [(ngModel)]="nativeModelNumber"
-       name="number_nativo"/>
+       name="number_nativo"/> -->
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -486,3 +486,29 @@
 
 <!-- <eds-button edsTooltip="Testo tooltip" placement="top" [label]="'Hover me to show a Tooltip!'" style="margin: 100px;"></eds-button>
  -->
+
+<!-- Radio button BUG -->
+<div class="row ml-3">
+  <ng-container *ngFor="let field of group.customFields">
+
+    <eds-card *ngIf="field.customField.layout.visibleOnLoad" class="mb-3 section-card" style="width: 100%;">
+      <label [ngClass]="(field.customField?.layout?.readOnly || !field.customField?.layout?.editOnLoad) ? 'op-grey-labels': 'ml-3'">
+        {{field.customField.layout.label}}
+      </label>
+      <p>{{field.customField.ngModel|json}}</p>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let fieldValue of field.customField.values">
+          <eds-radio-button *ngIf="((!field.customField?.layout?.readOnly && field.customField?.layout?.editOnLoad) || field?.customField?.isRequiredForGroup?.disabled) else readonly"
+                            [ngModel]="field.customField.ngModel?.key"
+                            [value]="fieldValue?.label ? fieldValue?.value : fieldValue?.key"
+                            [label]="fieldValue?.label ? fieldValue?.label : fieldValue?.value"
+                            [type]= "'box'"
+                            [name]="field.customField?.id"
+                            [disabled]="field?.customField?.isRequiredForGroup?.disabled"
+                            (ngModelChange)="assignRadioButtonValueFromSelect(field.customField, field.customField.values, $event)">
+          </eds-radio-button>
+        </div>
+      </div>
+    </eds-card>
+  </ng-container>
+</div>
