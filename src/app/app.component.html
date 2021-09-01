@@ -122,7 +122,7 @@
                 (blur)="stampa('blur')"
                 [isReadOnly]="true">
 </eds-input-time>
-<button (click)="stampa(modelTime)">Stampa time</button> -->
+<button (click)="stampa(modelTime)">Stampa time</button>
 
 <!-- RADIO BUTTON -->
 <!-- <eds-radio-button [id]="'id1'"
@@ -487,28 +487,140 @@
 <!-- <eds-button edsTooltip="Testo tooltip" placement="top" [label]="'Hover me to show a Tooltip!'" style="margin: 100px;"></eds-button>
  -->
 
-<!-- Radio button BUG -->
-<div class="row ml-3">
-  <ng-container *ngFor="let field of group.customFields">
-
-    <eds-card *ngIf="field.customField.layout.visibleOnLoad" class="mb-3 section-card" style="width: 100%;">
-      <label [ngClass]="(field.customField?.layout?.readOnly || !field.customField?.layout?.editOnLoad) ? 'op-grey-labels': 'ml-3'">
-        {{field.customField.layout.label}}
-      </label>
-      <p>{{field.customField.ngModel|json}}</p>
-      <div class="row">
-        <div class="col-md-6" *ngFor="let fieldValue of field.customField.values">
-          <eds-radio-button *ngIf="((!field.customField?.layout?.readOnly && field.customField?.layout?.editOnLoad) || field?.customField?.isRequiredForGroup?.disabled) else readonly"
-                            [ngModel]="field.customField.ngModel?.key"
-                            [value]="fieldValue?.label ? fieldValue?.value : fieldValue?.key"
-                            [label]="fieldValue?.label ? fieldValue?.label : fieldValue?.value"
-                            [type]= "'box'"
-                            [name]="field.customField?.id"
-                            [disabled]="field?.customField?.isRequiredForGroup?.disabled"
-                            (ngModelChange)="assignRadioButtonValueFromSelect(field.customField, field.customField.values, $event)">
-          </eds-radio-button>
-        </div>
+<!-- Accordion Embedded Bug -->
+<div>
+  <div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
+    <div style="display: flex; flex: 1">
+      <div style="display: flex; align-items: center">
       </div>
-    </eds-card>
-  </ng-container>
+      <eds-header-table [displayName]="'Clienti'"></eds-header-table>
+    </div>
+    <div style="display: flex; flex: 1; width: 100%; justify-content: space-between">
+      <eds-header-table [displayName]="'Man. programmata'"></eds-header-table>
+      <eds-header-table [displayName]="'Man. riparativa'"></eds-header-table>
+      <eds-header-table [displayName]="'Nuova installazione'"></eds-header-table>
+    </div>
+  </div>
+  <div accordion>
+    <eds-accordion-embedded>
+      <eds-accordion-embedded-line label="Nome cliente">
+        <!-- Row with children -->
+        <eds-accordion-embedded-line label="Nome sede 1">
+          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+          </div>
+
+          <!-- First row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 1-1" [disabled]="disableCheckbox1">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <!-- Second row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 1-2" [disabled]="disableCheckbox2">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 1-3" [disabled]="disableCheckbox3">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 1-4" [disabled]="disableCheckbox4">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+        </eds-accordion-embedded-line>
+
+        <!-- Second Site -->
+        <eds-accordion-embedded-line label="Nome sede 2">
+          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+          </div>
+
+          <!-- First row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 2-1" [disabled]="disableCheckbox5">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <!-- Second row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 2-2" [disabled]="disableCheckbox6">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 2-3" [disabled]="disableCheckbox7">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 2-4" [disabled]="disableCheckbox8">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+        </eds-accordion-embedded-line>
+
+        <!-- Third site -->
+        <eds-accordion-embedded-line label="Nome sede 3">
+          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+          </div>
+
+          <!-- First row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 3-1" [disabled]="disableCheckbox9">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <!-- Second row with no children -->
+          <eds-accordion-embedded-line label="Nome impianto 3-2" [disabled]="disableCheckbox10">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 3-3" [disabled]="disableCheckbox11">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+          <eds-accordion-embedded-line label="Nome impianto 3-4" [disabled]="disableCheckbox12">
+            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
+              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
+            </div>
+          </eds-accordion-embedded-line>
+        </eds-accordion-embedded-line>
+      </eds-accordion-embedded-line>
+    </eds-accordion-embedded>
+  </div>
 </div>
