@@ -846,8 +846,8 @@ export class AppComponent implements OnInit {
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
 
   // INPUT NUMBER
-  modelNumber = "45.10";
-  nativeModelNumber = "45.10";
+  modelNumber = "2.00";
+  nativeModelNumber = "5.00";
 
   // INPUT TIME
   modelTime = "00:01";
@@ -1674,13 +1674,35 @@ trowserListButtons = [
    ]
   }
 
-  assignRadioButtonValueFromSelect(field, values:any[], newValue) {
-    if ((field?.layout?.readOnly === true || (field?.isRequiredForGroup && field?.isRequiredForGroup.disabled === true) || !field?.layout.editOnLoad)) {
-      return;
+  selectedItemInputAccordion = {id: 1, label: 'test1', disabled: false};
+  itemsAccordion = [
+    {
+      id: 1,
+      label: 'test1',
+      disabled: false
+    },
+    {
+      id: 2,
+      label: 'disabilita',
+      disabled: false
+    },
+    {
+      id: 3,
+      label: 'test3',
+      disabled: true
     }
-    const finalValue = values.find((ele) => {
-      return ele.value == newValue;
-    });
-    field['ngModel'] = {...finalValue, key: finalValue.value};
-  }
+  ]
+  disableCheckbox1 = '';
+  disableCheckbox2 = '';
+  disableCheckbox3 = '';
+  disableCheckbox4 = '';
+  disableCheckbox5 = '';
+  disableCheckbox6 = '';
+  disableCheckbox7 = '';
+  disableCheckbox8 = '';
+  disableCheckbox9 = '';
+  disableCheckbox10 = '';
+  disableCheckbox11 = '';
+  disableCheckbox12 = '';
+  disableCheckbox13 = '';
 }
