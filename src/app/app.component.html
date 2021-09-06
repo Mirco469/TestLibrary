@@ -93,10 +93,22 @@
 <!-- INPUT DATE -->
 <!-- <eds-input-date [(ngModel)]="modelDate"
                 name="date"
-                (blur)="stampa('blur')">
+                (blur)="stampa($event); stampa(modelDate)"
+                (focus)="stampa('focus')">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button>
 {{modelDate}} -->
+
+<!-- INPUT DATE RANGE -->
+<!-- <eds-input-date [(ngModel)]="modelDateRange"
+                name="date"
+                range="true"
+                (blur)="stampa('blur'); stampa(modelDateRange)"
+                (focus)="stampa('focus')">
+</eds-input-date>
+<button (click)="stampa(modelDateRange)">Stampa data</button>
+<p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
+<p>End date: {{modelDateRange && modelDateRange[1]}}</p> -->
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
@@ -503,116 +515,35 @@
   </div>
   <div accordion>
     <eds-accordion-embedded>
-      <eds-accordion-embedded-line label="Nome cliente" (check)="stampa('Parent'); stampa($event)">
-        <!-- Row with children -->
-        <eds-accordion-embedded-line label="Nome sede 1" (check)="stampa('Second level'); stampa($event)">
+      <eds-accordion-embedded-line label="Nome cliente" [checked]="checked0.check" (check)="checkEventParent($event, checked0)" (changesFromHierarchy)="checkEventParent($event, checked0)">
+        <eds-accordion-embedded-line label="Nome sede 1" [checked]="checked1.check" (check)="checkEvent($event, checked1)" (changesFromHierarchy)="checkEvent($event, checked1)">
           <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
           </div>
 
-          <!-- First row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 1-1" [disabled]="disableCheckbox1" (check)="stampa('Child'); stampa($event)">
+          <eds-accordion-embedded-line label="Nome impianto 1-1" [disabled]="disableCheckbox1" [checked]="checked2.check" (check)="checkEvent($event, checked2)" (changesFromHierarchy)="checkEvent($event, checked2)">
             <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
             </div>
           </eds-accordion-embedded-line>
-          <!-- Second row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 1-2" [disabled]="disableCheckbox2" (check)="stampa('Child'); stampa($event)">
+          <eds-accordion-embedded-line label="Nome impianto 1-2" [disabled]="disableCheckbox2" [checked]="checked3.check" (check)="checkEvent($event, checked3)" (changesFromHierarchy)="checkEvent($event, checked3)">
             <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
             </div>
           </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 1-3" [disabled]="disableCheckbox3" (check)="stampa('Child'); stampa($event)">
+          <eds-accordion-embedded-line label="Nome impianto 1-3" [disabled]="disableCheckbox3" [checked]="checked4.check" (check)="checkEvent($event, checked4)" (changesFromHierarchy)="checkEvent($event, checked4)">
             <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
             </div>
           </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 1-4" [disabled]="disableCheckbox4" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-        </eds-accordion-embedded-line>
-
-        <!-- Second Site -->
-        <eds-accordion-embedded-line label="Nome sede 2" (check)="stampa('Second level'); stampa($event)">
-          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-          </div>
-
-          <!-- First row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 2-1" [disabled]="disableCheckbox5" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <!-- Second row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 2-2" [disabled]="disableCheckbox6" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 2-3" [disabled]="disableCheckbox7" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 2-4" [disabled]="disableCheckbox8" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-        </eds-accordion-embedded-line>
-
-        <!-- Third site -->
-        <eds-accordion-embedded-line label="Nome sede 3" (check)="stampa('Second level'); stampa($event)">
-          <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-          </div>
-
-          <!-- First row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 3-1" [disabled]="disableCheckbox9" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <!-- Second row with no children -->
-          <eds-accordion-embedded-line label="Nome impianto 3-2" [disabled]="disableCheckbox10" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 3-3" [disabled]="disableCheckbox11" (check)="stampa('Child'); stampa($event)">
-            <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
-              <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput"></eds-dropdown>
-            </div>
-          </eds-accordion-embedded-line>
-          <eds-accordion-embedded-line label="Nome impianto 3-4" [disabled]="disableCheckbox12" (check)="stampa('Child'); stampa($event)">
+          <eds-accordion-embedded-line label="Nome impianto 1-4" [disabled]="disableCheckbox4" [checked]="checked5.check" (check)="checkEvent($event, checked5)" (changesFromHierarchy)="checkEvent($event, checked5)">
             <div accordion-inline style="display: flex; width: 100%; justify-content: flex-end; padding: 0 3rem">
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
               <eds-dropdown [items]="items" [selectedItemInput]="selectedItemInput" style="margin-right: 1rem"></eds-dropdown>
@@ -624,3 +555,4 @@
     </eds-accordion-embedded>
   </div>
 </div>
+
