@@ -844,6 +844,7 @@ export class AppComponent implements OnInit {
 
   // INPUT DATE
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
+  modelDateRange;
 
   // INPUT NUMBER
   modelNumber = "2.00";
@@ -924,6 +925,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.order(null);
 
     this.sections = [
@@ -1692,6 +1694,13 @@ trowserListButtons = [
       disabled: true
     }
   ]
+
+  checked0 = {check: true};
+  checked1 = {check: true};
+  checked2 = {check: true};
+  checked3 = {check: true};
+  checked4 = {check: true};
+  checked5 = {check: true};
   disableCheckbox1 = '';
   disableCheckbox2 = '';
   disableCheckbox3 = '';
@@ -1705,4 +1714,16 @@ trowserListButtons = [
   disableCheckbox11 = '';
   disableCheckbox12 = '';
   disableCheckbox13 = '';
+
+  checkEvent($event, checked) {
+    console.log($event);
+    checked.check = $event.checked;
+  }
+
+  checkEventParent($event, checked) {
+    setTimeout(() => {
+      console.log($event);
+      checked.check = $event.checked;
+    }, 2000);
+  }
 }
