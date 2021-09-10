@@ -843,7 +843,7 @@ export class AppComponent implements OnInit {
   modelDropdown;
 
   // INPUT DATE
-  modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
+  modelDate /* = new Date(2018, 11, 24, 10, 33, 30, 0) */;
   modelDateRange;
 
   // INPUT NUMBER

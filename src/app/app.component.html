@@ -91,16 +91,16 @@
 <!--<eds-icon name="action-email"></eds-icon>-->
 
 <!-- INPUT DATE -->
-<!-- <eds-input-date [(ngModel)]="modelDate"
+<eds-input-date [(ngModel)]="modelDate"
                 name="date"
-                (blur)="stampa($event); stampa(modelDate)"
+                (blur)="stampa('blur'); stampa(modelDate)"
                 (focus)="stampa('focus')">
 </eds-input-date>
 <button (click)="stampa(modelDate)">Stampa data</button>
-{{modelDate}} -->
+{{modelDate}}
 
 <!-- INPUT DATE RANGE -->
-<!-- <eds-input-date [(ngModel)]="modelDateRange"
+<eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
                 range="true"
                 (blur)="stampa('blur'); stampa(modelDateRange)"
@@ -108,7 +108,7 @@
 </eds-input-date>
 <button (click)="stampa(modelDateRange)">Stampa data</button>
 <p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
-<p>End date: {{modelDateRange && modelDateRange[1]}}</p> -->
+<p>End date: {{modelDateRange && modelDateRange[1]}}</p>
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
@@ -500,7 +500,7 @@
  -->
 
 <!-- Accordion Embedded Bug -->
-<div>
+<!-- <div>
   <div header-table style="display: flex; justify-content: space-between; padding: 0 2rem;">
     <div style="display: flex; flex: 1">
       <div style="display: flex; align-items: center">
@@ -554,5 +554,5 @@
       </eds-accordion-embedded-line>
     </eds-accordion-embedded>
   </div>
-</div>
+</div> -->
 
