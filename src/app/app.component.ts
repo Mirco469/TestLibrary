@@ -843,7 +843,7 @@ export class AppComponent implements OnInit {
   modelDropdown;
 
   // INPUT DATE
-  modelDate /* = new Date(2018, 11, 24, 10, 33, 30, 0) */;
+  modelDate = null/* = new Date(2018, 11, 24, 10, 33, 30, 0) */;
   modelDateRange;
 
   // INPUT NUMBER
@@ -1726,4 +1726,6 @@ trowserListButtons = [
       checked.check = $event.checked;
     }, 2000);
   }
+
+  modelCurrency = 10;
 }

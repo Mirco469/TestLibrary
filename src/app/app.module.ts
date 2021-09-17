@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { NavigationModule, ActionPagerModule, SearchModule, TableModule, BreadcrumbsModule,
          ButtonModule, CheckboxModule, DropdownMultiModule, DropdownModule, HeaderTableModule,
          IconModule, InputDateModule, InputTimeModule, RadioButtonModule, StepperModule,
@@ -49,7 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AccordionTemplateModule,
     TooltipModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'acaso' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

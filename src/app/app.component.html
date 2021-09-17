@@ -91,16 +91,20 @@
 <!--<eds-icon name="action-email"></eds-icon>-->
 
 <!-- INPUT DATE -->
-<eds-input-date [(ngModel)]="modelDate"
-                name="date"
-                (blur)="stampa('blur'); stampa(modelDate)"
-                (focus)="stampa('focus')">
-</eds-input-date>
-<button (click)="stampa(modelDate)">Stampa data</button>
-{{modelDate}}
+<form #myForm3="ngForm">
+  <eds-input-date [(ngModel)]="modelDate"
+                  name="date"
+                  (blur)="stampa('blur'); stampa(modelDate)"
+                  (focus)="stampa('focus')"
+                  required>
+  </eds-input-date>
+  <button (click)="stampa(modelDate)">Stampa data</button>
+  {{modelDate}}
+  <p>Form valid: {{myForm3.form.valid}}</p>
+</form>
 
 <!-- INPUT DATE RANGE -->
-<eds-input-date [(ngModel)]="modelDateRange"
+<!-- <eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
                 range="true"
                 (blur)="stampa('blur'); stampa(modelDateRange)"
@@ -108,20 +112,19 @@
 </eds-input-date>
 <button (click)="stampa(modelDateRange)">Stampa data</button>
 <p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
-<p>End date: {{modelDateRange && modelDateRange[1]}}</p>
+<p>End date: {{modelDateRange && modelDateRange[1]}}</p> -->
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
-                  (blur)="stampa('blur')">
+                  (blur)="stampa('blur'); stampa(modelNumber)">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form>
-
-<input type="number"
+</form> -->
+<!-- <input type="number"
        [(ngModel)]="nativeModelNumber"
        name="number_nativo"/> -->
 
@@ -131,10 +134,10 @@
                 [disabled]="false"
                 [(ngModel)]="modelTime"
                 name="time"
-                (blur)="stampa('blur')"
-                [isReadOnly]="true">
+                (blur)="stampa('blur')">
 </eds-input-time>
-<button (click)="stampa(modelTime)">Stampa time</button>
+<p>{{modelTime|json}}</p>
+<button (click)="stampa(modelTime)">Stampa time</button> -->
 
 <!-- RADIO BUTTON -->
 <!-- <eds-radio-button [id]="'id1'"
@@ -556,3 +559,10 @@
   </div>
 </div> -->
 
+<!-- Currency -->
+<!-- <eds-input-number
+                  [(ngModel)]="modelCurrency"
+                  name="currency"
+                  [hasCurrency]="true"
+                  (blur)="stampa('blur'); stampa(modelCurrency)">
+</eds-input-number> -->
