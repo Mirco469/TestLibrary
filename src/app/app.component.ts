@@ -845,6 +845,9 @@ export class AppComponent implements OnInit {
   // INPUT DATE
   modelDate = null/* = new Date(2018, 11, 24, 10, 33, 30, 0) */;
   modelDateRange;
+  modelTimeRange;
+  modelDatetime/* "2021-09-20T08:28:25.503Z" */;
+  modelDateTimeRange;
 
   // INPUT NUMBER
   modelNumber = "2.00";
