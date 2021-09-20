@@ -5,7 +5,7 @@ import { NavigationModule, ActionPagerModule, SearchModule, TableModule, Breadcr
          IconModule, InputDateModule, InputTimeModule, RadioButtonModule, StepperModule,
          SwitchModule, TagModule, TextareaModule, TextfieldModule, ToastModule, InputNumberModule,
          AccordionModule, CardRowModule, DrawerModule, TimetableEditorModule, TrowserModule, SignatureInputModule,
-         AccordionTemplateModule, TooltipModule } from 'enhancers-design-system';
+         AccordionTemplateModule, TooltipModule, InputDateTimeModule } from 'enhancers-design-system';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,9 +47,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TrowserModule,
     SignatureInputModule,
     AccordionTemplateModule,
-    TooltipModule
+    TooltipModule,
+    InputDateTimeModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'acaso' }],
+  providers: [{provide: LOCALE_ID, useValue: 'en-US' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
