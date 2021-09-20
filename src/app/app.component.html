@@ -126,7 +126,7 @@
 <p>{{modelTimeRange}}</p>
 
 <!-- INPUT DATE TIME -->
-<eds-input-date-time [ngModel]="modelDatetime"
+<eds-input-date-time [(ngModel)]="modelDatetime"
                      [isReadOnly]="false"
                      label="Label datetime"
                      (blur)="stampa('blur'); stampa(modelDatetime)"
@@ -135,7 +135,7 @@
 <p>{{modelDatetime}}</p>
 
 <!-- INPUT DATE TIME RANGE -->
-<eds-input-date-time [ngModel]="modelDateTimeRange"
+<eds-input-date-time [(ngModel)]="modelDateTimeRange"
                      [isReadOnly]="false"
                      label="Label datetime"
                      [range]="true"

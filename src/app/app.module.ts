@@ -50,7 +50,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TooltipModule,
     InputDateTimeModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'en-US' }],
+  providers: [{provide: LOCALE_ID, useValue: 'it-IT' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
