@@ -1,2 +1,5 @@
-
-
+.different-color {
+  ::ng-deep g path:nth-child(1) {
+    fill: green;
+   }
+}

@@ -41,127 +41,91 @@ export class AppComponent implements OnInit {
 
   defaultPage = {
     "id": 1,
-    "label": "pag 1",
-    "value": "pag1"
+    "label": "Pagina 1",
+    "value": 1
   };
 
   pages = [
     {
       "id": 1,
-      "label": "pag 1",
-      "value": "pag1"
+      "label": "Pagina 1",
+      "value": 1
     },
     {
       "id": 2,
-      "label": "pag 2",
-      "value": "pag2"
+      "label": "Pagina 2",
+      "value": 2
     },
     {
       "id": 3,
-      "label": "pag 3",
-      "value": "pag3"
+      "label": "Pagina 3",
+      "value": 3
     },
     {
       "id": 4,
-      "label": "pag 4",
+      "label": "Pagina 4",
       "value": "pag4"
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 5,
+      "label": "Pagina 5",
+      "value": 5
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 6,
+      "label": "Pagina 6",
+      "value": 6
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 7,
+      "label": "Pagina 7",
+      "value": 7
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 8,
+      "label": "Pagina 8",
+      "value": 8
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 9,
+      "label": "Pagina 9",
+      "value": 9
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 10,
+      "label": "Pagina 10",
+      "value": 10
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 11,
+      "label": "Pagina 11",
+      "value": 11
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 12,
+      "label": "Pagina 12",
+      "value": 12
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 13,
+      "label": "Pagina 13",
+      "value": 13
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 14,
+      "label": "Pagina 14",
+      "value": 14
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
+      "id": 15,
+      "label": "Pagina 15",
+      "value": 15
     },
     {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-    {
-      "id": 4,
-      "label": "pag 4",
-      "value": "pag4"
-    },
-
+      "id": 16,
+      "label": "Pagina 16",
+      "value": 16
+    }
   ];
 
   // TABLE
