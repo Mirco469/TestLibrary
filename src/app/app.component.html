@@ -1,5 +1,5 @@
 <!-- ACTION PAGER -->
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <eds-action-pager [numberOfItems]="3456"
                   [pageCapacities]="pageCapacities"
                   [defaultPageCapacity]="defaultPageCapacity"
@@ -12,7 +12,7 @@
                   string_pagine_toTranslate="pagine"
                   (page)="stampa($event)"
                   (capacity)="stampa($event)"
-></eds-action-pager>
+></eds-action-pager> -->
 
 <!-- SEARCH -->
 <!-- <eds-search [withFilters]="true"
@@ -106,6 +106,7 @@
 </form> -->
 
 <!-- INPUT DATE RANGE -->
+
 <!-- <eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
                 range="true"
@@ -137,14 +138,16 @@
 <p>{{modelDatetime}}</p> -->
 
 <!-- INPUT DATE TIME RANGE -->
-<!-- <eds-input-date-time [(ngModel)]="modelDateTimeRange"
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<eds-input-date-time [(ngModel)]="modelDateTimeRange"
                      [isReadOnly]="false"
                      label="Label datetime"
                      [range]="true"
                      (blur)="stampa('blur'); stampa(modelDateTimeRange)"
-                     (focus)="stampa('focus')">
+                     (focus)="stampa('focus')"
+                     style="margin-left: 100px;">
 </eds-input-date-time>
-<p>{{modelDateTimeRange}}</p> -->
+<p>{{modelDateTimeRange}}</p>
 
 <!-- INPUT NUMBER -->
 <!-- <form #myForm3="ngForm">
