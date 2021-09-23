@@ -854,7 +854,7 @@ export class AppComponent implements OnInit {
   modelTextarea;
 
   // TEXTFIELD
-  modelTextfield = "Testo";
+  modelTextfield = "Testo abbastanza lunghetto per test";
   warning = false;
 
   setWarning() {

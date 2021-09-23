@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~10.2.4",
     "@angular/platform-browser-dynamic": "~10.2.4",
     "@angular/router": "~10.2.4",
+    "@danielzotti/ng-input-number-i18n": "^1.0.1",
     "bootstrap": "^4.6.0",
     "iso-country-currency": "^0.5.3",
     "ngx-bootstrap": "^7.1.0",

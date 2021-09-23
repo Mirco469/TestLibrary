@@ -1,5 +1,5 @@
 <!-- ACTION PAGER -->
-<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <eds-action-pager [numberOfItems]="3456"
                   [pageCapacities]="pageCapacities"
                   [defaultPageCapacity]="defaultPageCapacity"
@@ -93,52 +93,55 @@
 <!-- <eds-icon name="filled-action-filter" class="different-color"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<!-- <form #myForm3="ngForm">
+<form #myForm3="ngForm">
   <eds-input-date [(ngModel)]="modelDate"
                   name="date"
                   (blur)="stampa('blur'); stampa(modelDate)"
                   (focus)="stampa('focus')"
-                  required>
+                  required
+                  style="margin-left: 100px;">
   </eds-input-date>
   <button (click)="stampa(modelDate)">Stampa data</button>
   {{modelDate}}
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
+</form>
 
 <!-- INPUT DATE RANGE -->
-
-<!-- <eds-input-date [(ngModel)]="modelDateRange"
+<eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
                 range="true"
                 (blur)="stampa('blur'); stampa(modelDateRange)"
-                (focus)="stampa('focus')">
+                (focus)="stampa('focus')"
+                style="margin-left: 100px;">
 </eds-input-date>
 <button (click)="stampa(modelDateRange)">Stampa data</button>
 <p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
-<p>End date: {{modelDateRange && modelDateRange[1]}}</p> -->
+<p>End date: {{modelDateRange && modelDateRange[1]}}</p>
 
 <!-- INPUT TIME RANGE -->
-<!-- <eds-input-time [(ngModel)]="modelTimeRange"
+<eds-input-time [(ngModel)]="modelTimeRange"
                 label="Time Range"
                 placeholder="Select time"
                 [isReadOnly]="false"
                 [range]="true"
                 (blur)="stampa('blur'); stampa(modelTimeRange)"
-                (focus)="stampa('focus')">
+                (focus)="stampa('focus')"
+                style="margin-left: 100px;">
 </eds-input-time>
-<p>{{modelTimeRange}}</p> -->
+<p>{{modelTimeRange}}</p>
 
 <!-- INPUT DATE TIME -->
 <!-- <eds-input-date-time [(ngModel)]="modelDatetime"
                      [isReadOnly]="false"
                      label="Label datetime"
                      (blur)="stampa('blur'); stampa(modelDatetime)"
-                     (focus)="stampa('focus')">
+                     (focus)="stampa('focus')"
+                     style="margin-left: 100px;">
 </eds-input-date-time>
 <p>{{modelDatetime}}</p> -->
 
 <!-- INPUT DATE TIME RANGE -->
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
 <eds-input-date-time [(ngModel)]="modelDateTimeRange"
                      [isReadOnly]="false"
                      label="Label datetime"
