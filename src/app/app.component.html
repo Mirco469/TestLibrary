@@ -22,11 +22,13 @@
             placeholder="Cerca..."
             (search)="stampa($event)"
             (startFilter)="stampa($event)"
-            [(ngModel)]="modelSearch"
+            [formControl]="searchInput"
             name="search"
-            (clear)="stampa('clear')">
+            (clear)="stampa('clear')"
+            [disabled]="true"
+            style="width: 400px; margin-top: 50px; margin-left: 50px;">
 </eds-search>
-<button (click)="stampa(modelSearch)">Stampa Search</button> -->
+<button (click)="stampa(searchInput.value)">Stampa Search</button> -->
 
 <!-- BREADCRUMB-->
 <!--<eds-breadcrumbs [breadcrumbs]="breadcrumbs"
@@ -93,47 +95,53 @@
 <!-- <eds-icon name="filled-action-filter" class="different-color"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<form #myForm3="ngForm">
+<!-- <br><br><br>
+<form #myForm3="ngForm" style="margin-left: 100px; width: 50px;">
   <eds-input-date [(ngModel)]="modelDate"
                   name="date"
+                  [isReadOnly]="true"
                   (blur)="stampa('blur'); stampa(modelDate)"
                   (focus)="stampa('focus')"
-                  required
-                  style="margin-left: 100px;">
+                  required>
   </eds-input-date>
   <button (click)="stampa(modelDate)">Stampa data</button>
   {{modelDate}}
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form>
+</form> -->
+
+<!-- <input placeholder="Datepicker" bsDatepicker #dp="bsDatepicker" [(ngModel)]="modelDate"
+           [disabled]="true"> -->
 
 <!-- INPUT DATE RANGE -->
-<eds-input-date [(ngModel)]="modelDateRange"
+<!-- <eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
                 range="true"
                 (blur)="stampa('blur'); stampa(modelDateRange)"
                 (focus)="stampa('focus')"
+                [isReadOnly]="true"
                 style="margin-left: 100px;">
 </eds-input-date>
 <button (click)="stampa(modelDateRange)">Stampa data</button>
 <p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
-<p>End date: {{modelDateRange && modelDateRange[1]}}</p>
+<p>End date: {{modelDateRange && modelDateRange[1]}}</p> -->
 
 <!-- INPUT TIME RANGE -->
-<eds-input-time [(ngModel)]="modelTimeRange"
+<!-- <eds-input-time [(ngModel)]="modelTimeRange"
                 label="Time Range"
                 placeholder="Select time"
-                [isReadOnly]="false"
+                [isReadOnly]="true"
                 [range]="true"
                 (blur)="stampa('blur'); stampa(modelTimeRange)"
                 (focus)="stampa('focus')"
                 style="margin-left: 100px;">
 </eds-input-time>
-<p>{{modelTimeRange}}</p>
+<p>{{modelTimeRange}}</p> -->
 
 <!-- INPUT DATE TIME -->
 <!-- <eds-input-date-time [(ngModel)]="modelDatetime"
                      [isReadOnly]="false"
                      label="Label datetime"
+                     [isReadOnly]="true"
                      (blur)="stampa('blur'); stampa(modelDatetime)"
                      (focus)="stampa('focus')"
                      style="margin-left: 100px;">
@@ -141,23 +149,25 @@
 <p>{{modelDatetime}}</p> -->
 
 <!-- INPUT DATE TIME RANGE -->
-<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
-<eds-input-date-time [(ngModel)]="modelDateTimeRange"
+<!-- <eds-input-date-time [(ngModel)]="modelDateTimeRange"
                      [isReadOnly]="false"
                      label="Label datetime"
                      [range]="true"
+                     [isReadOnly]="true"
                      (blur)="stampa('blur'); stampa(modelDateTimeRange)"
                      (focus)="stampa('focus')"
-                     style="margin-left: 100px;">
+                     style="margin-left: 100px; width: 100%;">
 </eds-input-date-time>
-<p>{{modelDateTimeRange}}</p>
+<p>{{modelDateTimeRange}}</p> -->
 
 <!-- INPUT NUMBER -->
-<!-- <form #myForm3="ngForm">
+<!-- <br><br><br>
+<form #myForm3="ngForm" style="width: 100px; margin-left: 100px;">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
-                  (blur)="stampa('blur'); stampa(modelNumber)">
+                  (blur)="stampa('blur'); stampa(modelNumber)"
+                  [isReadOnly]="true">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
@@ -236,7 +246,8 @@
 <button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
 
 <!-- TEXTFIELD -->
-<!-- <form>
+<!-- <br/><br/>
+<form>
   <eds-textfield id="id"
                 label="label"
                 placeholder="Placeholder"

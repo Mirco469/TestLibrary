@@ -9,6 +9,7 @@ import { NavigationModule, ActionPagerModule, SearchModule, TableModule, Breadcr
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -48,9 +49,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignatureInputModule,
     AccordionTemplateModule,
     TooltipModule,
-    InputDateTimeModule
+    InputDateTimeModule,
+    BsDatepickerModule.forRoot()
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'it-IT' }],
+  providers: [{provide: LOCALE_ID, useValue: 'en-US' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -684,6 +685,7 @@ export class AppComponent implements OnInit {
 
   // SEARCH
   modelSearch;
+  searchInput = new FormControl();
 
   // BREADCRUMB
   breadcrumbs = [
@@ -807,14 +809,23 @@ export class AppComponent implements OnInit {
   modelDropdown;
 
   // INPUT DATE
-  modelDate = null/* = new Date(2018, 11, 24, 10, 33, 30, 0) */;
-  modelDateRange;
-  modelTimeRange;
-  modelDatetime/* "2021-09-20T08:28:25.503Z" */;
-  modelDateTimeRange;
+  modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
+  modelDateRange = [
+    new Date(2018, 11, 24, 10, 33, 30, 0),
+    new Date()
+  ];
+  modelTimeRange = [
+    "15:02",
+    "17:04"
+  ];
+  modelDatetime= new Date(2018, 11, 24, 10, 33, 30, 0);
+  modelDateTimeRange = [
+    "2021-09-23T00:02:00.000Z",
+    "2021-10-20T02:04:00.000Z"
+  ];
 
   // INPUT NUMBER
-  modelNumber = "2.00";
+  modelNumber = 2000000;
   nativeModelNumber = "5.00";
 
   // INPUT TIME
