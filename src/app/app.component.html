@@ -75,10 +75,13 @@
                 [items]="itemsDropdown"
                 label="Label"
                 placeholder="Placeholder"
-                [isRemovable]="false"
+                [isRemovable]="true"
                 [disabled]="false"
+                [isAutocomplete]="true"
+                fieldToShow="testLabel"
                 [(ngModel)]="modelDropdown"
-                name="dropdown">
+                name="dropdown"
+                (removeElement)="stampa('Removed'); stampa($event)">
   </eds-dropdown>
 </div>
 <p>NgModel: {{modelDropdown | json}}undefined</p>
@@ -95,13 +98,15 @@
 <!-- <eds-icon name="filled-action-filter" class="different-color"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<!-- <br><br><br>
-<form #myForm3="ngForm" style="margin-left: 100px; width: 50px;">
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<form #myForm3="ngForm" style="margin-left: 0; width: 500px;">
   <eds-input-date [(ngModel)]="modelDate"
                   name="date"
-                  [isReadOnly]="true"
+                  [isReadOnly]="false"
                   (blur)="stampa('blur'); stampa(modelDate)"
                   (focus)="stampa('focus')"
+                  style="width: 100%;"
                   required>
   </eds-input-date>
   <button (click)="stampa(modelDate)">Stampa data</button>
@@ -118,8 +123,8 @@
                 range="true"
                 (blur)="stampa('blur'); stampa(modelDateRange)"
                 (focus)="stampa('focus')"
-                [isReadOnly]="true"
-                style="margin-left: 100px;">
+                [isReadOnly]="false"
+                style="margin-left: 100px; width: 500px;">
 </eds-input-date>
 <button (click)="stampa(modelDateRange)">Stampa data</button>
 <p>Start date: {{modelDateRange && modelDateRange[0]}}</p>
@@ -129,11 +134,11 @@
 <!-- <eds-input-time [(ngModel)]="modelTimeRange"
                 label="Time Range"
                 placeholder="Select time"
-                [isReadOnly]="true"
+                [isReadOnly]="false"
                 [range]="true"
                 (blur)="stampa('blur'); stampa(modelTimeRange)"
                 (focus)="stampa('focus')"
-                style="margin-left: 100px;">
+                style="margin-left: 100px; width: 500px;">
 </eds-input-time>
 <p>{{modelTimeRange}}</p> -->
 
@@ -141,10 +146,10 @@
 <!-- <eds-input-date-time [(ngModel)]="modelDatetime"
                      [isReadOnly]="false"
                      label="Label datetime"
-                     [isReadOnly]="true"
+                     [isReadOnly]="false"
                      (blur)="stampa('blur'); stampa(modelDatetime)"
                      (focus)="stampa('focus')"
-                     style="margin-left: 100px;">
+                     style="margin-left: 100px; width: 500px;">
 </eds-input-date-time>
 <p>{{modelDatetime}}</p> -->
 
@@ -153,26 +158,27 @@
                      [isReadOnly]="false"
                      label="Label datetime"
                      [range]="true"
-                     [isReadOnly]="true"
+                     [isReadOnly]="false"
                      (blur)="stampa('blur'); stampa(modelDateTimeRange)"
                      (focus)="stampa('focus')"
-                     style="margin-left: 100px; width: 100%;">
+                     style="margin-left: 100px; width: 500px;">
 </eds-input-date-time>
 <p>{{modelDateTimeRange}}</p> -->
 
 <!-- INPUT NUMBER -->
 <!-- <br><br><br>
-<form #myForm3="ngForm" style="width: 100px; margin-left: 100px;">
+<form #myForm3="ngForm" style="width: 500px; margin-left: 100px;">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
                   (blur)="stampa('blur'); stampa(modelNumber)"
-                  [isReadOnly]="true">
+                  [isReadOnly]="false"
+                  [wholeNumbers]="false">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
-<!-- <input type="number"
+</form>
+<input type="number"
        [(ngModel)]="nativeModelNumber"
        name="number_nativo"/> -->
 
@@ -240,10 +246,12 @@
               [warning]="false"
               [(ngModel)]="modelTextarea"
               name="textarea"
+              [isReadOnly]="false"
               (blur)="stampa('blur')"
               (focus)="stampa('focus')">
 </eds-textarea>
-<button (click)="stampa(modelTextarea)">Stampa textarea</button> -->
+<button (click)="stampa(modelTextarea)">Stampa textarea</button>
+<p>{{modelTextarea}}</p> -->
 
 <!-- TEXTFIELD -->
 <!-- <br/><br/>
@@ -257,7 +265,8 @@
                 name="textfield"
                 (blur)="stampa('blur')"
                 (focus)="stampa('focus')"
-                [isReadOnly]="true">
+                [isReadOnly]="true"
+                [disabled]="false">
   </eds-textfield>
   <p>Valore warning: {{warning}}</p>
   <button (click)="setWarning()">Attiva warning</button>
@@ -615,3 +624,28 @@
                   [hasCurrency]="true"
                   (blur)="stampa('blur'); stampa(modelCurrency)">
 </eds-input-number> -->
+
+<!-- TOOLTIP BUG -->
+<div style="margin: 200px;">
+  <eds-button type="primary"
+              icon="action-edit"
+              (action)="showFirstButton = !showFirstButton"
+              *ngIf="showFirstButton"
+              [edsTooltip]="'tooltip'"
+              placement="top">
+  </eds-button>
+  <eds-button type="primary"
+              icon="action-edit"
+              (action)="showFirstButton = !showFirstButton"
+              *ngIf="!showFirstButton"
+              [edsTooltip]="'tooltip'"
+              placement="top">
+  </eds-button>
+  <eds-button type="primary"
+              icon="action-edit"
+              (action)="showFirstButton = !showFirstButton"
+              *ngIf="!showFirstButton"
+              [edsTooltip]="'tooltip'"
+              placement="top">
+  </eds-button>
+</div>
