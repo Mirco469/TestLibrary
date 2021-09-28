@@ -793,17 +793,23 @@ export class AppComponent implements OnInit {
     {
       "id": 1,
       "label": "test1",
-      "disabled": false
+      "disabled": false,
+      "testLabel": "label test 1",
+      value: "value1"
     },
     {
       "id": 2,
       "label": "test2",
-      "disabled": false
+      "disabled": false,
+      "testLabel": "label test 2",
+      value: "value2"
     },
     {
       "id": 3,
       "label": "test3",
-      "disabled": true
+      "disabled": true,
+      "testLabel": "label test 3",
+      value: "value3"
     }
   ];
   modelDropdown;
@@ -862,10 +868,10 @@ export class AppComponent implements OnInit {
   modelSwitch;
 
   // TEXTAREA
-  modelTextarea;
+  modelTextarea = "del testo";
 
   // TEXTFIELD
-  modelTextfield = "Testo abbastanza lunghetto per test";
+  modelTextfield = "11590";
   warning = false;
 
   setWarning() {
@@ -1706,4 +1712,6 @@ trowserListButtons = [
   }
 
   modelCurrency = 10;
+
+  showFirstButton = true;
 }
