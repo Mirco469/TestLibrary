@@ -812,7 +812,13 @@ export class AppComponent implements OnInit {
       value: "value3"
     }
   ];
-  modelDropdown;
+  modelDropdown = {
+    "id": 2,
+    "label": "test2",
+    "disabled": false,
+    "testLabel": "label test 2",
+    value: "value2"
+  };
 
   // INPUT DATE
   modelDate = new Date(2018, 11, 24, 10, 33, 30, 0);
@@ -1714,4 +1720,36 @@ trowserListButtons = [
   modelCurrency = 10;
 
   showFirstButton = true;
+
+  /* TEXT DROPDOWN */
+  textDropdownItems = [
+    {
+      "id": 0,
+      "disabled": false,
+      "label": "Tutti i ticket",
+      "value": "allTickets",
+      "icon": "menu-ticket"
+    },
+    {
+      "id": 1,
+      "disabled": false,
+      "label": "Cat#1",
+      "value": "providers",
+      "icon": "menu-fornitori"
+    },
+    {
+      "id": 2,
+      "disabled": false,
+      "label": "Da pianificare",
+      "value": "plannable",
+      "icon": "general-calendar"
+    }
+  ];
+
+  someWork() {
+
+    setTimeout(() => {
+      this.showFirstButton = !this.showFirstButton;
+    }, 2000);
+  }
 }

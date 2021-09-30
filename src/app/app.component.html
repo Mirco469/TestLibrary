@@ -98,25 +98,26 @@
 <!-- <eds-icon name="filled-action-filter" class="different-color"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<form #myForm3="ngForm" style="margin-left: 0; width: 500px;">
-  <eds-input-date [(ngModel)]="modelDate"
-                  name="date"
-                  [isReadOnly]="false"
-                  (blur)="stampa('blur'); stampa(modelDate)"
-                  (focus)="stampa('focus')"
-                  style="width: 100%;"
-                  required>
-  </eds-input-date>
-  <button (click)="stampa(modelDate)">Stampa data</button>
-  {{modelDate}}
-  <p>Form valid: {{myForm3.form.valid}}</p>
-</form> -->
+<!-- <div style="overflow-y: auto;">
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <form #myForm3="ngForm" style="margin-left: 0; width: 500px;">
+    <eds-input-date [(ngModel)]="modelDate"
+                    name="date"
+                    [isReadOnly]="false"
+                    (blur)="stampa('blur'); stampa(modelDate)"
+                    (focus)="stampa('focus')"
+                    style="width: 100%;"
+                    required>
+    </eds-input-date>
+    <button (click)="stampa(modelDate)">Stampa data</button>
+    {{modelDate}}
+    <p>Form valid: {{myForm3.form.valid}}</p>
+  </form>
+</div> -->
 
-<!-- <input placeholder="Datepicker" bsDatepicker #dp="bsDatepicker" [(ngModel)]="modelDate"
-           [disabled]="true"> -->
-
+<!-- <input placeholder="Datepicker" bsDatepicker #dp="bsDatepicker" [(ngModel)]="modelDate" [bsConfig]="{ adaptivePosition: true }">
+ -->
 <!-- INPUT DATE RANGE -->
 <!-- <eds-input-date [(ngModel)]="modelDateRange"
                 name="date"
@@ -629,23 +630,32 @@
 <div style="margin: 200px;">
   <eds-button type="primary"
               icon="action-edit"
-              (action)="showFirstButton = !showFirstButton"
+              (action)="someWork()"
               *ngIf="showFirstButton"
               [edsTooltip]="'tooltip'"
-              placement="top">
+              placement="top"
+              style="margin-left: 20px;">
   </eds-button>
   <eds-button type="primary"
               icon="action-edit"
-              (action)="showFirstButton = !showFirstButton"
+              (action)="someWork()"
               *ngIf="!showFirstButton"
               [edsTooltip]="'tooltip'"
               placement="top">
   </eds-button>
   <eds-button type="primary"
               icon="action-edit"
-              (action)="showFirstButton = !showFirstButton"
+              (action)="someWork()"
               *ngIf="!showFirstButton"
               [edsTooltip]="'tooltip'"
               placement="top">
   </eds-button>
 </div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<!-- TEXT DROPDOWN -->
+<!-- <eds-text-dropdown
+  [items]="textDropdownItems"
+  (itemChange)="stampa($event)"
+></eds-text-dropdown> -->
