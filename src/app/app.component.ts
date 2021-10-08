@@ -152,173 +152,173 @@ export class AppComponent implements OnInit {
   loadData() {
     this.configuration2 = {
       "headers": [
-          {
-              "id": "3288",
-              "displayName": "File Description"
-          },
-          {
-              "id": "3291",
-              "displayName": "Language"
-          },
-          {
-              "id": "3298",
-              "displayName": "Attachment Category"
-          },
-          {
-              "id": "3296",
-              "displayName": "Issue type"
-          },
-          {
-              "id": "3292",
-              "displayName": "Product Family"
-          },
-          {
-              "id": "3293",
-              "displayName": "Product Type"
-          },
-          {
-              "id": "3300",
-              "displayName": "Material Code"
-          },
-          {
-              "id": "3301",
-              "displayName": "Company"
-          }
+        {
+          "id": "3288",
+          "displayName": "File Description"
+        },
+        {
+          "id": "3291",
+          "displayName": "Language"
+        },
+        {
+          "id": "3298",
+          "displayName": "Attachment Category"
+        },
+        {
+          "id": "3296",
+          "displayName": "Issue type"
+        },
+        {
+          "id": "3292",
+          "displayName": "Product Family"
+        },
+        {
+          "id": "3293",
+          "displayName": "Product Type"
+        },
+        {
+          "id": "3300",
+          "displayName": "Material Code"
+        },
+        {
+          "id": "3301",
+          "displayName": "Company"
+        }
       ],
       "rowOptions": [
         {
-            "id": "Visualizza in una nuova scheda",
-            "icon": "general-document",
+          "id": "Visualizza in una nuova scheda",
+          "icon": "general-document",
           hideInMore: true
         },
         {
-            "id": "Visualizza in una nuova pagina",
-            "icon": "action-trash",
-            hideInMore: true
+          "id": "Visualizza in una nuova pagina",
+          "icon": "action-trash",
+          hideInMore: true
         }
       ]
     }
 
     this.data2 = [
       {
-          "3288": "CLONE - Verbale di collaudo e messa in servizio",
-          "3291": "Italian",
-          "3292": "CANCELLI MANUALI",
-          "3293": "CANCELLO BATTENTE VEICOLARE",
-          "3296": "New Installation",
-          "3298": "Verbale di collaudo e messa in servizio",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909466",
-          "name": "CLONE - Verbale di collaudo e messa in servizio"
+        "3288": "CLONE - Verbale di collaudo e messa in servizio",
+        "3291": "Italian",
+        "3292": "CANCELLI MANUALI",
+        "3293": "CANCELLO BATTENTE VEICOLARE",
+        "3296": "New Installation",
+        "3298": "Verbale di collaudo e messa in servizio",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909466",
+        "name": "CLONE - Verbale di collaudo e messa in servizio"
       },
       {
-          "3288": "Verbale di collaudo e messa in servizio",
-          "3291": "Italian",
-          "3292": "CANCELLI MANUALI",
-          "3293": "CANCELLO BATTENTE VEICOLARE",
-          "3296": "New Installation",
-          "3298": "Verbale di collaudo e messa in servizio",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909465",
-          "name": "Verbale di collaudo e messa in servizio"
+        "3288": "Verbale di collaudo e messa in servizio",
+        "3291": "Italian",
+        "3292": "CANCELLI MANUALI",
+        "3293": "CANCELLO BATTENTE VEICOLARE",
+        "3296": "New Installation",
+        "3298": "Verbale di collaudo e messa in servizio",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909465",
+        "name": "Verbale di collaudo e messa in servizio"
       },
       {
-          "3288": "Segnalazione cliente rischi",
-          "3291": "Italian",
-          "3292": "CANCELLI MANUALI",
-          "3293": "CANCELLO BATTENTE VEICOLARE",
-          "3296": "",
-          "3298": "Segnalazione cliente rischi",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909464",
-          "name": "Segnalazione cliente rischi"
+        "3288": "Segnalazione cliente rischi",
+        "3291": "Italian",
+        "3292": "CANCELLI MANUALI",
+        "3293": "CANCELLO BATTENTE VEICOLARE",
+        "3296": "",
+        "3298": "Segnalazione cliente rischi",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909464",
+        "name": "Segnalazione cliente rischi"
       },
       {
-          "3288": "Verbale di collaudo e messa in servizio",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "TERMINALE",
-          "3296": "New Installation",
-          "3298": "Verbale di collaudo e messa in servizio",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909462",
-          "name": "Verbale di collaudo e messa in servizio"
+        "3288": "Verbale di collaudo e messa in servizio",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "TERMINALE",
+        "3296": "New Installation",
+        "3298": "Verbale di collaudo e messa in servizio",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909462",
+        "name": "Verbale di collaudo e messa in servizio"
       },
       {
-          "3288": "Verbale di collaudo e messa in servizio",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "LETTORE",
-          "3296": "New Installation",
-          "3298": "Verbale di collaudo e messa in servizio",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909461",
-          "name": "Verbale di collaudo e messa in servizio"
+        "3288": "Verbale di collaudo e messa in servizio",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "LETTORE",
+        "3296": "New Installation",
+        "3298": "Verbale di collaudo e messa in servizio",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909461",
+        "name": "Verbale di collaudo e messa in servizio"
       },
       {
-          "3288": "Segnalazione cliente rischi",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "LETTORE",
-          "3296": "",
-          "3298": "Segnalazione cliente rischi",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909459",
-          "name": "Segnalazione cliente rischi"
+        "3288": "Segnalazione cliente rischi",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "LETTORE",
+        "3296": "",
+        "3298": "Segnalazione cliente rischi",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909459",
+        "name": "Segnalazione cliente rischi"
       },
       {
-          "3288": "Segnalazione cliente rischi",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "TERMINALE",
-          "3296": "",
-          "3298": "Segnalazione cliente rischi",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909458",
-          "name": "Segnalazione cliente rischi"
+        "3288": "Segnalazione cliente rischi",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "TERMINALE",
+        "3296": "",
+        "3298": "Segnalazione cliente rischi",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909458",
+        "name": "Segnalazione cliente rischi"
       },
       {
-          "3288": "Analisi rischi primo intervento",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "TERMINALE",
-          "3296": "",
-          "3298": "Analisi rischi primo intervento",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909457",
-          "name": "Analisi rischi primo intervento"
+        "3288": "Analisi rischi primo intervento",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "TERMINALE",
+        "3296": "",
+        "3298": "Analisi rischi primo intervento",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909457",
+        "name": "Analisi rischi primo intervento"
       },
       {
-          "3288": "Analisi rischi primo intervento",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI PEDONALE",
-          "3293": "LETTORE",
-          "3296": "",
-          "3298": "Analisi rischi primo intervento",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909456",
-          "name": "Analisi rischi primo intervento"
+        "3288": "Analisi rischi primo intervento",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI PEDONALE",
+        "3293": "LETTORE",
+        "3296": "",
+        "3298": "Analisi rischi primo intervento",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909456",
+        "name": "Analisi rischi primo intervento"
       },
       {
-          "3288": "Verbale di collaudo e messa in servizio",
-          "3291": "Italian",
-          "3292": "CONTROLLO ACCESSI VEICOLARE",
-          "3293": "LETTORE",
-          "3296": "New Installation",
-          "3298": "Verbale di collaudo e messa in servizio",
-          "3300": "",
-          "3301": "FAAC S.p.A. (1100)",
-          "id": "909455",
-          "name": "Verbale di collaudo e messa in servizio"
+        "3288": "Verbale di collaudo e messa in servizio",
+        "3291": "Italian",
+        "3292": "CONTROLLO ACCESSI VEICOLARE",
+        "3293": "LETTORE",
+        "3296": "New Installation",
+        "3298": "Verbale di collaudo e messa in servizio",
+        "3300": "",
+        "3301": "FAAC S.p.A. (1100)",
+        "id": "909455",
+        "name": "Verbale di collaudo e messa in servizio"
       }
     ];
 
@@ -347,316 +347,316 @@ export class AppComponent implements OnInit {
   loadData3() {
     this.configuration3 = {
       "headers": [
-          {
-              "id": "Status",
-              "displayName": "Status"
-          },
-          {
-              "id": "Key",
-              "displayName": "Tkt #"
-          },
-          {
-              "id": "OP_TKT_TYPE",
-              "displayName": "TKT Type"
-          },
-          {
-              "id": "OP_CUSTOMER",
-              "displayName": "Customer"
-          },
-          {
-              "id": "OP_SITE",
-              "displayName": "Site"
-          },
-          {
-              "id": "OP_ASSET",
-              "displayName": "Asset"
-          },
-          {
-              "id": "OP_PRIORITY",
-              "displayName": "Priority"
-          },
-          {
-              "id": "OP_SUPPLIER",
-              "displayName": "Supplier"
-          },
-          {
-              "id": "OP_REQUESTED_DATE",
-              "displayName": "Request Date"
-          },
-          {
-              "id": "OP_SALES_ORDER",
-              "displayName": "Sales Order #"
-          },
-          {
-              "id": "OP_SALES_ORDER_DATE",
-              "displayName": "Sales Order Date"
-          },
-          {
-              "id": "OP_SALES_ORDER_TOTAL",
-              "displayName": "Sales Order Total Amount"
-          },
-          {
-              "id": "OP_PURCHASE_ORDER",
-              "displayName": "Purchase Order #"
-          },
-          {
-              "id": "OP_PURCHASE_ORDER_DATE",
-              "displayName": "Purchase Order Date"
-          },
-          {
-              "id": "OP_PURCHASE_ORDER_TOTAL",
-              "displayName": "Purchase Order Total Amount"
-          },
-          {
-              "id": "OP_ASSET_STATUS_PRE",
-              "displayName": "Asset working before repair?"
-          },
-          {
-              "id": "OP_ASSET_STATUS_POST",
-              "displayName": "Asset working after repair?"
-          },
-          {
-              "id": "OP_RISK_ONSITE",
-              "displayName": "Risk found during repair?"
-          },
-          {
-              "id": "OP_EXECUTION_DATE",
-              "displayName": "Execution Date"
-          }
+        {
+          "id": "Status",
+          "displayName": "Status"
+        },
+        {
+          "id": "Key",
+          "displayName": "Tkt #"
+        },
+        {
+          "id": "OP_TKT_TYPE",
+          "displayName": "TKT Type"
+        },
+        {
+          "id": "OP_CUSTOMER",
+          "displayName": "Customer"
+        },
+        {
+          "id": "OP_SITE",
+          "displayName": "Site"
+        },
+        {
+          "id": "OP_ASSET",
+          "displayName": "Asset"
+        },
+        {
+          "id": "OP_PRIORITY",
+          "displayName": "Priority"
+        },
+        {
+          "id": "OP_SUPPLIER",
+          "displayName": "Supplier"
+        },
+        {
+          "id": "OP_REQUESTED_DATE",
+          "displayName": "Request Date"
+        },
+        {
+          "id": "OP_SALES_ORDER",
+          "displayName": "Sales Order #"
+        },
+        {
+          "id": "OP_SALES_ORDER_DATE",
+          "displayName": "Sales Order Date"
+        },
+        {
+          "id": "OP_SALES_ORDER_TOTAL",
+          "displayName": "Sales Order Total Amount"
+        },
+        {
+          "id": "OP_PURCHASE_ORDER",
+          "displayName": "Purchase Order #"
+        },
+        {
+          "id": "OP_PURCHASE_ORDER_DATE",
+          "displayName": "Purchase Order Date"
+        },
+        {
+          "id": "OP_PURCHASE_ORDER_TOTAL",
+          "displayName": "Purchase Order Total Amount"
+        },
+        {
+          "id": "OP_ASSET_STATUS_PRE",
+          "displayName": "Asset working before repair?"
+        },
+        {
+          "id": "OP_ASSET_STATUS_POST",
+          "displayName": "Asset working after repair?"
+        },
+        {
+          "id": "OP_RISK_ONSITE",
+          "displayName": "Risk found during repair?"
+        },
+        {
+          "id": "OP_EXECUTION_DATE",
+          "displayName": "Execution Date"
+        }
       ],
       "rowOptions": []
     }
 
     this.data3 = [
       {
-          "idDetail": 308713,
-          "id": 308713,
-          "Status": "",
-          "Key": "",
-          "OP_TKT_TYPE": "",
-          "OP_CUSTOMER": "0000066213 ELMET SRL ",
-          "OP_SITE": "",
-          "OP_ASSET": "",
-          "OP_PRIORITY": "",
-          "OP_SUPPLIER": "0000102880 - ELETEC SNC DI TILLI E VICARI ",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308713,
+        "id": 308713,
+        "Status": "",
+        "Key": "",
+        "OP_TKT_TYPE": "",
+        "OP_CUSTOMER": "0000066213 ELMET SRL ",
+        "OP_SITE": "",
+        "OP_ASSET": "",
+        "OP_PRIORITY": "",
+        "OP_SUPPLIER": "0000102880 - ELETEC SNC DI TILLI E VICARI ",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308704,
-          "id": 308704,
-          "Status": "",
-          "Key": "",
-          "OP_TKT_TYPE": "",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "",
-          "OP_ASSET": "",
-          "OP_PRIORITY": "",
-          "OP_SUPPLIER": "0000118608 - SIGNORELLI GIAN LUIGI ",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308704,
+        "id": 308704,
+        "Status": "",
+        "Key": "",
+        "OP_TKT_TYPE": "",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "",
+        "OP_ASSET": "",
+        "OP_PRIORITY": "",
+        "OP_SUPPLIER": "0000118608 - SIGNORELLI GIAN LUIGI ",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308701,
-          "id": 308701,
-          "Status": "",
-          "Key": "",
-          "OP_TKT_TYPE": "",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "",
-          "OP_ASSET": "",
-          "OP_PRIORITY": "",
-          "OP_SUPPLIER": "0000128559 - AIR TEK TRONIK SRL ",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308701,
+        "id": 308701,
+        "Status": "",
+        "Key": "",
+        "OP_TKT_TYPE": "",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "",
+        "OP_ASSET": "",
+        "OP_PRIORITY": "",
+        "OP_SUPPLIER": "0000128559 - AIR TEK TRONIK SRL ",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308698,
-          "id": 308698,
-          "Status": "",
-          "Key": "",
-          "OP_TKT_TYPE": "",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "",
-          "OP_ASSET": "",
-          "OP_PRIORITY": "",
-          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308698,
+        "id": 308698,
+        "Status": "",
+        "Key": "",
+        "OP_TKT_TYPE": "",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "",
+        "OP_ASSET": "",
+        "OP_PRIORITY": "",
+        "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308679,
-          "id": 308679,
-          "Status": "Open",
-          "Key": "AAS-3124",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "514 - RICCI CASA CIANO D'ENZA (RE) ",
-          "OP_ASSET": "514/003 - Porta scorrevole a due ante con sfondamento -  -  - ",
-          "OP_PRIORITY": "3 - Normale",
-          "OP_SUPPLIER": "",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308679,
+        "id": 308679,
+        "Status": "Open",
+        "Key": "AAS-3124",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "514 - RICCI CASA CIANO D'ENZA (RE) ",
+        "OP_ASSET": "514/003 - Porta scorrevole a due ante con sfondamento -  -  - ",
+        "OP_PRIORITY": "3 - Normale",
+        "OP_SUPPLIER": "",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308678,
-          "id": 308678,
-          "Status": "Open",
-          "Key": "AAS-3123",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000066213 ELMET SRL ",
-          "OP_SITE": "11634 - G.C.I. - Auchan San Rocco Al Porto ",
-          "OP_ASSET": "11634/004 - Porta automatica dx esterna lato sud. Barcode: 01252514 -  - Barcode: 01252514 - Porta fronte ingresso ipermercato ",
-          "OP_PRIORITY": "3 - Normale",
-          "OP_SUPPLIER": "",
-          "OP_REQUESTED_DATE": "",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308678,
+        "id": 308678,
+        "Status": "Open",
+        "Key": "AAS-3123",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000066213 ELMET SRL ",
+        "OP_SITE": "11634 - G.C.I. - Auchan San Rocco Al Porto ",
+        "OP_ASSET": "11634/004 - Porta automatica dx esterna lato sud. Barcode: 01252514 -  - Barcode: 01252514 - Porta fronte ingresso ipermercato ",
+        "OP_PRIORITY": "3 - Normale",
+        "OP_SUPPLIER": "",
+        "OP_REQUESTED_DATE": "",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308674,
-          "id": 308674,
-          "Status": "Confirmed and Planned",
-          "Key": "AAS-3119",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
-          "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
-          "OP_PRIORITY": "1 - Emergenza",
-          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
-          "OP_REQUESTED_DATE": "2021-06-09",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308674,
+        "id": 308674,
+        "Status": "Confirmed and Planned",
+        "Key": "AAS-3119",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+        "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
+        "OP_PRIORITY": "1 - Emergenza",
+        "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+        "OP_REQUESTED_DATE": "2021-06-09",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308673,
-          "id": 308673,
-          "Status": "In Progress",
-          "Key": "AAS-3118",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
-          "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
-          "OP_PRIORITY": "1 - Emergenza",
-          "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
-          "OP_REQUESTED_DATE": "2021-06-09",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "Yes",
-          "OP_ASSET_STATUS_POST": "Yes",
-          "OP_RISK_ONSITE": "No",
-          "OP_EXECUTION_DATE": "2021-06-09"
+        "idDetail": 308673,
+        "id": 308673,
+        "Status": "In Progress",
+        "Key": "AAS-3118",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+        "OP_ASSET": "511/003 - Porta Automatica Scorrevole -  -  - Uscita Laterale - Vista Interna DX ",
+        "OP_PRIORITY": "1 - Emergenza",
+        "OP_SUPPLIER": "0000125926 - S.I.R.E. ELETTRONICA DI IANDOL ",
+        "OP_REQUESTED_DATE": "2021-06-09",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "Yes",
+        "OP_ASSET_STATUS_POST": "Yes",
+        "OP_RISK_ONSITE": "No",
+        "OP_EXECUTION_DATE": "2021-06-09"
       },
       {
-          "idDetail": 308655,
-          "id": 308655,
-          "Status": "Confirmed and Planned",
-          "Key": "AAS-3100",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
-          "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
-          "OP_ASSET": "511/002 - Porta Automatica Scorrevole -  -  - Ingresso Laterale - Vista Interna SX ",
-          "OP_PRIORITY": "1 - Emergenza",
-          "OP_SUPPLIER": "0000120652 - EXCALIBUR SERVICE SRL ",
-          "OP_REQUESTED_DATE": "2021-06-09",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308655,
+        "id": 308655,
+        "Status": "Confirmed and Planned",
+        "Key": "AAS-3100",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000040118 RICCI CASA S.p.A. ",
+        "OP_SITE": "511 - RICCI CASA CRESPELLANO (BO) ",
+        "OP_ASSET": "511/002 - Porta Automatica Scorrevole -  -  - Ingresso Laterale - Vista Interna SX ",
+        "OP_PRIORITY": "1 - Emergenza",
+        "OP_SUPPLIER": "0000120652 - EXCALIBUR SERVICE SRL ",
+        "OP_REQUESTED_DATE": "2021-06-09",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       },
       {
-          "idDetail": 308637,
-          "id": 308637,
-          "Status": "Accepted By Supplier",
-          "Key": "AAS-3082",
-          "OP_TKT_TYPE": "Maintenance Ticket",
-          "OP_CUSTOMER": "0000066213 ELMET SRL ",
-          "OP_SITE": "14930 - Conforama - Aprilia (LT) ",
-          "OP_ASSET": "14930/005 - PORTA ALZATA RAPIDA -  -  - MONTACARICHI ",
-          "OP_PRIORITY": "3 - Normale",
-          "OP_SUPPLIER": "0000100859 - SEI   S.R.L. ",
-          "OP_REQUESTED_DATE": "2021-06-08",
-          "OP_SALES_ORDER": "",
-          "OP_SALES_ORDER_DATE": "",
-          "OP_SALES_ORDER_TOTAL": "",
-          "OP_PURCHASE_ORDER": "",
-          "OP_PURCHASE_ORDER_DATE": "",
-          "OP_PURCHASE_ORDER_TOTAL": "",
-          "OP_ASSET_STATUS_PRE": "",
-          "OP_ASSET_STATUS_POST": "",
-          "OP_RISK_ONSITE": "",
-          "OP_EXECUTION_DATE": ""
+        "idDetail": 308637,
+        "id": 308637,
+        "Status": "Accepted By Supplier",
+        "Key": "AAS-3082",
+        "OP_TKT_TYPE": "Maintenance Ticket",
+        "OP_CUSTOMER": "0000066213 ELMET SRL ",
+        "OP_SITE": "14930 - Conforama - Aprilia (LT) ",
+        "OP_ASSET": "14930/005 - PORTA ALZATA RAPIDA -  -  - MONTACARICHI ",
+        "OP_PRIORITY": "3 - Normale",
+        "OP_SUPPLIER": "0000100859 - SEI   S.R.L. ",
+        "OP_REQUESTED_DATE": "2021-06-08",
+        "OP_SALES_ORDER": "",
+        "OP_SALES_ORDER_DATE": "",
+        "OP_SALES_ORDER_TOTAL": "",
+        "OP_PURCHASE_ORDER": "",
+        "OP_PURCHASE_ORDER_DATE": "",
+        "OP_PURCHASE_ORDER_TOTAL": "",
+        "OP_ASSET_STATUS_PRE": "",
+        "OP_ASSET_STATUS_POST": "",
+        "OP_RISK_ONSITE": "",
+        "OP_EXECUTION_DATE": ""
       }
     ];
 
@@ -728,7 +728,7 @@ export class AppComponent implements OnInit {
   ];
 
   // CHECKBOX
-  modelCheckbox = {checked: false, indeterminate: true};
+  modelCheckbox = { checked: false, indeterminate: true };
 
   // DROPDOWN-MULTI
   options = [
@@ -830,7 +830,7 @@ export class AppComponent implements OnInit {
     "15:02",
     "17:04"
   ];
-  modelDatetime= new Date(2018, 11, 24, 10, 33, 30, 0);
+  modelDatetime = new Date(2018, 11, 24, 10, 33, 30, 0);
   modelDateTimeRange = [
     "2021-09-23T00:02:00.000Z",
     "2021-10-20T02:04:00.000Z"
@@ -914,7 +914,13 @@ export class AppComponent implements OnInit {
     console.log(data);
   }
 
+  isRange = false;
+
   ngOnInit() {
+
+    setTimeout(() => {
+      this.isRange = true
+    });
 
     this.order(null);
 
@@ -1133,7 +1139,7 @@ export class AppComponent implements OnInit {
             "id": "978714"
           }
         ]
-        this.columnsToShow = this.configuration.headers.map( x => x.id );
+        this.columnsToShow = this.configuration.headers.map(x => x.id);
 
       }, 1000
     )
@@ -1227,113 +1233,113 @@ export class AppComponent implements OnInit {
 
   timetableEditorNoTurns = {
     "times": [
-        {
-            "name": "Monday",
-            "description": "",
-            "turns": [
-                {
-                    "from": "1",
-                    "to": "12"
-                },
-                {
-                    "from": "13",
-                    "to": "18"
-                }
-            ]
-        },
-        {
-            "name": "Tuesday",
-            "description": "",
-            "turns": [
-                {
-                    "from": "10",
-                    "to": "12"
-                }
-            ],
-            "allDay": true
-        },
-        {
-            "name": "Wednesday",
-            "description": "",
-            "turns": [],
-            inactive: true
-        },
-        {
-            "name": "Thursday",
-            "description": "",
-            "turns": [],
-            inactive: true
-        },
-        {
-            "name": "Friday",
-            "description": "",
-            "turns": [],
-            inactive: true
-        },
-        {
-            "name": "Saturday",
-            "description": "",
-            "turns": [],
-            inactive: true
-        },
-        {
-            "name": "Sunday",
-            "description": "",
-            "turns": [],
-            inactive: true
-        }
+      {
+        "name": "Monday",
+        "description": "",
+        "turns": [
+          {
+            "from": "1",
+            "to": "12"
+          },
+          {
+            "from": "13",
+            "to": "18"
+          }
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "description": "",
+        "turns": [
+          {
+            "from": "10",
+            "to": "12"
+          }
+        ],
+        "allDay": true
+      },
+      {
+        "name": "Wednesday",
+        "description": "",
+        "turns": [],
+        inactive: true
+      },
+      {
+        "name": "Thursday",
+        "description": "",
+        "turns": [],
+        inactive: true
+      },
+      {
+        "name": "Friday",
+        "description": "",
+        "turns": [],
+        inactive: true
+      },
+      {
+        "name": "Saturday",
+        "description": "",
+        "turns": [],
+        inactive: true
+      },
+      {
+        "name": "Sunday",
+        "description": "",
+        "turns": [],
+        inactive: true
+      }
     ]
-};
+  };
 
-trowserSteps = [
-  {
-    id: 1,
-    label: 'Costi Fissi'
-  },
-  {
-    id: 2,
-    label: 'Costi Manutenzione'
-  },
-  {
-    id: 3,
-    label: 'Preventivo Sostituzione'
-  },
-  {
-    id: 4,
-    label: 'Materiali Sostituiti'
-  },
-  {
-    id: 5,
-    label: 'Stato Impianto'
-  }
-];
-trowserListButtons = [
-  {
-    id: '1',
-    label: 'Annulla',
-    disabled: false,
-    type: 'ghost',
-    icon: ''
-  },
-  {
-    id: '2',
-    label: 'Salva come bozza e chiudi',
-    disabled: false,
-    type: 'outline',
-    icon: ''
-  },
-  {
-    id: '3',
-    label: 'Prosegui',
-    disabled: false,
-    type: 'primary',
-    icon: ''
-  }
-];
+  trowserSteps = [
+    {
+      id: 1,
+      label: 'Costi Fissi'
+    },
+    {
+      id: 2,
+      label: 'Costi Manutenzione'
+    },
+    {
+      id: 3,
+      label: 'Preventivo Sostituzione'
+    },
+    {
+      id: 4,
+      label: 'Materiali Sostituiti'
+    },
+    {
+      id: 5,
+      label: 'Stato Impianto'
+    }
+  ];
+  trowserListButtons = [
+    {
+      id: '1',
+      label: 'Annulla',
+      disabled: false,
+      type: 'ghost',
+      icon: ''
+    },
+    {
+      id: '2',
+      label: 'Salva come bozza e chiudi',
+      disabled: false,
+      type: 'outline',
+      icon: ''
+    },
+    {
+      id: '3',
+      label: 'Prosegui',
+      disabled: false,
+      type: 'primary',
+      icon: ''
+    }
+  ];
 
   signature;
 
-  selectedItemInput = {id: 1, label: 'test1', disabled: false};
+  selectedItemInput = { id: 1, label: 'test1', disabled: false };
   items = [
     {
       id: 1,
@@ -1357,7 +1363,7 @@ trowserListButtons = [
       id: 1,
       label: 'Sede1',
       checked: false,
-      children:  [
+      children: [
         {
           id: 1,
           label: 'impianto1',
@@ -1379,7 +1385,7 @@ trowserListButtons = [
       id: 2,
       label: 'Sede2',
       checked: false,
-      children : []
+      children: []
     },
     {
       id: 3,
@@ -1421,252 +1427,252 @@ trowserListButtons = [
   group = {
     customFields: [
       {
-         "key":"OP_ASSET_STATUS_PRE",
-         "objectTypeId":0,
-         "visibilityRules":[
+        "key": "OP_ASSET_STATUS_PRE",
+        "objectTypeId": 0,
+        "visibilityRules": [
 
-         ],
-         "groupId":3,
-         "add":false,
-         "hMin":false,
-         "signature":false,
-         "asDetail":false,
-         "fileMngmt":false,
-         "enableInlineEdit":false,
-         "customField":{
-            "id":"customfield_22614",
-            "key":"OP_ASSET_STATUS_PRE",
-            "multiple":false,
-            "componentType":"select",
-            "required":false,
-            "layout":{
-               "defaultLabel":"Impianto funzionante prima dell'intervento?",
-               "readOnly":false,
-               "size":4,
-               "right":0,
-               "left":0,
-               "index":440,
-               "labelPosition":"top",
-               "objectTypeId":[
-
-               ],
-               "visibilityRules":[
-                  {
-                     "3":{
-                        "view":true,
-                        "edit":true
-                     },
-                     "type":"STATUS",
-                     "viewVisibility":true,
-                     "editVisibility":true,
-                     "userProfile":"default"
-                  }
-               ],
-               "hasCustomerTotal":false,
-               "hasSupplierTotal":false,
-               "isKeyAttribute":false,
-               "visibleOnLoad":true,
-               "editOnLoad":true,
-               "componentType":"select",
-               "label":"Impianto funzionante prima dell'intervento?"
-            },
-            "attributesToShow":"",
-            "orderIndex":440,
-            "values":[
-               {
-                  "children":null,
-                  "id":"23262",
-                  "label":"Si",
-                  "value":"Yes"
-               },
-               {
-                  "children":null,
-                  "id":"23263",
-                  "label":"No",
-                  "value":"No"
-               }
-            ],
-            "ngModel":{
-               "self":"http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23262",
-               "disabled":false,
-               "id":"23262",
-               "value":"Si",
-               "key":"Yes"
-            },
-            "mode":"edit",
-            "childs":[
+        ],
+        "groupId": 3,
+        "add": false,
+        "hMin": false,
+        "signature": false,
+        "asDetail": false,
+        "fileMngmt": false,
+        "enableInlineEdit": false,
+        "customField": {
+          "id": "customfield_22614",
+          "key": "OP_ASSET_STATUS_PRE",
+          "multiple": false,
+          "componentType": "select",
+          "required": false,
+          "layout": {
+            "defaultLabel": "Impianto funzionante prima dell'intervento?",
+            "readOnly": false,
+            "size": 4,
+            "right": 0,
+            "left": 0,
+            "index": 440,
+            "labelPosition": "top",
+            "objectTypeId": [
 
             ],
-            "hMin":false,
-            "signature":false,
-            "asDetail":false,
-            "translatedLabel":"Impianto funzionante prima dell'intervento?"
-         }
+            "visibilityRules": [
+              {
+                "3": {
+                  "view": true,
+                  "edit": true
+                },
+                "type": "STATUS",
+                "viewVisibility": true,
+                "editVisibility": true,
+                "userProfile": "default"
+              }
+            ],
+            "hasCustomerTotal": false,
+            "hasSupplierTotal": false,
+            "isKeyAttribute": false,
+            "visibleOnLoad": true,
+            "editOnLoad": true,
+            "componentType": "select",
+            "label": "Impianto funzionante prima dell'intervento?"
+          },
+          "attributesToShow": "",
+          "orderIndex": 440,
+          "values": [
+            {
+              "children": null,
+              "id": "23262",
+              "label": "Si",
+              "value": "Yes"
+            },
+            {
+              "children": null,
+              "id": "23263",
+              "label": "No",
+              "value": "No"
+            }
+          ],
+          "ngModel": {
+            "self": "http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23262",
+            "disabled": false,
+            "id": "23262",
+            "value": "Si",
+            "key": "Yes"
+          },
+          "mode": "edit",
+          "childs": [
+
+          ],
+          "hMin": false,
+          "signature": false,
+          "asDetail": false,
+          "translatedLabel": "Impianto funzionante prima dell'intervento?"
+        }
       },
       {
-         "key":"OP_ASSET_STATUS_POST",
-         "objectTypeId":0,
-         "visibilityRules":[
+        "key": "OP_ASSET_STATUS_POST",
+        "objectTypeId": 0,
+        "visibilityRules": [
 
-         ],
-         "groupId":3,
-         "add":false,
-         "hMin":false,
-         "signature":false,
-         "asDetail":false,
-         "fileMngmt":false,
-         "enableInlineEdit":false,
-         "customField":{
-            "id":"customfield_22615",
-            "key":"OP_ASSET_STATUS_POST",
-            "multiple":false,
-            "componentType":"select",
-            "required":false,
-            "layout":{
-               "defaultLabel":"Impianto funzionante al termine dell'intervento?",
-               "readOnly":false,
-               "size":4,
-               "right":0,
-               "left":0,
-               "index":450,
-               "labelPosition":"top",
-               "objectTypeId":[
-
-               ],
-               "visibilityRules":[
-                  {
-                     "3":{
-                        "view":true,
-                        "edit":true
-                     },
-                     "type":"STATUS",
-                     "viewVisibility":true,
-                     "editVisibility":true,
-                     "userProfile":"default"
-                  }
-               ],
-               "hasCustomerTotal":false,
-               "hasSupplierTotal":false,
-               "isKeyAttribute":false,
-               "visibleOnLoad":true,
-               "editOnLoad":true,
-               "componentType":"select",
-               "label":"Impianto funzionante al termine dell'intervento?"
-            },
-            "attributesToShow":"",
-            "orderIndex":450,
-            "values":[
-               {
-                  "children":null,
-                  "id":"23264",
-                  "label":"Si",
-                  "value":"Yes"
-               },
-               {
-                  "children":null,
-                  "id":"23265",
-                  "label":"No",
-                  "value":"No"
-               }
-            ],
-            "ngModel":{
-               "self":"http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23265",
-               "disabled":false,
-               "id":"23265",
-               "value":"No",
-               "key":"No"
-            },
-            "mode":"edit",
-            "childs":[
+        ],
+        "groupId": 3,
+        "add": false,
+        "hMin": false,
+        "signature": false,
+        "asDetail": false,
+        "fileMngmt": false,
+        "enableInlineEdit": false,
+        "customField": {
+          "id": "customfield_22615",
+          "key": "OP_ASSET_STATUS_POST",
+          "multiple": false,
+          "componentType": "select",
+          "required": false,
+          "layout": {
+            "defaultLabel": "Impianto funzionante al termine dell'intervento?",
+            "readOnly": false,
+            "size": 4,
+            "right": 0,
+            "left": 0,
+            "index": 450,
+            "labelPosition": "top",
+            "objectTypeId": [
 
             ],
-            "hMin":false,
-            "signature":false,
-            "asDetail":false,
-            "translatedLabel":"Impianto funzionante al termine dell'intervento?"
-         }
+            "visibilityRules": [
+              {
+                "3": {
+                  "view": true,
+                  "edit": true
+                },
+                "type": "STATUS",
+                "viewVisibility": true,
+                "editVisibility": true,
+                "userProfile": "default"
+              }
+            ],
+            "hasCustomerTotal": false,
+            "hasSupplierTotal": false,
+            "isKeyAttribute": false,
+            "visibleOnLoad": true,
+            "editOnLoad": true,
+            "componentType": "select",
+            "label": "Impianto funzionante al termine dell'intervento?"
+          },
+          "attributesToShow": "",
+          "orderIndex": 450,
+          "values": [
+            {
+              "children": null,
+              "id": "23264",
+              "label": "Si",
+              "value": "Yes"
+            },
+            {
+              "children": null,
+              "id": "23265",
+              "label": "No",
+              "value": "No"
+            }
+          ],
+          "ngModel": {
+            "self": "http://itblq1srll0007.faacspa.local:8080/rest/api/2/customFieldOption/23265",
+            "disabled": false,
+            "id": "23265",
+            "value": "No",
+            "key": "No"
+          },
+          "mode": "edit",
+          "childs": [
+
+          ],
+          "hMin": false,
+          "signature": false,
+          "asDetail": false,
+          "translatedLabel": "Impianto funzionante al termine dell'intervento?"
+        }
       },
       {
-         "key":"OP_RISK_ONSITE",
-         "objectTypeId":0,
-         "visibilityRules":[
+        "key": "OP_RISK_ONSITE",
+        "objectTypeId": 0,
+        "visibilityRules": [
 
-         ],
-         "groupId":3,
-         "add":false,
-         "hMin":false,
-         "signature":false,
-         "asDetail":false,
-         "fileMngmt":false,
-         "enableInlineEdit":false,
-         "customField":{
-            "id":"customfield_22616",
-            "key":"OP_RISK_ONSITE",
-            "multiple":false,
-            "componentType":"select",
-            "required":false,
-            "layout":{
-               "defaultLabel":"Rilevato rischio sull'impianto?",
-               "readOnly":false,
-               "size":4,
-               "right":0,
-               "left":0,
-               "index":470,
-               "labelPosition":"top",
-               "objectTypeId":[
+        ],
+        "groupId": 3,
+        "add": false,
+        "hMin": false,
+        "signature": false,
+        "asDetail": false,
+        "fileMngmt": false,
+        "enableInlineEdit": false,
+        "customField": {
+          "id": "customfield_22616",
+          "key": "OP_RISK_ONSITE",
+          "multiple": false,
+          "componentType": "select",
+          "required": false,
+          "layout": {
+            "defaultLabel": "Rilevato rischio sull'impianto?",
+            "readOnly": false,
+            "size": 4,
+            "right": 0,
+            "left": 0,
+            "index": 470,
+            "labelPosition": "top",
+            "objectTypeId": [
 
-               ],
-               "visibilityRules":[
-                  {
-                     "3":{
-                        "view":true,
-                        "edit":true
-                     },
-                     "type":"STATUS",
-                     "viewVisibility":true,
-                     "editVisibility":true,
-                     "userProfile":"default"
-                  }
-               ],
-               "hasCustomerTotal":false,
-               "hasSupplierTotal":false,
-               "isKeyAttribute":true,
-               "visibleOnLoad":true,
-               "editOnLoad":true,
-               "componentType":"select",
-               "label":"Rilevato rischio sull'impianto?"
+            ],
+            "visibilityRules": [
+              {
+                "3": {
+                  "view": true,
+                  "edit": true
+                },
+                "type": "STATUS",
+                "viewVisibility": true,
+                "editVisibility": true,
+                "userProfile": "default"
+              }
+            ],
+            "hasCustomerTotal": false,
+            "hasSupplierTotal": false,
+            "isKeyAttribute": true,
+            "visibleOnLoad": true,
+            "editOnLoad": true,
+            "componentType": "select",
+            "label": "Rilevato rischio sull'impianto?"
+          },
+          "attributesToShow": "",
+          "orderIndex": 470,
+          "values": [
+            {
+              "children": null,
+              "id": "23266",
+              "label": "Si",
+              "value": "Yes"
             },
-            "attributesToShow":"",
-            "orderIndex":470,
-            "values":[
-               {
-                  "children":null,
-                  "id":"23266",
-                  "label":"Si",
-                  "value":"Yes"
-               },
-               {
-                  "children":null,
-                  "id":"23267",
-                  "label":"No",
-                  "value":"No"
-               }
-            ],
-            "ngModel":null,
-            "mode":"edit",
-            "childs":[
+            {
+              "children": null,
+              "id": "23267",
+              "label": "No",
+              "value": "No"
+            }
+          ],
+          "ngModel": null,
+          "mode": "edit",
+          "childs": [
 
-            ],
-            "hMin":false,
-            "signature":false,
-            "asDetail":false,
-            "translatedLabel":"Rilevato rischio sull'impianto?"
-         }
+          ],
+          "hMin": false,
+          "signature": false,
+          "asDetail": false,
+          "translatedLabel": "Rilevato rischio sull'impianto?"
+        }
       }
-   ]
+    ]
   }
 
-  selectedItemInputAccordion = {id: 1, label: 'test1', disabled: false};
+  selectedItemInputAccordion = { id: 1, label: 'test1', disabled: false };
   itemsAccordion = [
     {
       id: 1,
@@ -1685,12 +1691,12 @@ trowserListButtons = [
     }
   ]
 
-  checked0 = {check: true};
-  checked1 = {check: true};
-  checked2 = {check: true};
-  checked3 = {check: true};
-  checked4 = {check: true};
-  checked5 = {check: true};
+  checked0 = { check: true };
+  checked1 = { check: true };
+  checked2 = { check: true };
+  checked3 = { check: true };
+  checked4 = { check: true };
+  checked5 = { check: true };
   disableCheckbox1 = '';
   disableCheckbox2 = '';
   disableCheckbox3 = '';
@@ -1717,7 +1723,7 @@ trowserListButtons = [
     }, 2000);
   }
 
-  modelCurrency = 10;
+  modelCurrency = 111222333.40;
 
   showFirstButton = true;
 

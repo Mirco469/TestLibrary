@@ -53,7 +53,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     BsDatepickerModule.forRoot(),
     TextDropdownModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'en-US' }],
+  providers: [{provide: LOCALE_ID, useValue: 'it-IT' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

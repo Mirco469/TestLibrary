@@ -98,7 +98,7 @@
 <!-- <eds-icon name="filled-action-filter" class="different-color"></eds-icon> -->
 
 <!-- INPUT DATE -->
-<div style="overflow-y: auto; background-color: aqua; height: 500px; width: 500px;">
+<!-- <div style="overflow-y: auto; background-color: aqua; height: 500px; width: 500px;">
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   <form #myForm3="ngForm" style="margin-left: 0; width: 500px;">
@@ -114,7 +114,8 @@
     {{modelDate}}
     <p>Form valid: {{myForm3.form.valid}}</p>
   </form>
-</div>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div> -->
 
 <!-- <input placeholder="Datepicker" bsDatepicker #dp="bsDatepicker" [(ngModel)]="modelDate" [bsConfig]="{ adaptivePosition: true }">
  -->
@@ -623,6 +624,7 @@
                   [(ngModel)]="modelCurrency"
                   name="currency"
                   [hasCurrency]="true"
+                  [isReadOnly]="false"
                   (blur)="stampa('blur'); stampa(modelCurrency)">
 </eds-input-number> -->
 
@@ -657,3 +659,26 @@
   [items]="textDropdownItems"
   (itemChange)="stampa($event)"
 ></eds-text-dropdown> -->
+
+<!-- HEADER TABLE -->
+<!-- <eds-header-table [displayName]="'Man. programmata'" order="none"></eds-header-table> -->
+
+<!-- DATERANGEPICKER BUG -->
+<div style="width: 780px; background-color: grey;">
+  <p>Simulo la dimensione del modale</p>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <eds-input-date [(ngModel)]="modelDateRange"
+                      name="date"
+                      [range]="isRange"
+                      (blur)="stampa('blur'); stampa(modelDateRange)"
+                      (focus)="stampa('focus')"
+                      [isReadOnly]="false"
+                      style="width: 100%;">
+      </eds-input-date>
+    </div>
+  </div>
+</div>
