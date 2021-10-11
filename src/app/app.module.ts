@@ -5,7 +5,7 @@ import { NavigationModule, ActionPagerModule, SearchModule, TableModule, Breadcr
          IconModule, InputDateModule, InputTimeModule, RadioButtonModule, StepperModule,
          SwitchModule, TagModule, TextareaModule, TextfieldModule, ToastModule, InputNumberModule,
          AccordionModule, CardRowModule, DrawerModule, TimetableEditorModule, TrowserModule, SignatureInputModule,
-         AccordionTemplateModule, TooltipModule, InputDateTimeModule, TextDropdownModule } from 'enhancers-design-system';
+         AccordionTemplateModule, TooltipModule, InputDateTimeModule, TextDropdownModule, TableTemplateModule } from 'enhancers-design-system';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,7 +51,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TooltipModule,
     InputDateTimeModule,
     BsDatepickerModule.forRoot(),
-    TextDropdownModule
+    TextDropdownModule,
+    TableTemplateModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'it-IT' }],
   bootstrap: [AppComponent]

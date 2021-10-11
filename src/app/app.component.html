@@ -664,7 +664,7 @@
 <!-- <eds-header-table [displayName]="'Man. programmata'" order="none"></eds-header-table> -->
 
 <!-- DATERANGEPICKER BUG -->
-<div style="width: 780px; background-color: grey;">
+<!-- <div style="width: 760px; background-color: grey;">
   <p>Simulo la dimensione del modale</p>
   <div class="row">
     <div class="col-md-3"></div>
@@ -681,4 +681,115 @@
       </eds-input-date>
     </div>
   </div>
-</div>
+</div> -->
+
+<eds-table-template>
+  <eds-header-table accordion-list-header [displayName]="'Task'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'Stato'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'ID'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'Impianto'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'ERP Project Number'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'Task'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'Stato'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'ID'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'Impianto'" class="table-template-width"></eds-header-table>
+  <eds-header-table accordion-list-header [displayName]="'ERP Project Number'" class="table-template-width"></eds-header-table>
+  <eds-accordion-row accordion-list-body>
+    <eds-accordion-row-line [lineClass]="'accordion-row-root-table'" [hasCheckbox]="false">
+      <div accordion-inline style="display: flex; align-items: center; width: 100%; justify-content: space-between">
+        <h3 accordion-head style="margin: 0;" class="table-template-width">Production Task</h3>
+        <p class="table-template-width">
+          <eds-input-date [(ngModel)]="modelDateRange"
+                          name="date"
+                          [range]="true"
+                          (blur)="stampa('blur'); stampa(modelDateRange)"
+                          (focus)="stampa('focus')"
+                          [isReadOnly]="false"
+                          style="width: 100%;">
+          </eds-input-date>
+        </p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
+        <p class="table-template-width">2323434</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
+        <p class="table-template-width">2323434</p>
+      </div>
+    </eds-accordion-row-line>
+    <eds-accordion-row-line [lineClass]="'accordion-row-root-table'" [hasCheckbox]="false" style="margin-top: 20px;">
+      <div accordion-inline style="display: flex; align-items: center; width: 100%; justify-content: space-between">
+        <h3 accordion-head style="margin: 0;" class="table-template-width">Production Task</h3>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
+        <p class="table-template-width">2323434</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
+        <p class="table-template-width">2323434</p>
+      </div>
+    </eds-accordion-row-line>
+    <eds-accordion-row-line [lineClass]="'accordion-row-root-table'" [hasCheckbox]="false"  style="margin-top: 20px;">
+      <div accordion-inline style="display: flex; align-items: center; width: 100%; justify-content: space-between">
+        <h3 accordion-head style="margin: 0;" class="table-template-width">Production Task</h3>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">giovanni.poltronieri@riccicasa.it</p>
+        <p class="table-template-width">2323434</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">In progress</p>
+        <p class="table-template-width">0PUT-2425</p>
+        <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
+        <p class="table-template-width">2323434</p>
+      </div>
+      <eds-accordion-row-line [lineClass]="'accordion-row-header-table'" [hasCheckbox]="false">
+      </eds-accordion-row-line>
+      <eds-accordion-row-line [lineClass]="'accordion-row-body-table'" [hasCheckbox]="false">
+      </eds-accordion-row-line>
+    </eds-accordion-row-line>
+  </eds-accordion-row>
+</eds-table-template>
+
+
+<!-- <table style="width: 100%;">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Stato</th>
+      <th>ID</th>
+      <th>Impianto</th>
+      <th>ERP Project Number</th>
+      <th>Task</th>
+      <th>Stato</th>
+      <th>ID</th>
+      <th>Impianto</th>
+      <th>ERP Project Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <eds-input-date [(ngModel)]="modelDateRange"
+                        name="date"
+                        [range]="true"
+                        (blur)="stampa('blur'); stampa(modelDateRange)"
+                        (focus)="stampa('focus')"
+                        [isReadOnly]="false"
+                        style="width: 100%;">
+        </eds-input-date>
+      </td>
+      <td>0PUT-2425</td>
+      <td>HUBIOEFHOISF SKJDFKJSD</td>
+      <td>2323434</td>
+      <td>In progress</td>
+      <td>In progress</td>
+      <td>0PUT-2425</td>
+      <td>HUBIOEFHOISF SKJDFKJSD</td>
+      <td>2323434</td>
+      <td>2323434</td>
+    </tr>
+  </tbody>
+</table> -->
