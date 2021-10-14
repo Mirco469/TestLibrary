@@ -664,7 +664,7 @@
 <!-- <eds-header-table [displayName]="'Man. programmata'" order="none"></eds-header-table> -->
 
 <!-- DATERANGEPICKER BUG -->
-<div style="width: 760px; background-color: grey; margin-left: auto;">
+<div style="width: 760px; background-color: grey;">
   <p>Simulo la dimensione del modale</p>
   <div class="row">
     <div class="col-md-3"></div>
@@ -683,7 +683,7 @@
   </div>
 </div>
 
-<!-- <eds-table-template>
+<!-- <eds-table-template [isMultilevel]="true">
   <eds-header-table accordion-list-header [displayName]="'Task'" class="table-template-width"></eds-header-table>
   <eds-header-table accordion-list-header [displayName]="'Stato'" class="table-template-width"></eds-header-table>
   <eds-header-table accordion-list-header [displayName]="'ID'" class="table-template-width"></eds-header-table>
@@ -717,6 +717,10 @@
         <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
         <p class="table-template-width">2323434</p>
       </div>
+      <eds-accordion-row-line [lineClass]="'accordion-row-header-table'" [hasCheckbox]="false">
+      </eds-accordion-row-line>
+      <eds-accordion-row-line [lineClass]="'accordion-row-body-table'" [hasCheckbox]="false">
+      </eds-accordion-row-line>
     </eds-accordion-row-line>
     <eds-accordion-row-line [lineClass]="'accordion-row-root-table'" [hasCheckbox]="false" style="margin-top: 20px;">
       <div accordion-inline style="display: flex; align-items: center; width: 100%; justify-content: space-between">
@@ -745,10 +749,6 @@
         <p class="table-template-width">HUBIOEFHOISF SKJDFKJSD</p>
         <p class="table-template-width">2323434</p>
       </div>
-      <eds-accordion-row-line [lineClass]="'accordion-row-header-table'" [hasCheckbox]="false">
-      </eds-accordion-row-line>
-      <eds-accordion-row-line [lineClass]="'accordion-row-body-table'" [hasCheckbox]="false">
-      </eds-accordion-row-line>
     </eds-accordion-row-line>
   </eds-accordion-row>
 </eds-table-template> -->
