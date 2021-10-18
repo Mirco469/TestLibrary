@@ -168,21 +168,22 @@
 <p>{{modelDateTimeRange}}</p> -->
 
 <!-- INPUT NUMBER -->
-<!-- <br><br><br>
+<br><br><br>
 <form #myForm3="ngForm" style="width: 500px; margin-left: 100px;">
   <eds-input-number
                   [(ngModel)]="modelNumber"
                   name="number"
                   (blur)="stampa('blur'); stampa(modelNumber)"
                   [isReadOnly]="false"
-                  [wholeNumbers]="false">
+                  min="0"
+                  [wholeNumbers]="true">
 </eds-input-number>
 <button (click)="stampa(modelNumber)">Stampa number</button>
   <p>Form valid: {{myForm3.form.valid}}</p>
 </form>
 <input type="number"
        [(ngModel)]="nativeModelNumber"
-       name="number_nativo"/> -->
+       name="number_nativo"/>
 
 <!-- INPUT TIME -->
 <!-- <eds-input-time label="Label"
@@ -664,7 +665,7 @@
 <!-- <eds-header-table [displayName]="'Man. programmata'" order="none"></eds-header-table> -->
 
 <!-- DATERANGEPICKER BUG -->
-<div style="width: 760px; background-color: grey;">
+<!-- <div style="width: 760px; background-color: grey; margin-left: auto;">
   <p>Simulo la dimensione del modale</p>
   <div class="row">
     <div class="col-md-3"></div>
@@ -681,7 +682,7 @@
       </eds-input-date>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <eds-table-template [isMultilevel]="true">
   <eds-header-table accordion-list-header [displayName]="'Task'" class="table-template-width"></eds-header-table>
@@ -793,3 +794,14 @@
     </tr>
   </tbody>
 </table> -->
+
+<!-- INPUT DIGIT -->
+<!-- <eds-input-digit
+  id="input-digit"
+  icon="value-dollaro"
+  placeholder="Value"
+  [(ngModel)]="modelDigit"
+  name="input-digit"
+  (blur)="stampa(modelDigit)"
+></eds-input-digit>
+<p>{{modelDigit}}</p> -->

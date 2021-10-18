@@ -837,7 +837,7 @@ export class AppComponent implements OnInit {
   ];
 
   // INPUT NUMBER
-  modelNumber = 2000000;
+  modelNumber = 2000000.00;
   nativeModelNumber = "5.00";
 
   // INPUT TIME
@@ -883,6 +883,9 @@ export class AppComponent implements OnInit {
   setWarning() {
     this.warning = !this.warning;
   }
+
+  // INPUT DIGIT
+  modelDigit = 2000000;
 
   // NAVIGATION
   currentCategory = {
@@ -969,6 +972,32 @@ export class AppComponent implements OnInit {
     this.activeNavItem = {
       "id": "sedi"
     }
+
+    setTimeout(() => {
+      this.textDropdownItems = [
+        {
+          "id": 0,
+          "disabled": false,
+          "label": "Tutti i ticket",
+          "value": "allTickets",
+          "icon": "menu-ticket"
+        },
+        {
+          "id": 1,
+          "disabled": false,
+          "label": "Cat#1",
+          "value": "providers",
+          "icon": "menu-fornitori"
+        },
+        {
+          "id": 2,
+          "disabled": false,
+          "label": "Da pianificare",
+          "value": "plannable",
+          "icon": "general-calendar"
+        }
+      ];
+    }, 200);
   }
 
   extraOptionsRowCard = [
@@ -1728,29 +1757,7 @@ export class AppComponent implements OnInit {
   showFirstButton = true;
 
   /* TEXT DROPDOWN */
-  textDropdownItems = [
-    {
-      "id": 0,
-      "disabled": false,
-      "label": "Tutti i ticket",
-      "value": "allTickets",
-      "icon": "menu-ticket"
-    },
-    {
-      "id": 1,
-      "disabled": false,
-      "label": "Cat#1",
-      "value": "providers",
-      "icon": "menu-fornitori"
-    },
-    {
-      "id": 2,
-      "disabled": false,
-      "label": "Da pianificare",
-      "value": "plannable",
-      "icon": "general-calendar"
-    }
-  ];
+  textDropdownItems = []
 
   someWork() {
 
