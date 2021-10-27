@@ -1,1 +1,6 @@
-<p>modal works!</p>
+<div>
+  <ejs-richtexteditor #defaultRTE
+                      [(ngModel)]="richtexteditorModel"
+                      (created)="onRTECreate($event)">
+  </ejs-richtexteditor>
+</div>
