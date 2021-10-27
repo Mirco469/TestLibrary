@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TestLibrary';
+
+  constructor(private modalService: BsModalService) {}
+
+  openModalWithComponent() {
+    this.modalService.show(ModalComponent, {});
+  }
 }
